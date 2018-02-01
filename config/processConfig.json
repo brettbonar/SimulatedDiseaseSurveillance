@@ -1,0 +1,6 @@
+{
+  "coordinator": {
+    "ip": "localhost",
+    "port": 12000
+  }
+}

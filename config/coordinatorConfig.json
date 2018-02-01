@@ -1,0 +1,92 @@
+{
+  "coordinator": {
+    "ip": "localhost",
+    "port": 12000
+  },
+  "diseases": [
+    {
+      "id": 1,
+      "name": "Influenza"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Pox"
+    },
+    {
+      "id": 3,
+      "name": "Measles"
+    }
+  ],
+  "doa": [
+    {
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1,
+      "id": 1
+    },
+    {
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2,
+      "id": 2
+    },
+    {
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3,
+      "id": 3
+    }
+  ],
+  "hds": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12100
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12101
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12102
+    },
+    {
+      "id": 4,
+      "ip": "localhost",
+      "port": 12103
+    }
+  ],
+  "emr": [
+    {
+      "id": 1,
+      "hds": 1
+    },
+    {
+      "id": 2,
+      "hds": 1
+    },
+    {
+      "id": 3,
+      "hds": 2
+    },
+    {
+      "id": 4,
+      "hds": 2
+    },
+    {
+      "id": 5,
+      "hds": 3
+    },
+    {
+      "id": 6,
+      "hds": 3
+    },
+    {
+      "id": 7,
+      "hds": 4
+    }
+  ]
+}
