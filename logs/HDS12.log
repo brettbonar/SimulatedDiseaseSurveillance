@@ -1,0 +1,1202 @@
+[2018-02-05T23:07:28.386] [DEBUG] HDS12 - Got config: {"hds":{"id":12,"notification":{"ip":"localhost","port":12104},"update":{"ip":"localhost","port":12105},"outbreakRouter":{"ip":"localhost","port":12112}},"doa":[{"id":1,"ip":"localhost","port":12001,"disease":1},{"id":2,"ip":"localhost","port":12002,"disease":2},{"id":3,"ip":"localhost","port":12003,"disease":3}],"simulation":{"simulationTime":24,"diseases":[{"id":1,"name":"Influenza","threshold":100,"rate":12},{"id":2,"name":"Chicken Pox","threshold":50,"rate":1},{"id":3,"name":"Measles","threshold":10,"rate":0.5}]}}
+[2018-02-05T23:07:28.499] [DEBUG] HDS12 - Received disease notification (Influenza): 1
+[2018-02-05T23:07:28.591] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":1,"vectorTimestamp":[]}
+[2018-02-05T23:07:28.600] [DEBUG] HDS12 - Received disease notification (Influenza): 2
+[2018-02-05T23:07:28.699] [DEBUG] HDS12 - Received disease notification (Influenza): 3
+[2018-02-05T23:07:28.791] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":3,"vectorTimestamp":[]}
+[2018-02-05T23:07:28.799] [DEBUG] HDS12 - Received disease notification (Influenza): 4
+[2018-02-05T23:07:28.845] [DEBUG] HDS12 - Received disease notification (Measles): 1
+[2018-02-05T23:07:28.845] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 1
+[2018-02-05T23:07:28.845] [DEBUG] HDS12 - Received disease notification (Measles): 2
+[2018-02-05T23:07:28.846] [DEBUG] HDS12 - Received disease notification (Influenza): 5
+[2018-02-05T23:07:28.848] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 2
+[2018-02-05T23:07:28.900] [DEBUG] HDS12 - Received disease notification (Measles): 3
+[2018-02-05T23:07:28.948] [DEBUG] HDS12 - Received disease notification (Measles): 4
+[2018-02-05T23:07:28.992] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":5,"vectorTimestamp":[]}
+[2018-02-05T23:07:28.992] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":4,"vectorTimestamp":[]}
+[2018-02-05T23:07:28.992] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":2,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.000] [DEBUG] HDS12 - Received disease notification (Influenza): 6
+[2018-02-05T23:07:29.048] [DEBUG] HDS12 - Received disease notification (Measles): 5
+[2018-02-05T23:07:29.100] [DEBUG] HDS12 - Received disease notification (Influenza): 7
+[2018-02-05T23:07:29.148] [DEBUG] HDS12 - Received disease notification (Measles): 6
+[2018-02-05T23:07:29.193] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":7,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.193] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":6,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.193] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":2,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.201] [DEBUG] HDS12 - Received disease notification (Measles): 7
+[2018-02-05T23:07:29.249] [DEBUG] HDS12 - Received disease notification (Influenza): 8
+[2018-02-05T23:07:29.301] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 3
+[2018-02-05T23:07:29.349] [DEBUG] HDS12 - Received disease notification (Measles): 8
+[2018-02-05T23:07:29.394] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":8,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.394] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":8,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.394] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":3,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.401] [DEBUG] HDS12 - Received disease notification (Measles): 9
+[2018-02-05T23:07:29.449] [DEBUG] HDS12 - Received disease notification (Influenza): 9
+[2018-02-05T23:07:29.501] [DEBUG] HDS12 - Received disease notification (Measles): 10
+[2018-02-05T23:07:29.549] [DEBUG] HDS12 - Received disease notification (Measles): 11
+[2018-02-05T23:07:29.595] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":9,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.595] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":11,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.595] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":3,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.602] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 4
+[2018-02-05T23:07:29.650] [DEBUG] HDS12 - Received disease notification (Measles): 12
+[2018-02-05T23:07:29.702] [DEBUG] HDS12 - Received disease notification (Measles): 13
+[2018-02-05T23:07:29.750] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 5
+[2018-02-05T23:07:29.795] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":9,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.795] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":13,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.795] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":5,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.802] [DEBUG] HDS12 - Received disease notification (Measles): 14
+[2018-02-05T23:07:29.850] [DEBUG] HDS12 - Received disease notification (Measles): 15
+[2018-02-05T23:07:29.902] [DEBUG] HDS12 - Received disease notification (Measles): 16
+[2018-02-05T23:07:29.951] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 6
+[2018-02-05T23:07:29.996] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":9,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.996] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":16,"vectorTimestamp":[]}
+[2018-02-05T23:07:29.996] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":6,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.003] [DEBUG] HDS12 - Received disease notification (Influenza): 10
+[2018-02-05T23:07:30.051] [DEBUG] HDS12 - Received disease notification (Influenza): 11
+[2018-02-05T23:07:30.103] [DEBUG] HDS12 - Received disease notification (Influenza): 12
+[2018-02-05T23:07:30.152] [DEBUG] HDS12 - Received disease notification (Measles): 17
+[2018-02-05T23:07:30.196] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":12,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.196] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":17,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.196] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":6,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.203] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 7
+[2018-02-05T23:07:30.253] [DEBUG] HDS12 - Received disease notification (Measles): 18
+[2018-02-05T23:07:30.303] [DEBUG] HDS12 - Received disease notification (Influenza): 13
+[2018-02-05T23:07:30.354] [DEBUG] HDS12 - Received disease notification (Measles): 19
+[2018-02-05T23:07:30.397] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":13,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.397] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":19,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.397] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":7,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.404] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 8
+[2018-02-05T23:07:30.454] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 9
+[2018-02-05T23:07:30.504] [DEBUG] HDS12 - Received disease notification (Influenza): 14
+[2018-02-05T23:07:30.554] [DEBUG] HDS12 - Received disease notification (Measles): 20
+[2018-02-05T23:07:30.598] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":14,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.598] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":20,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.598] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":9,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.604] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 10
+[2018-02-05T23:07:30.654] [DEBUG] HDS12 - Received disease notification (Influenza): 15
+[2018-02-05T23:07:30.705] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 11
+[2018-02-05T23:07:30.755] [DEBUG] HDS12 - Received disease notification (Measles): 21
+[2018-02-05T23:07:30.799] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":15,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.799] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.799] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":11,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.805] [DEBUG] HDS12 - Received disease notification (Measles): 22
+[2018-02-05T23:07:30.855] [DEBUG] HDS12 - Received disease notification (Influenza): 16
+[2018-02-05T23:07:30.905] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 12
+[2018-02-05T23:07:30.955] [DEBUG] HDS12 - Received disease notification (Measles): 23
+[2018-02-05T23:07:30.999] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":16,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.999] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":23,"vectorTimestamp":[]}
+[2018-02-05T23:07:30.999] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":12,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.006] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 13
+[2018-02-05T23:07:31.055] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 14
+[2018-02-05T23:07:31.107] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 15
+[2018-02-05T23:07:31.156] [DEBUG] HDS12 - Received disease notification (Influenza): 17
+[2018-02-05T23:07:31.200] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":17,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.200] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":23,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.200] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":15,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.207] [DEBUG] HDS12 - Received disease notification (Measles): 24
+[2018-02-05T23:07:31.256] [DEBUG] HDS12 - Received disease notification (Measles): 25
+[2018-02-05T23:07:31.307] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 16
+[2018-02-05T23:07:31.356] [DEBUG] HDS12 - Received disease notification (Influenza): 18
+[2018-02-05T23:07:31.400] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":18,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.400] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":25,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.400] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":16,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.406] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 17
+[2018-02-05T23:07:31.457] [DEBUG] HDS12 - Received disease notification (Measles): 26
+[2018-02-05T23:07:31.507] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 18
+[2018-02-05T23:07:31.557] [DEBUG] HDS12 - Received disease notification (Measles): 27
+[2018-02-05T23:07:31.601] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":18,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.601] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":27,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.601] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":18,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.608] [DEBUG] HDS12 - Received disease notification (Influenza): 19
+[2018-02-05T23:07:31.658] [DEBUG] HDS12 - Received disease notification (Influenza): 20
+[2018-02-05T23:07:31.709] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 19
+[2018-02-05T23:07:31.760] [DEBUG] HDS12 - Received disease notification (Influenza): 21
+[2018-02-05T23:07:31.801] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.801] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":27,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.801] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":19,"vectorTimestamp":[]}
+[2018-02-05T23:07:31.808] [DEBUG] HDS12 - Received disease notification (Measles): 28
+[2018-02-05T23:07:31.860] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 20
+[2018-02-05T23:07:31.909] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 21
+[2018-02-05T23:07:31.960] [DEBUG] HDS12 - Received disease notification (Measles): 29
+[2018-02-05T23:07:32.003] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.003] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":29,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.003] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.009] [DEBUG] HDS12 - Received disease notification (Measles): 30
+[2018-02-05T23:07:32.060] [DEBUG] HDS12 - Received disease notification (Influenza): 22
+[2018-02-05T23:07:32.109] [DEBUG] HDS12 - Received disease notification (Influenza): 23
+[2018-02-05T23:07:32.160] [DEBUG] HDS12 - Received disease notification (Influenza): 24
+[2018-02-05T23:07:32.204] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":24,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.204] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":30,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.204] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.210] [DEBUG] HDS12 - Received disease notification (Influenza): 25
+[2018-02-05T23:07:32.261] [DEBUG] HDS12 - Received disease notification (Influenza): 26
+[2018-02-05T23:07:32.310] [DEBUG] HDS12 - Received disease notification (Influenza): 27
+[2018-02-05T23:07:32.361] [DEBUG] HDS12 - Received disease notification (Influenza): 28
+[2018-02-05T23:07:32.404] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":28,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.404] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":30,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.404] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":21,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.410] [DEBUG] HDS12 - Received disease notification (Measles): 31
+[2018-02-05T23:07:32.461] [DEBUG] HDS12 - Received disease notification (Measles): 32
+[2018-02-05T23:07:32.510] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 22
+[2018-02-05T23:07:32.561] [DEBUG] HDS12 - Received disease notification (Influenza): 29
+[2018-02-05T23:07:32.605] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":29,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.605] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":32,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.605] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":22,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.611] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 23
+[2018-02-05T23:07:32.662] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 24
+[2018-02-05T23:07:32.711] [DEBUG] HDS12 - Received disease notification (Influenza): 30
+[2018-02-05T23:07:32.762] [DEBUG] HDS12 - Received disease notification (Influenza): 31
+[2018-02-05T23:07:32.805] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":31,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.805] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":32,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.805] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":24,"vectorTimestamp":[]}
+[2018-02-05T23:07:32.811] [DEBUG] HDS12 - Received disease notification (Influenza): 32
+[2018-02-05T23:07:32.863] [DEBUG] HDS12 - Received disease notification (Influenza): 33
+[2018-02-05T23:07:32.911] [DEBUG] HDS12 - Received disease notification (Measles): 33
+[2018-02-05T23:07:32.963] [DEBUG] HDS12 - Received disease notification (Measles): 34
+[2018-02-05T23:07:33.006] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":33,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.006] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":34,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.007] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":24,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.012] [DEBUG] HDS12 - Received disease notification (Measles): 35
+[2018-02-05T23:07:33.063] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 25
+[2018-02-05T23:07:33.112] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 26
+[2018-02-05T23:07:33.164] [DEBUG] HDS12 - Received disease notification (Influenza): 34
+[2018-02-05T23:07:33.207] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":34,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.207] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":35,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.207] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":26,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.213] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 27
+[2018-02-05T23:07:33.265] [DEBUG] HDS12 - Received disease notification (Influenza): 35
+[2018-02-05T23:07:33.313] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 28
+[2018-02-05T23:07:33.366] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 29
+[2018-02-05T23:07:33.408] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":35,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.408] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":35,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.408] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":29,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.414] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 30
+[2018-02-05T23:07:33.466] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 31
+[2018-02-05T23:07:33.514] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 32
+[2018-02-05T23:07:33.566] [DEBUG] HDS12 - Received disease notification (Measles): 36
+[2018-02-05T23:07:33.608] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":35,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.608] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":36,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.608] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":32,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.615] [DEBUG] HDS12 - Received disease notification (Influenza): 36
+[2018-02-05T23:07:33.666] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 33
+[2018-02-05T23:07:33.715] [DEBUG] HDS12 - Received disease notification (Influenza): 37
+[2018-02-05T23:07:33.767] [DEBUG] HDS12 - Received disease notification (Influenza): 38
+[2018-02-05T23:07:33.809] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":38,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.809] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":36,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.809] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":33,"vectorTimestamp":[]}
+[2018-02-05T23:07:33.815] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 34
+[2018-02-05T23:07:33.867] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 35
+[2018-02-05T23:07:33.915] [DEBUG] HDS12 - Received disease notification (Influenza): 39
+[2018-02-05T23:07:33.967] [DEBUG] HDS12 - Received disease notification (Measles): 37
+[2018-02-05T23:07:34.009] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":39,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.009] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":37,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.009] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":35,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.015] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 36
+[2018-02-05T23:07:34.066] [DEBUG] HDS12 - Received disease notification (Measles): 38
+[2018-02-05T23:07:34.116] [DEBUG] HDS12 - Received disease notification (Measles): 39
+[2018-02-05T23:07:34.167] [DEBUG] HDS12 - Received disease notification (Influenza): 40
+[2018-02-05T23:07:34.210] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":40,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.210] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":39,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.210] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":36,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.216] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 37
+[2018-02-05T23:07:34.267] [DEBUG] HDS12 - Received disease notification (Measles): 40
+[2018-02-05T23:07:34.316] [DEBUG] HDS12 - Received disease notification (Influenza): 41
+[2018-02-05T23:07:34.367] [DEBUG] HDS12 - Received disease notification (Measles): 41
+[2018-02-05T23:07:34.409] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":41,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.409] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":41,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.409] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":37,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.415] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 38
+[2018-02-05T23:07:34.468] [DEBUG] HDS12 - Received disease notification (Influenza): 42
+[2018-02-05T23:07:34.516] [DEBUG] HDS12 - Received disease notification (Measles): 42
+[2018-02-05T23:07:34.568] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 39
+[2018-02-05T23:07:34.610] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":42,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.610] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":42,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.610] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":39,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.616] [DEBUG] HDS12 - Received disease notification (Influenza): 43
+[2018-02-05T23:07:34.668] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 40
+[2018-02-05T23:07:34.717] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 41
+[2018-02-05T23:07:34.769] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 42
+[2018-02-05T23:07:34.810] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":43,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.810] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":42,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.810] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":42,"vectorTimestamp":[]}
+[2018-02-05T23:07:34.817] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 43
+[2018-02-05T23:07:34.870] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 44
+[2018-02-05T23:07:34.918] [DEBUG] HDS12 - Received disease notification (Measles): 43
+[2018-02-05T23:07:34.970] [DEBUG] HDS12 - Received disease notification (Influenza): 44
+[2018-02-05T23:07:35.011] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":44,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.011] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":43,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.011] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":44,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.018] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 45
+[2018-02-05T23:07:35.070] [DEBUG] HDS12 - Received disease notification (Influenza): 45
+[2018-02-05T23:07:35.119] [DEBUG] HDS12 - Received disease notification (Influenza): 46
+[2018-02-05T23:07:35.170] [DEBUG] HDS12 - Received disease notification (Influenza): 47
+[2018-02-05T23:07:35.211] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":47,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.211] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":43,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.211] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":45,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.220] [DEBUG] HDS12 - Received disease notification (Measles): 44
+[2018-02-05T23:07:35.271] [DEBUG] HDS12 - Received disease notification (Measles): 45
+[2018-02-05T23:07:35.320] [DEBUG] HDS12 - Received disease notification (Measles): 46
+[2018-02-05T23:07:35.371] [DEBUG] HDS12 - Received disease notification (Influenza): 48
+[2018-02-05T23:07:35.411] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":48,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.411] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":46,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.411] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":45,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.420] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 46
+[2018-02-05T23:07:35.472] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 47
+[2018-02-05T23:07:35.520] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 48
+[2018-02-05T23:07:35.572] [DEBUG] HDS12 - Received disease notification (Measles): 47
+[2018-02-05T23:07:35.612] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":48,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.612] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":47,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.612] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":48,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.622] [DEBUG] HDS12 - Received disease notification (Measles): 48
+[2018-02-05T23:07:35.673] [DEBUG] HDS12 - Received disease notification (Influenza): 49
+[2018-02-05T23:07:35.722] [DEBUG] HDS12 - Received disease notification (Influenza): 50
+[2018-02-05T23:07:35.773] [DEBUG] HDS12 - Received disease notification (Influenza): 51
+[2018-02-05T23:07:35.812] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":51,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.812] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":48,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.812] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":48,"vectorTimestamp":[]}
+[2018-02-05T23:07:35.822] [DEBUG] HDS12 - Received disease notification (Influenza): 52
+[2018-02-05T23:07:35.873] [DEBUG] HDS12 - Received disease notification (Influenza): 53
+[2018-02-05T23:07:35.922] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 49
+[2018-02-05T23:07:35.974] [DEBUG] HDS12 - Received disease notification (Measles): 49
+[2018-02-05T23:07:36.013] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":53,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.013] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":49,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.013] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":49,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.026] [DEBUG] HDS12 - Received disease notification (Influenza): 54
+[2018-02-05T23:07:36.074] [DEBUG] HDS12 - Received disease notification (Measles): 50
+[2018-02-05T23:07:36.123] [DEBUG] HDS12 - Received disease notification (Influenza): 55
+[2018-02-05T23:07:36.174] [DEBUG] HDS12 - Received disease notification (Measles): 51
+[2018-02-05T23:07:36.213] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":55,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.213] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":51,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.213] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":49,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.223] [DEBUG] HDS12 - Received disease notification (Measles): 52
+[2018-02-05T23:07:36.274] [DEBUG] HDS12 - Received disease notification (Influenza): 56
+[2018-02-05T23:07:36.323] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 50
+[2018-02-05T23:07:36.375] [DEBUG] HDS12 - Received disease notification (Influenza): 57
+[2018-02-05T23:07:36.414] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":57,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.414] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":52,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.414] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":50,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.424] [DEBUG] HDS12 - Received disease notification (Influenza): 58
+[2018-02-05T23:07:36.475] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 51
+[2018-02-05T23:07:36.524] [DEBUG] HDS12 - Received disease notification (Measles): 53
+[2018-02-05T23:07:36.575] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 52
+[2018-02-05T23:07:36.614] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":58,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.614] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":53,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.614] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":52,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.624] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 53
+[2018-02-05T23:07:36.674] [DEBUG] HDS12 - Received disease notification (Influenza): 59
+[2018-02-05T23:07:36.725] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 54
+[2018-02-05T23:07:36.775] [DEBUG] HDS12 - Received disease notification (Influenza): 60
+[2018-02-05T23:07:36.815] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":60,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.815] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":53,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.815] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":54,"vectorTimestamp":[]}
+[2018-02-05T23:07:36.825] [DEBUG] HDS12 - Received disease notification (Measles): 54
+[2018-02-05T23:07:36.875] [DEBUG] HDS12 - Received disease notification (Measles): 55
+[2018-02-05T23:07:36.925] [DEBUG] HDS12 - Received disease notification (Influenza): 61
+[2018-02-05T23:07:36.975] [DEBUG] HDS12 - Received disease notification (Influenza): 62
+[2018-02-05T23:07:37.015] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":62,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.015] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":55,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.015] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":54,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.025] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 55
+[2018-02-05T23:07:37.075] [DEBUG] HDS12 - Received disease notification (Influenza): 63
+[2018-02-05T23:07:37.126] [DEBUG] HDS12 - Received disease notification (Measles): 56
+[2018-02-05T23:07:37.176] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 56
+[2018-02-05T23:07:37.216] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":63,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.216] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":56,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.216] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":56,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.226] [DEBUG] HDS12 - Received disease notification (Measles): 57
+[2018-02-05T23:07:37.276] [DEBUG] HDS12 - Received disease notification (Influenza): 64
+[2018-02-05T23:07:37.326] [DEBUG] HDS12 - Received disease notification (Measles): 58
+[2018-02-05T23:07:37.376] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 57
+[2018-02-05T23:07:37.415] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":64,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.415] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":58,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.415] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":57,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.425] [DEBUG] HDS12 - Received disease notification (Measles): 59
+[2018-02-05T23:07:37.477] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 58
+[2018-02-05T23:07:37.526] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 59
+[2018-02-05T23:07:37.577] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 60
+[2018-02-05T23:07:37.619] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":64,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.619] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":59,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.619] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":60,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.626] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 61
+[2018-02-05T23:07:37.677] [DEBUG] HDS12 - Received disease notification (Influenza): 65
+[2018-02-05T23:07:37.727] [DEBUG] HDS12 - Received disease notification (Influenza): 66
+[2018-02-05T23:07:37.778] [DEBUG] HDS12 - Received disease notification (Measles): 60
+[2018-02-05T23:07:37.819] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":66,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.819] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":60,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.819] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":61,"vectorTimestamp":[]}
+[2018-02-05T23:07:37.826] [DEBUG] HDS12 - Received disease notification (Measles): 61
+[2018-02-05T23:07:37.879] [DEBUG] HDS12 - Received disease notification (Influenza): 67
+[2018-02-05T23:07:37.927] [DEBUG] HDS12 - Received disease notification (Influenza): 68
+[2018-02-05T23:07:37.979] [DEBUG] HDS12 - Received disease notification (Measles): 62
+[2018-02-05T23:07:38.020] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":68,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.020] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":62,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.020] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":61,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.027] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 62
+[2018-02-05T23:07:38.079] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 63
+[2018-02-05T23:07:38.127] [DEBUG] HDS12 - Received disease notification (Influenza): 69
+[2018-02-05T23:07:38.179] [DEBUG] HDS12 - Received disease notification (Measles): 63
+[2018-02-05T23:07:38.220] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":69,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.220] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":63,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.220] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":63,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.228] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 64
+[2018-02-05T23:07:38.280] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 65
+[2018-02-05T23:07:38.328] [DEBUG] HDS12 - Received disease notification (Measles): 64
+[2018-02-05T23:07:38.380] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 66
+[2018-02-05T23:07:38.420] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":69,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.420] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":64,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.420] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":66,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.428] [DEBUG] HDS12 - Received disease notification (Influenza): 70
+[2018-02-05T23:07:38.480] [DEBUG] HDS12 - Received disease notification (Influenza): 71
+[2018-02-05T23:07:38.528] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 67
+[2018-02-05T23:07:38.580] [DEBUG] HDS12 - Received disease notification (Measles): 65
+[2018-02-05T23:07:38.621] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":71,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.621] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":65,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.621] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":67,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.629] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 68
+[2018-02-05T23:07:38.681] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 69
+[2018-02-05T23:07:38.729] [DEBUG] HDS12 - Received disease notification (Influenza): 72
+[2018-02-05T23:07:38.781] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 70
+[2018-02-05T23:07:38.821] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":72,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.821] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":65,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.821] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":70,"vectorTimestamp":[]}
+[2018-02-05T23:07:38.829] [DEBUG] HDS12 - Received disease notification (Influenza): 73
+[2018-02-05T23:07:38.881] [DEBUG] HDS12 - Received disease notification (Measles): 66
+[2018-02-05T23:07:38.929] [DEBUG] HDS12 - Received disease notification (Measles): 67
+[2018-02-05T23:07:38.982] [DEBUG] HDS12 - Received disease notification (Influenza): 74
+[2018-02-05T23:07:39.022] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":74,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.022] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":67,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.022] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":70,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.030] [DEBUG] HDS12 - Received disease notification (Measles): 68
+[2018-02-05T23:07:39.082] [DEBUG] HDS12 - Received disease notification (Influenza): 75
+[2018-02-05T23:07:39.130] [DEBUG] HDS12 - Received disease notification (Influenza): 76
+[2018-02-05T23:07:39.182] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 71
+[2018-02-05T23:07:39.222] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":76,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.222] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":68,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.222] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":71,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.230] [DEBUG] HDS12 - Received disease notification (Influenza): 77
+[2018-02-05T23:07:39.283] [DEBUG] HDS12 - Received disease notification (Measles): 69
+[2018-02-05T23:07:39.330] [DEBUG] HDS12 - Received disease notification (Influenza): 78
+[2018-02-05T23:07:39.384] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 72
+[2018-02-05T23:07:39.423] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":78,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.423] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":69,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.423] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":72,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.431] [DEBUG] HDS12 - Received disease notification (Measles): 70
+[2018-02-05T23:07:39.484] [DEBUG] HDS12 - Received disease notification (Influenza): 79
+[2018-02-05T23:07:39.531] [DEBUG] HDS12 - Received disease notification (Measles): 71
+[2018-02-05T23:07:39.584] [DEBUG] HDS12 - Received disease notification (Measles): 72
+[2018-02-05T23:07:39.623] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":79,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.623] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":72,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.623] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":72,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.631] [DEBUG] HDS12 - Received disease notification (Measles): 73
+[2018-02-05T23:07:39.684] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 73
+[2018-02-05T23:07:39.732] [DEBUG] HDS12 - Received disease notification (Influenza): 80
+[2018-02-05T23:07:39.785] [DEBUG] HDS12 - Received disease notification (Influenza): 81
+[2018-02-05T23:07:39.824] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":81,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.824] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":73,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.825] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":73,"vectorTimestamp":[]}
+[2018-02-05T23:07:39.832] [DEBUG] HDS12 - Received disease notification (Measles): 74
+[2018-02-05T23:07:39.885] [DEBUG] HDS12 - Received disease notification (Measles): 75
+[2018-02-05T23:07:39.932] [DEBUG] HDS12 - Received disease notification (Measles): 76
+[2018-02-05T23:07:39.985] [DEBUG] HDS12 - Received disease notification (Measles): 77
+[2018-02-05T23:07:40.026] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":81,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.026] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":77,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.026] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":73,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.032] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 74
+[2018-02-05T23:07:40.085] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 75
+[2018-02-05T23:07:40.133] [DEBUG] HDS12 - Received disease notification (Influenza): 82
+[2018-02-05T23:07:40.186] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 76
+[2018-02-05T23:07:40.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":82,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":77,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":76,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.233] [DEBUG] HDS12 - Received disease notification (Influenza): 83
+[2018-02-05T23:07:40.286] [DEBUG] HDS12 - Received disease notification (Influenza): 84
+[2018-02-05T23:07:40.333] [DEBUG] HDS12 - Received disease notification (Measles): 78
+[2018-02-05T23:07:40.388] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 77
+[2018-02-05T23:07:40.426] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":84,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.426] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":78,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.426] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":77,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.433] [DEBUG] HDS12 - Received disease notification (Measles): 79
+[2018-02-05T23:07:40.489] [DEBUG] HDS12 - Received disease notification (Influenza): 85
+[2018-02-05T23:07:40.534] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 78
+[2018-02-05T23:07:40.589] [DEBUG] HDS12 - Received disease notification (Influenza): 86
+[2018-02-05T23:07:40.627] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":86,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.627] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":79,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.627] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":78,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.634] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 79
+[2018-02-05T23:07:40.689] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 80
+[2018-02-05T23:07:40.734] [DEBUG] HDS12 - Received disease notification (Influenza): 87
+[2018-02-05T23:07:40.789] [DEBUG] HDS12 - Received disease notification (Measles): 80
+[2018-02-05T23:07:40.826] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":87,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.826] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":80,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.826] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":80,"vectorTimestamp":[]}
+[2018-02-05T23:07:40.834] [DEBUG] HDS12 - Received disease notification (Influenza): 88
+[2018-02-05T23:07:40.890] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 81
+[2018-02-05T23:07:40.935] [DEBUG] HDS12 - Received disease notification (Influenza): 89
+[2018-02-05T23:07:40.991] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 82
+[2018-02-05T23:07:41.027] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":89,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.027] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":80,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.027] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":82,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.036] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 83
+[2018-02-05T23:07:41.091] [DEBUG] HDS12 - Received disease notification (Influenza): 90
+[2018-02-05T23:07:41.138] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 84
+[2018-02-05T23:07:41.191] [DEBUG] HDS12 - Received disease notification (Influenza): 91
+[2018-02-05T23:07:41.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":91,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":80,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.227] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":84,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.239] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 85
+[2018-02-05T23:07:41.292] [DEBUG] HDS12 - Received disease notification (Measles): 81
+[2018-02-05T23:07:41.339] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 86
+[2018-02-05T23:07:41.392] [DEBUG] HDS12 - Received disease notification (Measles): 82
+[2018-02-05T23:07:41.427] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":91,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.427] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":82,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.427] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":86,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.439] [DEBUG] HDS12 - Received disease notification (Measles): 83
+[2018-02-05T23:07:41.497] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 87
+[2018-02-05T23:07:41.544] [DEBUG] HDS12 - Received disease notification (Measles): 84
+[2018-02-05T23:07:41.601] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 88
+[2018-02-05T23:07:41.628] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":91,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.628] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":84,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.628] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":88,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.646] [DEBUG] HDS12 - Received disease notification (Influenza): 92
+[2018-02-05T23:07:41.701] [DEBUG] HDS12 - Received disease notification (Influenza): 93
+[2018-02-05T23:07:41.747] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 89
+[2018-02-05T23:07:41.802] [DEBUG] HDS12 - Received disease notification (Measles): 85
+[2018-02-05T23:07:41.828] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":93,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.828] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":85,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.828] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":89,"vectorTimestamp":[]}
+[2018-02-05T23:07:41.848] [DEBUG] HDS12 - Received disease notification (Influenza): 94
+[2018-02-05T23:07:41.902] [DEBUG] HDS12 - Received disease notification (Measles): 86
+[2018-02-05T23:07:41.948] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 90
+[2018-02-05T23:07:42.003] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 91
+[2018-02-05T23:07:42.029] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":94,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.029] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":86,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.029] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":91,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.049] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 92
+[2018-02-05T23:07:42.103] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 93
+[2018-02-05T23:07:42.149] [DEBUG] HDS12 - Received disease notification (Measles): 87
+[2018-02-05T23:07:42.203] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 94
+[2018-02-05T23:07:42.229] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":94,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.229] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":87,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.229] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":94,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.249] [DEBUG] HDS12 - Received disease notification (Measles): 88
+[2018-02-05T23:07:42.303] [DEBUG] HDS12 - Received disease notification (Influenza): 95
+[2018-02-05T23:07:42.349] [DEBUG] HDS12 - Received disease notification (Measles): 89
+[2018-02-05T23:07:42.404] [DEBUG] HDS12 - Received disease notification (Measles): 90
+[2018-02-05T23:07:42.430] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":95,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.430] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":90,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.430] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":94,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.450] [DEBUG] HDS12 - Received disease notification (Influenza): 96
+[2018-02-05T23:07:42.504] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 95
+[2018-02-05T23:07:42.550] [DEBUG] HDS12 - Received disease notification (Measles): 91
+[2018-02-05T23:07:42.604] [DEBUG] HDS12 - Received disease notification (Measles): 92
+[2018-02-05T23:07:42.630] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":96,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.630] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":92,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.630] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":95,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.650] [DEBUG] HDS12 - Received disease notification (Measles): 93
+[2018-02-05T23:07:42.704] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 96
+[2018-02-05T23:07:42.751] [DEBUG] HDS12 - Received disease notification (Measles): 94
+[2018-02-05T23:07:42.805] [DEBUG] HDS12 - Received disease notification (Influenza): 97
+[2018-02-05T23:07:42.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":97,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":94,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":96,"vectorTimestamp":[]}
+[2018-02-05T23:07:42.851] [DEBUG] HDS12 - Received disease notification (Influenza): 98
+[2018-02-05T23:07:42.905] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 97
+[2018-02-05T23:07:42.951] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 98
+[2018-02-05T23:07:43.005] [DEBUG] HDS12 - Received disease notification (Measles): 95
+[2018-02-05T23:07:43.031] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":98,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.031] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":95,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.031] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":98,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.051] [DEBUG] HDS12 - Received disease notification (Measles): 96
+[2018-02-05T23:07:43.106] [DEBUG] HDS12 - Received disease notification (Measles): 97
+[2018-02-05T23:07:43.152] [DEBUG] HDS12 - Received disease notification (Measles): 98
+[2018-02-05T23:07:43.206] [DEBUG] HDS12 - Received disease notification (Influenza): 99
+[2018-02-05T23:07:43.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":99,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":98,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":98,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.252] [DEBUG] HDS12 - Received disease notification (Influenza): 100
+[2018-02-05T23:07:43.306] [DEBUG] HDS12 - Received disease notification (Influenza): 101
+[2018-02-05T23:07:43.352] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 99
+[2018-02-05T23:07:43.406] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 100
+[2018-02-05T23:07:43.431] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":101,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.431] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":98,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.431] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":100,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.451] [DEBUG] HDS12 - Received disease notification (Influenza): 102
+[2018-02-05T23:07:43.507] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 101
+[2018-02-05T23:07:43.552] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 102
+[2018-02-05T23:07:43.607] [DEBUG] HDS12 - Received disease notification (Measles): 99
+[2018-02-05T23:07:43.632] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":102,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.632] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":99,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.632] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":102,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.652] [DEBUG] HDS12 - Received disease notification (Influenza): 103
+[2018-02-05T23:07:43.707] [DEBUG] HDS12 - Received disease notification (Influenza): 104
+[2018-02-05T23:07:43.752] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 103
+[2018-02-05T23:07:43.807] [DEBUG] HDS12 - Received disease notification (Influenza): 105
+[2018-02-05T23:07:43.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":105,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":99,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.831] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":103,"vectorTimestamp":[]}
+[2018-02-05T23:07:43.852] [DEBUG] HDS12 - Received disease notification (Influenza): 106
+[2018-02-05T23:07:43.908] [DEBUG] HDS12 - Received disease notification (Influenza): 107
+[2018-02-05T23:07:43.953] [DEBUG] HDS12 - Received disease notification (Influenza): 108
+[2018-02-05T23:07:44.008] [DEBUG] HDS12 - Received disease notification (Influenza): 109
+[2018-02-05T23:07:44.032] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":109,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.032] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":99,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.032] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":103,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.053] [DEBUG] HDS12 - Received disease notification (Measles): 100
+[2018-02-05T23:07:44.108] [DEBUG] HDS12 - Received disease notification (Measles): 101
+[2018-02-05T23:07:44.153] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 104
+[2018-02-05T23:07:44.208] [DEBUG] HDS12 - Received disease notification (Influenza): 110
+[2018-02-05T23:07:44.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":110,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":101,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.232] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":104,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.254] [DEBUG] HDS12 - Received disease notification (Influenza): 111
+[2018-02-05T23:07:44.309] [DEBUG] HDS12 - Received disease notification (Measles): 102
+[2018-02-05T23:07:44.354] [DEBUG] HDS12 - Received disease notification (Influenza): 112
+[2018-02-05T23:07:44.409] [DEBUG] HDS12 - Received disease notification (Measles): 103
+[2018-02-05T23:07:44.432] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":112,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.432] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":103,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.432] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":104,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.454] [DEBUG] HDS12 - Received disease notification (Measles): 104
+[2018-02-05T23:07:44.509] [DEBUG] HDS12 - Received disease notification (Influenza): 113
+[2018-02-05T23:07:44.554] [DEBUG] HDS12 - Received disease notification (Measles): 105
+[2018-02-05T23:07:44.610] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 105
+[2018-02-05T23:07:44.633] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":113,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.633] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":105,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.633] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":105,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.655] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 106
+[2018-02-05T23:07:44.710] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 107
+[2018-02-05T23:07:44.755] [DEBUG] HDS12 - Received disease notification (Influenza): 114
+[2018-02-05T23:07:44.810] [DEBUG] HDS12 - Received disease notification (Influenza): 115
+[2018-02-05T23:07:44.833] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":115,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.833] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":105,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.833] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":107,"vectorTimestamp":[]}
+[2018-02-05T23:07:44.855] [DEBUG] HDS12 - Received disease notification (Influenza): 116
+[2018-02-05T23:07:44.910] [DEBUG] HDS12 - Received disease notification (Influenza): 117
+[2018-02-05T23:07:44.955] [DEBUG] HDS12 - Received disease notification (Measles): 106
+[2018-02-05T23:07:45.011] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 108
+[2018-02-05T23:07:45.034] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":117,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.034] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":106,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.034] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":108,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.056] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 109
+[2018-02-05T23:07:45.111] [DEBUG] HDS12 - Received disease notification (Influenza): 118
+[2018-02-05T23:07:45.156] [DEBUG] HDS12 - Received disease notification (Measles): 107
+[2018-02-05T23:07:45.211] [DEBUG] HDS12 - Received disease notification (Measles): 108
+[2018-02-05T23:07:45.234] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":118,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.234] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":108,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.234] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":109,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.256] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 110
+[2018-02-05T23:07:45.311] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 111
+[2018-02-05T23:07:45.356] [DEBUG] HDS12 - Received disease notification (Influenza): 119
+[2018-02-05T23:07:45.412] [DEBUG] HDS12 - Received disease notification (Measles): 109
+[2018-02-05T23:07:45.435] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":119,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.435] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":109,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.435] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":111,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.457] [DEBUG] HDS12 - Received disease notification (Measles): 110
+[2018-02-05T23:07:45.512] [DEBUG] HDS12 - Received disease notification (Measles): 111
+[2018-02-05T23:07:45.557] [DEBUG] HDS12 - Received disease notification (Measles): 112
+[2018-02-05T23:07:45.612] [DEBUG] HDS12 - Received disease notification (Measles): 113
+[2018-02-05T23:07:45.635] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":119,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.635] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":113,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.635] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":111,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.658] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 112
+[2018-02-05T23:07:45.712] [DEBUG] HDS12 - Received disease notification (Influenza): 120
+[2018-02-05T23:07:45.759] [DEBUG] HDS12 - Received disease notification (Influenza): 121
+[2018-02-05T23:07:45.813] [DEBUG] HDS12 - Received disease notification (Influenza): 122
+[2018-02-05T23:07:45.836] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":122,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.836] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":113,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.836] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":112,"vectorTimestamp":[]}
+[2018-02-05T23:07:45.859] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 113
+[2018-02-05T23:07:45.913] [DEBUG] HDS12 - Received disease notification (Influenza): 123
+[2018-02-05T23:07:45.959] [DEBUG] HDS12 - Received disease notification (Influenza): 124
+[2018-02-05T23:07:46.013] [DEBUG] HDS12 - Received disease notification (Measles): 114
+[2018-02-05T23:07:46.036] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":124,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.036] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":114,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.036] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":113,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.059] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 114
+[2018-02-05T23:07:46.114] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 115
+[2018-02-05T23:07:46.160] [DEBUG] HDS12 - Received disease notification (Influenza): 125
+[2018-02-05T23:07:46.214] [DEBUG] HDS12 - Received disease notification (Influenza): 126
+[2018-02-05T23:07:46.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":126,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":114,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":115,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.260] [DEBUG] HDS12 - Received disease notification (Influenza): 127
+[2018-02-05T23:07:46.314] [DEBUG] HDS12 - Received disease notification (Influenza): 128
+[2018-02-05T23:07:46.360] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 116
+[2018-02-05T23:07:46.414] [DEBUG] HDS12 - Received disease notification (Measles): 115
+[2018-02-05T23:07:46.437] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":128,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.437] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":115,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.437] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":116,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.460] [DEBUG] HDS12 - Received disease notification (Measles): 116
+[2018-02-05T23:07:46.515] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 117
+[2018-02-05T23:07:46.561] [DEBUG] HDS12 - Received disease notification (Influenza): 129
+[2018-02-05T23:07:46.615] [DEBUG] HDS12 - Received disease notification (Influenza): 130
+[2018-02-05T23:07:46.638] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":130,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.638] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":116,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.638] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":117,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.661] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 118
+[2018-02-05T23:07:46.715] [DEBUG] HDS12 - Received disease notification (Measles): 117
+[2018-02-05T23:07:46.764] [DEBUG] HDS12 - Received disease notification (Measles): 118
+[2018-02-05T23:07:46.815] [DEBUG] HDS12 - Received disease notification (Measles): 119
+[2018-02-05T23:07:46.837] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":130,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.837] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":119,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.837] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":118,"vectorTimestamp":[]}
+[2018-02-05T23:07:46.861] [DEBUG] HDS12 - Received disease notification (Measles): 120
+[2018-02-05T23:07:46.916] [DEBUG] HDS12 - Received disease notification (Measles): 121
+[2018-02-05T23:07:46.962] [DEBUG] HDS12 - Received disease notification (Influenza): 131
+[2018-02-05T23:07:47.016] [DEBUG] HDS12 - Received disease notification (Influenza): 132
+[2018-02-05T23:07:47.038] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":132,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.038] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":121,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.038] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":118,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.062] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 119
+[2018-02-05T23:07:47.116] [DEBUG] HDS12 - Received disease notification (Measles): 122
+[2018-02-05T23:07:47.162] [DEBUG] HDS12 - Received disease notification (Measles): 123
+[2018-02-05T23:07:47.216] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 120
+[2018-02-05T23:07:47.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":132,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":123,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.237] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":120,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.263] [DEBUG] HDS12 - Received disease notification (Measles): 124
+[2018-02-05T23:07:47.317] [DEBUG] HDS12 - Received disease notification (Influenza): 133
+[2018-02-05T23:07:47.363] [DEBUG] HDS12 - Received disease notification (Influenza): 134
+[2018-02-05T23:07:47.417] [DEBUG] HDS12 - Received disease notification (Measles): 125
+[2018-02-05T23:07:47.438] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":134,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.438] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":125,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.438] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":120,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.463] [DEBUG] HDS12 - Received disease notification (Measles): 126
+[2018-02-05T23:07:47.517] [DEBUG] HDS12 - Received disease notification (Measles): 127
+[2018-02-05T23:07:47.563] [DEBUG] HDS12 - Received disease notification (Influenza): 135
+[2018-02-05T23:07:47.618] [DEBUG] HDS12 - Received disease notification (Influenza): 136
+[2018-02-05T23:07:47.639] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":136,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.639] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":127,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.639] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":120,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.664] [DEBUG] HDS12 - Received disease notification (Influenza): 137
+[2018-02-05T23:07:47.718] [DEBUG] HDS12 - Received disease notification (Measles): 128
+[2018-02-05T23:07:47.764] [DEBUG] HDS12 - Received disease notification (Influenza): 138
+[2018-02-05T23:07:47.818] [DEBUG] HDS12 - Received disease notification (Influenza): 139
+[2018-02-05T23:07:47.839] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":139,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.839] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":128,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.839] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":120,"vectorTimestamp":[]}
+[2018-02-05T23:07:47.864] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 121
+[2018-02-05T23:07:47.918] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 122
+[2018-02-05T23:07:47.963] [DEBUG] HDS12 - Received disease notification (Influenza): 140
+[2018-02-05T23:07:48.019] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 123
+[2018-02-05T23:07:48.040] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":140,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.040] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":128,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.040] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":123,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.064] [DEBUG] HDS12 - Received disease notification (Measles): 129
+[2018-02-05T23:07:48.119] [DEBUG] HDS12 - Received disease notification (Influenza): 141
+[2018-02-05T23:07:48.164] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 124
+[2018-02-05T23:07:48.219] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 125
+[2018-02-05T23:07:48.240] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":141,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.240] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":129,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.240] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":125,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.264] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 126
+[2018-02-05T23:07:48.319] [DEBUG] HDS12 - Received disease notification (Influenza): 142
+[2018-02-05T23:07:48.364] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 127
+[2018-02-05T23:07:48.420] [DEBUG] HDS12 - Received disease notification (Measles): 130
+[2018-02-05T23:07:48.441] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":142,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.441] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":130,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.441] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":127,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.465] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 128
+[2018-02-05T23:07:48.520] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 129
+[2018-02-05T23:07:48.565] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 130
+[2018-02-05T23:07:48.621] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 131
+[2018-02-05T23:07:48.641] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":142,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.641] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":130,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.641] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":131,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.665] [DEBUG] HDS12 - Received disease notification (Measles): 131
+[2018-02-05T23:07:48.721] [DEBUG] HDS12 - Received disease notification (Measles): 132
+[2018-02-05T23:07:48.766] [DEBUG] HDS12 - Received disease notification (Measles): 133
+[2018-02-05T23:07:48.822] [DEBUG] HDS12 - Received disease notification (Measles): 134
+[2018-02-05T23:07:48.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":142,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":134,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":131,"vectorTimestamp":[]}
+[2018-02-05T23:07:48.866] [DEBUG] HDS12 - Received disease notification (Influenza): 143
+[2018-02-05T23:07:48.922] [DEBUG] HDS12 - Received disease notification (Influenza): 144
+[2018-02-05T23:07:48.966] [DEBUG] HDS12 - Received disease notification (Measles): 135
+[2018-02-05T23:07:49.022] [DEBUG] HDS12 - Received disease notification (Influenza): 145
+[2018-02-05T23:07:49.042] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":145,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.042] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":135,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.042] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":131,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.066] [DEBUG] HDS12 - Received disease notification (Measles): 136
+[2018-02-05T23:07:49.123] [DEBUG] HDS12 - Received disease notification (Measles): 137
+[2018-02-05T23:07:49.167] [DEBUG] HDS12 - Received disease notification (Measles): 138
+[2018-02-05T23:07:49.223] [DEBUG] HDS12 - Received disease notification (Measles): 139
+[2018-02-05T23:07:49.243] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":145,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.243] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":139,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.243] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":131,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.267] [DEBUG] HDS12 - Received disease notification (Influenza): 146
+[2018-02-05T23:07:49.323] [DEBUG] HDS12 - Received disease notification (Influenza): 147
+[2018-02-05T23:07:49.367] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 132
+[2018-02-05T23:07:49.423] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 133
+[2018-02-05T23:07:49.442] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":147,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.442] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":139,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.442] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":133,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.467] [DEBUG] HDS12 - Received disease notification (Influenza): 148
+[2018-02-05T23:07:49.524] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 134
+[2018-02-05T23:07:49.568] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 135
+[2018-02-05T23:07:49.624] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 136
+[2018-02-05T23:07:49.643] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":148,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.643] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":139,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.643] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":136,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.668] [DEBUG] HDS12 - Received disease notification (Measles): 140
+[2018-02-05T23:07:49.724] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 137
+[2018-02-05T23:07:49.768] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 138
+[2018-02-05T23:07:49.824] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 139
+[2018-02-05T23:07:49.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":148,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":140,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.842] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":139,"vectorTimestamp":[]}
+[2018-02-05T23:07:49.868] [DEBUG] HDS12 - Received disease notification (Measles): 141
+[2018-02-05T23:07:49.925] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 140
+[2018-02-05T23:07:49.969] [DEBUG] HDS12 - Received disease notification (Influenza): 149
+[2018-02-05T23:07:50.025] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 141
+[2018-02-05T23:07:50.043] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":149,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.043] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":141,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.043] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":141,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.069] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 142
+[2018-02-05T23:07:50.125] [DEBUG] HDS12 - Received disease notification (Influenza): 150
+[2018-02-05T23:07:50.169] [DEBUG] HDS12 - Received disease notification (Influenza): 151
+[2018-02-05T23:07:50.225] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 143
+[2018-02-05T23:07:50.242] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":151,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.242] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":141,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.242] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":143,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.270] [DEBUG] HDS12 - Received disease notification (Measles): 142
+[2018-02-05T23:07:50.326] [DEBUG] HDS12 - Received disease notification (Measles): 143
+[2018-02-05T23:07:50.370] [DEBUG] HDS12 - Received disease notification (Measles): 144
+[2018-02-05T23:07:50.426] [DEBUG] HDS12 - Received disease notification (Influenza): 152
+[2018-02-05T23:07:50.443] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":152,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.443] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":144,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.443] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":143,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.470] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 144
+[2018-02-05T23:07:50.526] [DEBUG] HDS12 - Received disease notification (Measles): 145
+[2018-02-05T23:07:50.570] [DEBUG] HDS12 - Received disease notification (Influenza): 153
+[2018-02-05T23:07:50.627] [DEBUG] HDS12 - Received disease notification (Influenza): 154
+[2018-02-05T23:07:50.644] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":154,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.644] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":145,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.644] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":144,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.671] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 145
+[2018-02-05T23:07:50.727] [DEBUG] HDS12 - Received disease notification (Measles): 146
+[2018-02-05T23:07:50.771] [DEBUG] HDS12 - Received disease notification (Influenza): 155
+[2018-02-05T23:07:50.827] [DEBUG] HDS12 - Received disease notification (Influenza): 156
+[2018-02-05T23:07:50.844] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.844] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":146,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.844] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":145,"vectorTimestamp":[]}
+[2018-02-05T23:07:50.871] [DEBUG] HDS12 - Received disease notification (Influenza): 157
+[2018-02-05T23:07:50.927] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 146
+[2018-02-05T23:07:50.971] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 147
+[2018-02-05T23:07:51.028] [DEBUG] HDS12 - Received disease notification (Measles): 147
+[2018-02-05T23:07:51.045] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":157,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.045] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":147,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.045] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":147,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.072] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 148
+[2018-02-05T23:07:51.128] [DEBUG] HDS12 - Received disease notification (Measles): 148
+[2018-02-05T23:07:51.172] [DEBUG] HDS12 - Received disease notification (Measles): 149
+[2018-02-05T23:07:51.228] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 149
+[2018-02-05T23:07:51.245] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":157,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.245] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":149,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.245] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":149,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.272] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 150
+[2018-02-05T23:07:51.328] [DEBUG] HDS12 - Received disease notification (Measles): 150
+[2018-02-05T23:07:51.372] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 151
+[2018-02-05T23:07:51.429] [DEBUG] HDS12 - Received disease notification (Influenza): 158
+[2018-02-05T23:07:51.446] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":158,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.446] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":150,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.446] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":151,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.473] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 152
+[2018-02-05T23:07:51.529] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 153
+[2018-02-05T23:07:51.573] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 154
+[2018-02-05T23:07:51.629] [DEBUG] HDS12 - Received disease notification (Measles): 151
+[2018-02-05T23:07:51.646] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":158,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.646] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":151,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.646] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":154,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.673] [DEBUG] HDS12 - Received disease notification (Measles): 152
+[2018-02-05T23:07:51.729] [DEBUG] HDS12 - Received disease notification (Influenza): 159
+[2018-02-05T23:07:51.777] [DEBUG] HDS12 - Received disease notification (Influenza): 160
+[2018-02-05T23:07:51.830] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 155
+[2018-02-05T23:07:51.847] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":160,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.847] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":152,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.847] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":155,"vectorTimestamp":[]}
+[2018-02-05T23:07:51.875] [DEBUG] HDS12 - Received disease notification (Influenza): 161
+[2018-02-05T23:07:51.930] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 156
+[2018-02-05T23:07:51.974] [DEBUG] HDS12 - Received disease notification (Influenza): 162
+[2018-02-05T23:07:52.030] [DEBUG] HDS12 - Received disease notification (Measles): 153
+[2018-02-05T23:07:52.047] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":162,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.047] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":153,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.047] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.074] [DEBUG] HDS12 - Received disease notification (Measles): 154
+[2018-02-05T23:07:52.131] [DEBUG] HDS12 - Received disease notification (Measles): 155
+[2018-02-05T23:07:52.175] [DEBUG] HDS12 - Received disease notification (Influenza): 163
+[2018-02-05T23:07:52.231] [DEBUG] HDS12 - Received disease notification (Measles): 156
+[2018-02-05T23:07:52.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":163,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.275] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 157
+[2018-02-05T23:07:52.331] [DEBUG] HDS12 - Received disease notification (Influenza): 164
+[2018-02-05T23:07:52.375] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 158
+[2018-02-05T23:07:52.431] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 159
+[2018-02-05T23:07:52.448] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":164,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.448] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.448] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":159,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.474] [DEBUG] HDS12 - Received disease notification (Influenza): 165
+[2018-02-05T23:07:52.532] [DEBUG] HDS12 - Received disease notification (Influenza): 166
+[2018-02-05T23:07:52.575] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 160
+[2018-02-05T23:07:52.632] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 161
+[2018-02-05T23:07:52.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":166,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":161,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.675] [DEBUG] HDS12 - Received disease notification (Influenza): 167
+[2018-02-05T23:07:52.732] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 162
+[2018-02-05T23:07:52.775] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 163
+[2018-02-05T23:07:52.832] [DEBUG] HDS12 - Received disease notification (Influenza): 168
+[2018-02-05T23:07:52.848] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":168,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.848] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.848] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":163,"vectorTimestamp":[]}
+[2018-02-05T23:07:52.875] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 164
+[2018-02-05T23:07:52.933] [DEBUG] HDS12 - Received disease notification (Influenza): 169
+[2018-02-05T23:07:52.976] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 165
+[2018-02-05T23:07:53.033] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 166
+[2018-02-05T23:07:53.049] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":169,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.049] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":156,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.049] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":166,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.076] [DEBUG] HDS12 - Received disease notification (Measles): 157
+[2018-02-05T23:07:53.133] [DEBUG] HDS12 - Received disease notification (Influenza): 170
+[2018-02-05T23:07:53.176] [DEBUG] HDS12 - Received disease notification (Measles): 158
+[2018-02-05T23:07:53.233] [DEBUG] HDS12 - Received disease notification (Influenza): 171
+[2018-02-05T23:07:53.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":171,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":158,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.248] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":166,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.277] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 167
+[2018-02-05T23:07:53.334] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 168
+[2018-02-05T23:07:53.377] [DEBUG] HDS12 - Received disease notification (Influenza): 172
+[2018-02-05T23:07:53.434] [DEBUG] HDS12 - Received disease notification (Measles): 159
+[2018-02-05T23:07:53.449] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":172,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.449] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":159,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.449] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":168,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.477] [DEBUG] HDS12 - Received disease notification (Influenza): 173
+[2018-02-05T23:07:53.535] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 169
+[2018-02-05T23:07:53.577] [DEBUG] HDS12 - Received disease notification (Influenza): 174
+[2018-02-05T23:07:53.636] [DEBUG] HDS12 - Received disease notification (Influenza): 175
+[2018-02-05T23:07:53.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":175,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":159,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.649] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":169,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.678] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 170
+[2018-02-05T23:07:53.736] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 171
+[2018-02-05T23:07:53.778] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 172
+[2018-02-05T23:07:53.836] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 173
+[2018-02-05T23:07:53.849] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":175,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.849] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":159,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.849] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":173,"vectorTimestamp":[]}
+[2018-02-05T23:07:53.878] [DEBUG] HDS12 - Received disease notification (Measles): 160
+[2018-02-05T23:07:53.936] [DEBUG] HDS12 - Received disease notification (Influenza): 176
+[2018-02-05T23:07:53.978] [DEBUG] HDS12 - Received disease notification (Measles): 161
+[2018-02-05T23:07:54.037] [DEBUG] HDS12 - Received disease notification (Measles): 162
+[2018-02-05T23:07:54.050] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":176,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.050] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":162,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.050] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":173,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.079] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 174
+[2018-02-05T23:07:54.137] [DEBUG] HDS12 - Received disease notification (Influenza): 177
+[2018-02-05T23:07:54.179] [DEBUG] HDS12 - Received disease notification (Influenza): 178
+[2018-02-05T23:07:54.237] [DEBUG] HDS12 - Received disease notification (Influenza): 179
+[2018-02-05T23:07:54.250] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":179,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.250] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":162,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.250] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":174,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.279] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 175
+[2018-02-05T23:07:54.337] [DEBUG] HDS12 - Received disease notification (Measles): 163
+[2018-02-05T23:07:54.379] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 176
+[2018-02-05T23:07:54.438] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 177
+[2018-02-05T23:07:54.451] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":179,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.451] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":163,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.451] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":177,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.480] [DEBUG] HDS12 - Received disease notification (Influenza): 180
+[2018-02-05T23:07:54.538] [DEBUG] HDS12 - Received disease notification (Influenza): 181
+[2018-02-05T23:07:54.580] [DEBUG] HDS12 - Received disease notification (Influenza): 182
+[2018-02-05T23:07:54.642] [DEBUG] HDS12 - Received disease notification (Influenza): 183
+[2018-02-05T23:07:54.651] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":183,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.651] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":163,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.651] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":177,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.684] [DEBUG] HDS12 - Received disease notification (Measles): 164
+[2018-02-05T23:07:54.742] [DEBUG] HDS12 - Received disease notification (Influenza): 184
+[2018-02-05T23:07:54.785] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 178
+[2018-02-05T23:07:54.843] [DEBUG] HDS12 - Received disease notification (Influenza): 185
+[2018-02-05T23:07:54.853] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":185,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.853] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":164,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.853] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":178,"vectorTimestamp":[]}
+[2018-02-05T23:07:54.885] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 179
+[2018-02-05T23:07:54.943] [DEBUG] HDS12 - Received disease notification (Influenza): 186
+[2018-02-05T23:07:54.985] [DEBUG] HDS12 - Received disease notification (Measles): 165
+[2018-02-05T23:07:55.043] [DEBUG] HDS12 - Received disease notification (Measles): 166
+[2018-02-05T23:07:55.054] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":186,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.054] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":166,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.054] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":179,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.084] [DEBUG] HDS12 - Received disease notification (Measles): 167
+[2018-02-05T23:07:55.144] [DEBUG] HDS12 - Received disease notification (Influenza): 187
+[2018-02-05T23:07:55.185] [DEBUG] HDS12 - Received disease notification (Influenza): 188
+[2018-02-05T23:07:55.244] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 180
+[2018-02-05T23:07:55.255] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":188,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.255] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":167,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.255] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":180,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.285] [DEBUG] HDS12 - Received disease notification (Influenza): 189
+[2018-02-05T23:07:55.344] [DEBUG] HDS12 - Received disease notification (Influenza): 190
+[2018-02-05T23:07:55.385] [DEBUG] HDS12 - Received disease notification (Influenza): 191
+[2018-02-05T23:07:55.444] [DEBUG] HDS12 - Received disease notification (Measles): 168
+[2018-02-05T23:07:55.455] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.455] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":168,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.455] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":180,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.486] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 181
+[2018-02-05T23:07:55.545] [DEBUG] HDS12 - Received disease notification (Measles): 169
+[2018-02-05T23:07:55.587] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 182
+[2018-02-05T23:07:55.645] [DEBUG] HDS12 - Received disease notification (Measles): 170
+[2018-02-05T23:07:55.659] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.661] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":170,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.661] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":182,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.687] [DEBUG] HDS12 - Received disease notification (Measles): 171
+[2018-02-05T23:07:55.745] [DEBUG] HDS12 - Received disease notification (Influenza): 192
+[2018-02-05T23:07:55.787] [DEBUG] HDS12 - Received disease notification (Measles): 172
+[2018-02-05T23:07:55.845] [DEBUG] HDS12 - Received disease notification (Influenza): 193
+[2018-02-05T23:07:55.861] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":193,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.861] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":172,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.861] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":182,"vectorTimestamp":[]}
+[2018-02-05T23:07:55.887] [DEBUG] HDS12 - Received disease notification (Measles): 173
+[2018-02-05T23:07:55.946] [DEBUG] HDS12 - Received disease notification (Influenza): 194
+[2018-02-05T23:07:55.988] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 183
+[2018-02-05T23:07:56.046] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 184
+[2018-02-05T23:07:56.062] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":194,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.062] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":173,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.062] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":184,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.088] [DEBUG] HDS12 - Received disease notification (Influenza): 195
+[2018-02-05T23:07:56.146] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 185
+[2018-02-05T23:07:56.188] [DEBUG] HDS12 - Received disease notification (Influenza): 196
+[2018-02-05T23:07:56.246] [DEBUG] HDS12 - Received disease notification (Measles): 174
+[2018-02-05T23:07:56.261] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":196,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.261] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":174,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.261] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":185,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.289] [DEBUG] HDS12 - Received disease notification (Influenza): 197
+[2018-02-05T23:07:56.347] [DEBUG] HDS12 - Received disease notification (Influenza): 198
+[2018-02-05T23:07:56.389] [DEBUG] HDS12 - Received disease notification (Influenza): 199
+[2018-02-05T23:07:56.447] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 186
+[2018-02-05T23:07:56.462] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":199,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.462] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":174,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.462] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":186,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.489] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 187
+[2018-02-05T23:07:56.547] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 188
+[2018-02-05T23:07:56.589] [DEBUG] HDS12 - Received disease notification (Influenza): 200
+[2018-02-05T23:07:56.648] [DEBUG] HDS12 - Received disease notification (Measles): 175
+[2018-02-05T23:07:56.662] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":200,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.662] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":175,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.662] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":188,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.690] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 189
+[2018-02-05T23:07:56.748] [DEBUG] HDS12 - Received disease notification (Measles): 176
+[2018-02-05T23:07:56.790] [DEBUG] HDS12 - Received disease notification (Influenza): 201
+[2018-02-05T23:07:56.848] [DEBUG] HDS12 - Received disease notification (Influenza): 202
+[2018-02-05T23:07:56.862] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":202,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.862] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":176,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.862] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":189,"vectorTimestamp":[]}
+[2018-02-05T23:07:56.890] [DEBUG] HDS12 - Received disease notification (Influenza): 203
+[2018-02-05T23:07:56.948] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 190
+[2018-02-05T23:07:56.990] [DEBUG] HDS12 - Received disease notification (Measles): 177
+[2018-02-05T23:07:57.049] [DEBUG] HDS12 - Received disease notification (Influenza): 204
+[2018-02-05T23:07:57.063] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":204,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.063] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":177,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.063] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":190,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.091] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 191
+[2018-02-05T23:07:57.149] [DEBUG] HDS12 - Received disease notification (Influenza): 205
+[2018-02-05T23:07:57.191] [DEBUG] HDS12 - Received disease notification (Measles): 178
+[2018-02-05T23:07:57.249] [DEBUG] HDS12 - Received disease notification (Measles): 179
+[2018-02-05T23:07:57.263] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":205,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.263] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":179,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.263] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.291] [DEBUG] HDS12 - Received disease notification (Measles): 180
+[2018-02-05T23:07:57.349] [DEBUG] HDS12 - Received disease notification (Influenza): 206
+[2018-02-05T23:07:57.391] [DEBUG] HDS12 - Received disease notification (Influenza): 207
+[2018-02-05T23:07:57.450] [DEBUG] HDS12 - Received disease notification (Influenza): 208
+[2018-02-05T23:07:57.464] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":208,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.464] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":180,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.464] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.492] [DEBUG] HDS12 - Received disease notification (Measles): 181
+[2018-02-05T23:07:57.550] [DEBUG] HDS12 - Received disease notification (Measles): 182
+[2018-02-05T23:07:57.592] [DEBUG] HDS12 - Received disease notification (Influenza): 209
+[2018-02-05T23:07:57.650] [DEBUG] HDS12 - Received disease notification (Measles): 183
+[2018-02-05T23:07:57.664] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":209,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.664] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":183,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.664] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.692] [DEBUG] HDS12 - Received disease notification (Influenza): 210
+[2018-02-05T23:07:57.750] [DEBUG] HDS12 - Received disease notification (Measles): 184
+[2018-02-05T23:07:57.793] [DEBUG] HDS12 - Received disease notification (Measles): 185
+[2018-02-05T23:07:57.851] [DEBUG] HDS12 - Received disease notification (Measles): 186
+[2018-02-05T23:07:57.865] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":210,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.865] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":186,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.865] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:57.893] [DEBUG] HDS12 - Received disease notification (Influenza): 211
+[2018-02-05T23:07:57.951] [DEBUG] HDS12 - Received disease notification (Measles): 187
+[2018-02-05T23:07:57.993] [DEBUG] HDS12 - Received disease notification (Measles): 188
+[2018-02-05T23:07:58.051] [DEBUG] HDS12 - Received disease notification (Influenza): 212
+[2018-02-05T23:07:58.065] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":212,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.065] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":188,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.065] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.093] [DEBUG] HDS12 - Received disease notification (Measles): 189
+[2018-02-05T23:07:58.152] [DEBUG] HDS12 - Received disease notification (Influenza): 213
+[2018-02-05T23:07:58.194] [DEBUG] HDS12 - Received disease notification (Influenza): 214
+[2018-02-05T23:07:58.252] [DEBUG] HDS12 - Received disease notification (Influenza): 215
+[2018-02-05T23:07:58.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":215,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":189,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":191,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.294] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 192
+[2018-02-05T23:07:58.352] [DEBUG] HDS12 - Received disease notification (Influenza): 216
+[2018-02-05T23:07:58.394] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 193
+[2018-02-05T23:07:58.452] [DEBUG] HDS12 - Received disease notification (Measles): 190
+[2018-02-05T23:07:58.466] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":216,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.466] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":190,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.466] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":193,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.494] [DEBUG] HDS12 - Received disease notification (Measles): 191
+[2018-02-05T23:07:58.553] [DEBUG] HDS12 - Received disease notification (Influenza): 217
+[2018-02-05T23:07:58.595] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 194
+[2018-02-05T23:07:58.653] [DEBUG] HDS12 - Received disease notification (Measles): 192
+[2018-02-05T23:07:58.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":217,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":192,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":194,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.695] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 195
+[2018-02-05T23:07:58.753] [DEBUG] HDS12 - Received disease notification (Influenza): 218
+[2018-02-05T23:07:58.795] [DEBUG] HDS12 - Received disease notification (Influenza): 219
+[2018-02-05T23:07:58.853] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 196
+[2018-02-05T23:07:58.866] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":219,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.866] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":192,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.866] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":196,"vectorTimestamp":[]}
+[2018-02-05T23:07:58.895] [DEBUG] HDS12 - Received disease notification (Influenza): 220
+[2018-02-05T23:07:58.954] [DEBUG] HDS12 - Received disease notification (Influenza): 221
+[2018-02-05T23:07:58.996] [DEBUG] HDS12 - Received disease notification (Measles): 193
+[2018-02-05T23:07:59.054] [DEBUG] HDS12 - Received disease notification (Influenza): 222
+[2018-02-05T23:07:59.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":222,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":193,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":196,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.096] [DEBUG] HDS12 - Received disease notification (Measles): 194
+[2018-02-05T23:07:59.154] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 197
+[2018-02-05T23:07:59.196] [DEBUG] HDS12 - Received disease notification (Measles): 195
+[2018-02-05T23:07:59.253] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 198
+[2018-02-05T23:07:59.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":222,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":195,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.266] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":198,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.297] [DEBUG] HDS12 - Received disease notification (Measles): 196
+[2018-02-05T23:07:59.354] [DEBUG] HDS12 - Received disease notification (Influenza): 223
+[2018-02-05T23:07:59.397] [DEBUG] HDS12 - Received disease notification (Measles): 197
+[2018-02-05T23:07:59.454] [DEBUG] HDS12 - Received disease notification (Influenza): 224
+[2018-02-05T23:07:59.467] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":224,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.467] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":197,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.467] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":198,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.497] [DEBUG] HDS12 - Received disease notification (Influenza): 225
+[2018-02-05T23:07:59.554] [DEBUG] HDS12 - Received disease notification (Influenza): 226
+[2018-02-05T23:07:59.597] [DEBUG] HDS12 - Received disease notification (Influenza): 227
+[2018-02-05T23:07:59.655] [DEBUG] HDS12 - Received disease notification (Influenza): 228
+[2018-02-05T23:07:59.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":228,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":197,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.667] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":198,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.698] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 199
+[2018-02-05T23:07:59.755] [DEBUG] HDS12 - Received disease notification (Measles): 198
+[2018-02-05T23:07:59.798] [DEBUG] HDS12 - Received disease notification (Measles): 199
+[2018-02-05T23:07:59.855] [DEBUG] HDS12 - Received disease notification (Measles): 200
+[2018-02-05T23:07:59.867] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":228,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.867] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":200,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.867] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":199,"vectorTimestamp":[]}
+[2018-02-05T23:07:59.898] [DEBUG] HDS12 - Received disease notification (Influenza): 229
+[2018-02-05T23:07:59.955] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 200
+[2018-02-05T23:07:59.997] [DEBUG] HDS12 - Received disease notification (Measles): 201
+[2018-02-05T23:08:00.056] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 201
+[2018-02-05T23:08:00.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":229,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":201,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.067] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":201,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.098] [DEBUG] HDS12 - Received disease notification (Influenza): 230
+[2018-02-05T23:08:00.156] [DEBUG] HDS12 - Received disease notification (Influenza): 231
+[2018-02-05T23:08:00.198] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 202
+[2018-02-05T23:08:00.256] [DEBUG] HDS12 - Received disease notification (Influenza): 232
+[2018-02-05T23:08:00.267] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":232,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.267] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":201,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.267] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":202,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.298] [DEBUG] HDS12 - Received disease notification (Influenza): 233
+[2018-02-05T23:08:00.355] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 203
+[2018-02-05T23:08:00.398] [DEBUG] HDS12 - Received disease notification (Measles): 202
+[2018-02-05T23:08:00.456] [DEBUG] HDS12 - Received disease notification (Measles): 203
+[2018-02-05T23:08:00.468] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":233,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.468] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":203,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.468] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":203,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.499] [DEBUG] HDS12 - Received disease notification (Measles): 204
+[2018-02-05T23:08:00.556] [DEBUG] HDS12 - Received disease notification (Influenza): 234
+[2018-02-05T23:08:00.599] [DEBUG] HDS12 - Received disease notification (Influenza): 235
+[2018-02-05T23:08:00.656] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 204
+[2018-02-05T23:08:00.668] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":235,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.668] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":204,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.668] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":204,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.699] [DEBUG] HDS12 - Received disease notification (Influenza): 236
+[2018-02-05T23:08:00.756] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 205
+[2018-02-05T23:08:00.800] [DEBUG] HDS12 - Received disease notification (Measles): 205
+[2018-02-05T23:08:00.857] [DEBUG] HDS12 - Received disease notification (Influenza): 237
+[2018-02-05T23:08:00.869] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":237,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.869] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":205,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.869] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":205,"vectorTimestamp":[]}
+[2018-02-05T23:08:00.900] [DEBUG] HDS12 - Received disease notification (Influenza): 238
+[2018-02-05T23:08:00.957] [DEBUG] HDS12 - Received disease notification (Influenza): 239
+[2018-02-05T23:08:01.000] [DEBUG] HDS12 - Received disease notification (Influenza): 240
+[2018-02-05T23:08:01.057] [DEBUG] HDS12 - Received disease notification (Measles): 206
+[2018-02-05T23:08:01.069] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":240,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.069] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":206,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.069] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":205,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.100] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 206
+[2018-02-05T23:08:01.158] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 207
+[2018-02-05T23:08:01.201] [DEBUG] HDS12 - Received disease notification (Influenza): 241
+[2018-02-05T23:08:01.258] [DEBUG] HDS12 - Received disease notification (Influenza): 242
+[2018-02-05T23:08:01.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":242,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":206,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":207,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.301] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 208
+[2018-02-05T23:08:01.358] [DEBUG] HDS12 - Received disease notification (Influenza): 243
+[2018-02-05T23:08:01.401] [DEBUG] HDS12 - Received disease notification (Measles): 207
+[2018-02-05T23:08:01.458] [DEBUG] HDS12 - Received disease notification (Measles): 208
+[2018-02-05T23:08:01.470] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":243,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.470] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":208,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.470] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":208,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.501] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 209
+[2018-02-05T23:08:01.559] [DEBUG] HDS12 - Received disease notification (Measles): 209
+[2018-02-05T23:08:01.602] [DEBUG] HDS12 - Received disease notification (Influenza): 244
+[2018-02-05T23:08:01.659] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 210
+[2018-02-05T23:08:01.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":244,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":209,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":210,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.702] [DEBUG] HDS12 - Received disease notification (Measles): 210
+[2018-02-05T23:08:01.759] [DEBUG] HDS12 - Received disease notification (Measles): 211
+[2018-02-05T23:08:01.802] [DEBUG] HDS12 - Received disease notification (Influenza): 245
+[2018-02-05T23:08:01.859] [DEBUG] HDS12 - Received disease notification (Influenza): 246
+[2018-02-05T23:08:01.870] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":246,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.870] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":211,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.870] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":210,"vectorTimestamp":[]}
+[2018-02-05T23:08:01.902] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 211
+[2018-02-05T23:08:01.960] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 212
+[2018-02-05T23:08:02.003] [DEBUG] HDS12 - Received disease notification (Measles): 212
+[2018-02-05T23:08:02.060] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 213
+[2018-02-05T23:08:02.071] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":246,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.071] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":212,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.071] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":213,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.103] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 214
+[2018-02-05T23:08:02.160] [DEBUG] HDS12 - Received disease notification (Influenza): 247
+[2018-02-05T23:08:02.203] [DEBUG] HDS12 - Received disease notification (Influenza): 248
+[2018-02-05T23:08:02.260] [DEBUG] HDS12 - Received disease notification (Influenza): 249
+[2018-02-05T23:08:02.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":249,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":212,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.270] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":214,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.304] [DEBUG] HDS12 - Received disease notification (Measles): 213
+[2018-02-05T23:08:02.361] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 215
+[2018-02-05T23:08:02.404] [DEBUG] HDS12 - Received disease notification (Influenza): 250
+[2018-02-05T23:08:02.461] [DEBUG] HDS12 - Received disease notification (Influenza): 251
+[2018-02-05T23:08:02.471] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":251,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.471] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":213,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.471] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":215,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.504] [DEBUG] HDS12 - Received disease notification (Measles): 214
+[2018-02-05T23:08:02.561] [DEBUG] HDS12 - Received disease notification (Influenza): 252
+[2018-02-05T23:08:02.604] [DEBUG] HDS12 - Received disease notification (Measles): 215
+[2018-02-05T23:08:02.662] [DEBUG] HDS12 - Received disease notification (Influenza): 253
+[2018-02-05T23:08:02.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":253,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":215,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.671] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":215,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.705] [DEBUG] HDS12 - Received disease notification (Measles): 216
+[2018-02-05T23:08:02.762] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 216
+[2018-02-05T23:08:02.805] [DEBUG] HDS12 - Received disease notification (Measles): 217
+[2018-02-05T23:08:02.862] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 217
+[2018-02-05T23:08:02.871] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":1,"count":253,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.871] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":3,"count":217,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.871] [DEBUG] HDS12 - Published disease count: {"hds":12,"disease":2,"count":217,"vectorTimestamp":[]}
+[2018-02-05T23:08:02.905] [DEBUG] HDS12 - Received disease notification (Chicken Pox): 218
+[2018-02-05T23:08:02.962] [DEBUG] HDS12 - Received disease notification (Influenza): 254

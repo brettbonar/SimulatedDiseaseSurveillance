@@ -1,6 +1,7 @@
-let _ = require("lodash");
-let options = require("commander");
-let Router = require("./Messaging/Router");
+const _ = require("lodash");
+const options = require("commander");
+const Router = require("./Messaging/Router");
+const logger = require("./logger").getLogger("Coordinator");
 
 options
   //.version("0.1.0")
@@ -15,24 +16,22 @@ function getConfig(data) {
     let hdsId = _.find(config.emr, { id: data.id }).hds;
     let hds = _.find(config.hds, { id: hdsId });
     return {
-      hds: hds.notification,
-      diseases: config.diseases
+      hds: hds,
+      simulation: config.simulation
     };
   } else if (data.type === "hds") {
-    // TODO: return DOA list
     let hds = _.find(config.hds, { id: data.id });
     return {
       hds: hds,
       doa: config.doa,
-      diseases: config.diseases
+      simulation: config.simulation
     };
   } else if (data.type === "doa") {
-    // TODO: return DOA list
     let doa = _.find(config.doa, { id: data.id });
     return {
       doa: doa,
-      hds: config.hds.update,
-      diseases: config.diseases
+      hds: config.hds,
+      simulation: config.simulation
     };
   }
 
@@ -41,6 +40,6 @@ function getConfig(data) {
 }
 
 socket.on(function (data, id) {
-  console.log("Send config");
+  logger.debug("Sent config to: " + data.type + data.id);
   socket.send(getConfig(data), id);
 });

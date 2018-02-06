@@ -1,70 +1,83 @@
-let _ = require("lodash");
+const _ = require("lodash");
+const moment = require("moment");
 
-let Process = require("./Process");
-let Disease = require("./Disease");
-let Pull = require("./Messaging/Pull");
-let Pub = require("./Messaging/Pub");
-let Sub = require("./Messaging/Sub");
+const Process = require("./Process");
+const Disease = require("./Disease");
+const Pull = require("./Messaging/Pull");
+const Pub = require("./Messaging/Pub");
+const Sub = require("./Messaging/Sub");
+const Router = require("./Messaging/Router");
 
 class HDS extends Process {
   constructor() {
     super("hds");
-    this.doas = {};
-    this.diseaseCounts = {};
   }
   
   start(params) {
-    let that = this;
+    this.simulation = params.simulation;
+    this.settings = params.hds;
 
-    this.notificationConnection = {
-      ip: params.hds.notification.ip,
-      port: params.hds.notification.port
-    };
-    
-    this.updateConnection = {
-      ip: params.hds.update.ip,
-      port: params.hds.update.port
-    };
+    this.diseaseCounts = [];
+    this.diseaseOutbreaks = [];
 
-    // _.each(params.doa, function (doa) {
-    //   that.doas[doa.disease] = new Push({ ip: doa.ip, port: doa.port });
-    // });
-
-    this.diseaseUpdatePublisher = new Pub(this.updateConnection);
-    this.diseaseNotificationPuller = new Pull(this.notificationConnection);
+    // Establish sockets
+    this.diseaseUpdatePublisher = new Pub(this.settings.update);
+    this.diseaseNotificationPuller = new Pull(this.settings.notification);
     this.diseaseNotificationPuller.on((data) => this.handleDiseaseNotification(data));
-
     this.outbreakSub = new Sub(params.doa);
     this.outbreakSub.on((data) => this.handleOutbreakNotification(data));
+    this.diseaseOutbreakRouter = new Router(this.settings.outbreakRouter);
+    this.diseaseOutbreakRouter.on((data) => this.handleDiseaseOutbreakReq(data));
 
-    setInterval(() => this.publishDiseases(this.diseaseCounts), 1000);
+    setInterval(() => this.publishDiseases(), 200);
   }
 
   handleDiseaseNotification(data) {
-    if (_.isUndefined(this.diseaseCounts[data.type])) {
-      this.diseaseCounts[data.type] = 1;
-    } else {
-      this.diseaseCounts[data.type]++;
+    let diseaseCnt = _.find(this.diseaseCounts, { type: data.type });
+    if (!diseaseCnt) {
+      diseaseCnt = {
+        type: data.type,
+        count: 0
+      };
+      this.diseaseCounts.push(diseaseCnt);
     }
-    console.log("Disease (" + _.find(this.diseases, { id: data.type }).name + "): " + this.diseaseCounts[data.type]);
+    diseaseCnt.count += 1;
+    this.logger.debug("Received disease notification (" + _.find(this.simulation.diseases, { id: data.type }).name + "): " + diseaseCnt.count);
   }
   
   handleOutbreakNotification(data) {
-    console.log("Disease Outbreak (" + _.find(this.diseases, { id: data.type }).name + ")");
+    this.logger.debug("Disease Outbreak (" + _.find(this.simulation.diseases, { id: data.type }).name + ")");
+    this.diseaseOutbreaks.push({
+      time: moment().valueOf(),
+      infections: data.infections,
+      type: data.type
+    });
   }
 
-  publishDiseases(diseaseCounts) {
+  publishDiseases() {
     // Notify associated DOA
     // TODO: make sent message type a class
-    let that = this;
-    _.each(diseaseCounts, function (count, type) {
-      diseaseUpdatePublisher.send(type, {
-        hds: that.id,
+    _.each(this.diseaseCounts, (disease) => {
+      let message = {
+        hds: this.id,
         disease: disease.type,
-        count: count,
+        count: disease.count,
         vectorTimestamp: []
-      });
+      };
+      this.diseaseUpdatePublisher.send(message, "A");
+      this.logger.debug("Published disease count: " + JSON.stringify(message));
     });
+  }
+
+  handleDiseaseOutbreakReq(data, from) {
+    // Respond with list of outbreaks from last simulation time period
+    let minTime = moment().subtract(this.simulation.simulationTime, "seconds").valueOf();
+    let outbreaks = _.takeRightWhile(this.diseaseOutbreaks, (outbreak) => outbreak.time > minTime);
+    this.diseaseOutbreakRouter.send({
+      time: moment().valueOf(),
+      outbreaks: outbreaks,
+      vectorTimestamp: []
+    }, from);
   }
 }
 

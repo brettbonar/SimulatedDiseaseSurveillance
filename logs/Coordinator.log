@@ -1,0 +1,14 @@
+[2018-02-05T23:07:28.253] [DEBUG] Coordinator - Sent config to: doa3
+[2018-02-05T23:07:28.260] [DEBUG] Coordinator - Sent config to: emr104
+[2018-02-05T23:07:28.261] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-05T23:07:28.266] [DEBUG] Coordinator - Sent config to: emr103
+[2018-02-05T23:07:28.308] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-05T23:07:28.319] [DEBUG] Coordinator - Sent config to: hds13
+[2018-02-05T23:07:28.330] [DEBUG] Coordinator - Sent config to: emr12
+[2018-02-05T23:07:28.340] [DEBUG] Coordinator - Sent config to: emr106
+[2018-02-05T23:07:28.355] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-05T23:07:28.363] [DEBUG] Coordinator - Sent config to: emr107
+[2018-02-05T23:07:28.367] [DEBUG] Coordinator - Sent config to: hds11
+[2018-02-05T23:07:28.372] [DEBUG] Coordinator - Sent config to: doa2
+[2018-02-05T23:07:28.386] [DEBUG] Coordinator - Sent config to: hds12
+[2018-02-05T23:07:28.395] [DEBUG] Coordinator - Sent config to: emr105

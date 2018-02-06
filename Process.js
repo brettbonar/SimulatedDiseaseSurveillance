@@ -1,5 +1,8 @@
-let options = require("commander");
-let Req = require("./Messaging/Req");
+const options = require("commander");
+const _ = require("lodash");
+
+const logger = require("./logger");
+const Req = require("./Messaging/Req");
 
 // TODO: make one launching process that takes "type" command line parameter and creates an instance of that type
 class Process {
@@ -12,8 +15,7 @@ class Process {
   }
   
   handleConfig(params) {
-    this.diseases = params.diseases;
-    console.log("Got config");
+    this.logger.debug("Got config: " + JSON.stringify(params));
     this.start(params);
   }
 
@@ -23,8 +25,10 @@ class Process {
       .option("-c, --configuration <f>", "Configuration file path")
       .parse(process.argv);
 
-    this.coordinator = require(options.configuration).coordinator;
     this.id = options.id;
+    this.coordinator = require(options.configuration).coordinator;
+    this.name = _.upperCase(this.type) + this.id;
+    this.logger = logger.getLogger(this.name);
 
     // Get configuration from coordinator first
     let sock = new Req(this.coordinator);
@@ -32,7 +36,8 @@ class Process {
       id: this.id,
       type: this.type
     };
-    sock.send(params).then((params) => this.handleConfig(params));
+    sock.on((data) => this.handleConfig(data));
+    sock.send(params);//.then((config) => this.handleConfig(config));
   }
 }
 

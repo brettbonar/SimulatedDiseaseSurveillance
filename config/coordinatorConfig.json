@@ -3,23 +3,29 @@
     "ip": "localhost",
     "port": 12000
   },
-  "diseases": [
-    {
-      "id": 1,
-      "name": "Influenza",
-      "threshold": 200
-    },
-    {
-      "id": 2,
-      "name": "Chicken Pox",
-      "threshold": 50
-    },
-    {
-      "id": 3,
-      "name": "Measles",
-      "threshold": 10
-    }
-  ],
+  "simulation": {
+    "simulationTime": 24,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 100,
+        "rate": 12
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 50,
+        "rate": 1
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 10,
+        "rate": 0.5
+      }
+    ]
+  },
   "doa": [
     {
       "id": 1,
@@ -50,6 +56,10 @@
       "update": {
         "ip": "localhost",
         "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
       }
     },
     {
@@ -61,6 +71,10 @@
       "update": {
         "ip": "localhost",
         "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
       }
     },
     {
@@ -72,6 +86,10 @@
       "update": {
         "ip": "localhost",
         "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
       }
     },
     {
@@ -83,6 +101,10 @@
       "update": {
         "ip": "localhost",
         "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
       }
     }
   ],

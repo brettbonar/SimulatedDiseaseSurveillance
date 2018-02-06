@@ -1,0 +1,28 @@
+"use strict";
+const log4js = require("log4js");
+let configured = false;
+
+function configure(name) {
+  log4js.configure({
+    appenders: {
+      file: { type: "file", filename: "./logs/" + name + ".log" },
+      console: { type: "console" }
+    },
+    categories: {
+      default: { appenders: ["file"], level: "debug" }
+    }
+  });
+  configured = true;
+}
+
+function getLogger(name) {
+  if (!configured) {
+    configure(name);
+  }
+  return log4js.getLogger(name);
+}
+
+module.exports = {
+  configure: configure,
+  getLogger: getLogger
+};

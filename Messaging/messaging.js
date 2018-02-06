@@ -1,5 +1,5 @@
-let utils = require("../utils.js");
-let q = require("q");
+const utils = require("../utils.js");
+const q = require("q");
 
 function sendRequest(ip, port, )
 

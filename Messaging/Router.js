@@ -1,4 +1,4 @@
-let Socket = require("./Socket");
+const Socket = require("./Socket");
 
 class Router extends Socket {
   constructor(connection) {

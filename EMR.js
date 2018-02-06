@@ -1,8 +1,9 @@
-let _ = require("lodash");
+const _ = require("lodash");
 
-let Process = require("./Process");
-let Disease = require("./Disease");
-let Push = require("./Messaging/Push");
+const Process = require("./Process");
+const Disease = require("./Disease");
+const Push = require("./Messaging/Push");
+const Req = require("./Messaging/Req");
 
 class EMR extends Process {
   constructor() {
@@ -10,17 +11,26 @@ class EMR extends Process {
   }
   
   start(params) {
+    this.simulation = params.simulation;
     this.hds = params.hds;
-    this.push = new Push(this.hds);
-    setInterval(() => this.sendDiseaseNotification(), 1000);
+    this.push = new Push(this.hds.notification);
+    this.outbreakReq = new Req(this.hds.outbreakRouter);
+    this.outbreakReq.on((data) => this.printOutbreakStatus(data));
+
+    setInterval(() => this.sendDiseaseNotification(), 100);
+    setInterval(() => this.outbreakReq.send(), 1000);
   }
 
   sendDiseaseNotification() {
-    let disease = new Disease({
-      type: _.sample(this.diseases).id
-    });
-    console.log("Send");
-    this.push.send(disease.toJSON());
+    let disease = _.sample(this.simulation.diseases);
+    this.logger.debug("Sent disease notification: " + disease.name + " (" + disease.id + ")");
+    this.push.send(new Disease({
+      type: disease.id
+    }).toJSON());
+  }
+  
+  printOutbreakStatus(status) {
+    this.logger.debug("Outbreaks: " + JSON.stringify(status));
   }
 }
 

@@ -1,25 +1,26 @@
-let _ = require("lodash");
-let q = require("q");
-let zmq = require("zmq");
+const _ = require("lodash");
+const q = require("q");
+const zmq = require("zmq");
 
 let CONNECTION_TYPE = {
   CONNECT: "connect",
   BIND: "bind"
 }
 
-function getAddress(ip, port) {
+function getAddress(connection) {
+  let ip = connection.ip;
   if (ip === "localhost") {
     ip = "127.0.0.1";
   }
-  return "tcp://" + ip + ":" + port;
+  return "tcp://" + ip + ":" + connection.port;
 }
 
 class Socket {
   constructor(connection, socketType, connectionType) {
     if (_.isArray(connection)) {
-      this.connection = _.map(connection, (conn) => getAddress(conn.ip, conn.port));
+      this.connection = _.map(connection, getAddress);
     } else {
-      this.connection = getAddress(connection.ip, connection.port);
+      this.connection = getAddress(connection);
     }
 
     this.socketType = socketType;
@@ -28,7 +29,7 @@ class Socket {
     let socket = zmq.socket(this.socketType);
     if (this.connectionType === CONNECTION_TYPE.CONNECT) {
       if (_.isArray(this.connection)) {
-        _.each(this.connection, socket.connect);
+        _.each(this.connection, (conn) => socket.connect(conn));
       } else {
         socket.connect(this.connection);
       }
@@ -44,6 +45,9 @@ class Socket {
   }
 
   send(data, id) {
+    if (_.isUndefined(data)) {
+      data = "";
+    }
     data = JSON.stringify(data);
     if (!_.isUndefined(id)) {
       this.socket.send([id, "", data]);
@@ -54,14 +58,16 @@ class Socket {
   }
 
   on(cb) {
-    this.socket.on("message", function (message, empty, data) {
+    this.socket.on("message", function (data) {
+      let from = null; // will be sender id or publish topic
       if (arguments.length > 1) {
-        data = JSON.parse(data.toString());
+        let args = Array.apply(null, arguments);
+        from = args[0];
+        data = JSON.parse(args[args.length - 1].toString());
       } else {
-        data = JSON.parse(message.toString());
+        data = JSON.parse(data.toString());
       }
-      // TRICKY: if arguments.length > 1 then message will actually be sender ID
-      cb(data, message);
+      cb(data, from);
     });
   }
 

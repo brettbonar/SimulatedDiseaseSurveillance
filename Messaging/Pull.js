@@ -1,4 +1,4 @@
-let Socket = require("./Socket");
+const Socket = require("./Socket");
 
 class Pull extends Socket {
   constructor(connection) {
