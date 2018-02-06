@@ -14,11 +14,9 @@ class EMR extends Process {
     this.simulation = params.simulation;
     this.hds = params.hds;
     this.push = new Push(this.hds.notification);
-    this.outbreakReq = new Req(this.hds.outbreakRouter);
-    this.outbreakReq.on((data) => this.printOutbreakStatus(data));
 
     setInterval(() => this.sendDiseaseNotification(), 100);
-    setInterval(() => this.outbreakReq.send(), 1000);
+    setInterval(() => this.sendOutbreakReq(), 1000);
   }
 
   sendDiseaseNotification() {
@@ -27,6 +25,13 @@ class EMR extends Process {
     this.push.send(new Disease({
       type: disease.id
     }).toJSON());
+  }
+
+  sendOutbreakReq() {
+    this.req = new Req(this.hds.outbreakRouter);
+    this.req.on((data) => this.printOutbreakStatus(data));
+    this.req.send();
+    this.logger.debug("Sent outbreak request");
   }
   
   printOutbreakStatus(status) {

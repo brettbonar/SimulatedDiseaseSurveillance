@@ -17,15 +17,15 @@ class DOA extends Process {
       port: params.doa.port
     };
   
-    this.diseaseUpdateSub = new Sub(_.map(params.hds, "update"), "A");
+    this.disease = _.find(this.simulation.diseases, { id: params.doa.disease });
+
+    this.diseaseUpdateSub = new Sub(_.map(params.hds, "update"), params.doa.disease.toString());
     this.diseaseUpdateSub.on((data) => this.onDiseaseUpdate(data));
 
     this.diseaseOutbreakPub = new Pub(this.connection);
 
-    this.disease = params.doa.disease;
     this.currentHour = 0;
     this.diseaseCounts = Array(this.simulation.simulationTime).fill(0);
-    this.totalCount = 0;
 
     // Update simulation every hour
     setInterval(() => this.updateSimulation(), 1000);
@@ -33,9 +33,8 @@ class DOA extends Process {
 
   onDiseaseUpdate(data) {
     this.logger.debug("Disease update: " + JSON.stringify(data));
-    let diff = data.count - this.totalCount;
-    this.totalCount = data.count;
-    this.diseaseCounts[data.type] += diff;
+    this.diseaseCounts[this.currentHour] += data.count;
+    this.logger.debug("Counts: " + JSON.stringify(this.diseaseCounts));
   }
 
   updateSimulation() {
@@ -43,11 +42,13 @@ class DOA extends Process {
     // as long as outbreak is still active.
     let sum = _.sum(this.diseaseCounts);
     if (sum > this.disease.threshold) {
-      this.diseaseOutbreakPub.send({
-        type: data.type,
+      let message = {
+        type: this.disease.id,
         infections: sum,
         vectorTimestamp: []
-      }, "outbreak");
+      };
+      this.diseaseOutbreakPub.send(message, "outbreak");
+      this.logger.debug("Published disease outbreak: " + JSON.stringify(message));
     }
 
     this.currentHour = (this.currentHour + 1) % this.simulation.simulationTime;

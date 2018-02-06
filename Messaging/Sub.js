@@ -4,9 +4,10 @@ const Socket = require("./Socket");
 class Sub extends Socket {
   constructor(connection, topic) {
     super(connection, "sub", Socket.CONNECTION_TYPE.CONNECT);
-    if (!_.isNil(topic)) {
-      this.socket.subscribe(topic);
+    if (_.isNil(topic)) {
+      topic = "";
     }
+    this.socket.subscribe(topic);
   }
 }
 

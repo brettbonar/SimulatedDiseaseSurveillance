@@ -24,10 +24,11 @@ class HDS extends Process {
     this.diseaseUpdatePublisher = new Pub(this.settings.update);
     this.diseaseNotificationPuller = new Pull(this.settings.notification);
     this.diseaseNotificationPuller.on((data) => this.handleDiseaseNotification(data));
-    this.outbreakSub = new Sub(params.doa);
+    
+    this.outbreakSub = new Sub(params.doa, "outbreak");
     this.outbreakSub.on((data) => this.handleOutbreakNotification(data));
     this.diseaseOutbreakRouter = new Router(this.settings.outbreakRouter);
-    this.diseaseOutbreakRouter.on((data) => this.handleDiseaseOutbreakReq(data));
+    this.diseaseOutbreakRouter.on((data, id) => this.handleDiseaseOutbreakReq(data, id));
 
     setInterval(() => this.publishDiseases(), 200);
   }
@@ -37,7 +38,8 @@ class HDS extends Process {
     if (!diseaseCnt) {
       diseaseCnt = {
         type: data.type,
-        count: 0
+        count: 0,
+        lastCount: 0
       };
       this.diseaseCounts.push(diseaseCnt);
     }
@@ -61,23 +63,27 @@ class HDS extends Process {
       let message = {
         hds: this.id,
         disease: disease.type,
-        count: disease.count,
+        count: disease.count - disease.lastCount,
         vectorTimestamp: []
       };
-      this.diseaseUpdatePublisher.send(message, "A");
+      disease.lastCount = disease.count;
+      this.diseaseUpdatePublisher.send(message, disease.type.toString());
       this.logger.debug("Published disease count: " + JSON.stringify(message));
     });
   }
 
-  handleDiseaseOutbreakReq(data, from) {
+  handleDiseaseOutbreakReq(data, id) {
+    this.logger.debug("Got disease outbreak req: " + id.toString());
     // Respond with list of outbreaks from last simulation time period
     let minTime = moment().subtract(this.simulation.simulationTime, "seconds").valueOf();
     let outbreaks = _.takeRightWhile(this.diseaseOutbreaks, (outbreak) => outbreak.time > minTime);
-    this.diseaseOutbreakRouter.send({
+    let message = {
       time: moment().valueOf(),
       outbreaks: outbreaks,
       vectorTimestamp: []
-    }, from);
+    };
+    this.diseaseOutbreakRouter.send(message, id);
+    this.logger.debug("Sent disease outbreak response: " + JSON.stringify(message));
   }
 }
 
