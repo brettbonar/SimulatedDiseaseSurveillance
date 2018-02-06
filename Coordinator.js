@@ -15,7 +15,7 @@ function getConfig(data) {
     let hdsId = _.find(config.emr, { id: data.id }).hds;
     let hds = _.find(config.hds, { id: hdsId });
     return {
-      hds: hds,
+      hds: hds.notification,
       diseases: config.diseases
     };
   } else if (data.type === "hds") {
@@ -31,7 +31,7 @@ function getConfig(data) {
     let doa = _.find(config.doa, { id: data.id });
     return {
       doa: doa,
-      hds: config.hds,
+      hds: config.hds.update,
       diseases: config.diseases
     };
   }

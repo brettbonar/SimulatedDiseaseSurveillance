@@ -16,15 +16,24 @@ function getAddress(ip, port) {
 
 class Socket {
   constructor(connection, socketType, connectionType) {
-    this.address = getAddress(connection.ip, connection.port);
+    if (_.isArray(connection)) {
+      this.connection = _.map(connection, (conn) => getAddress(conn.ip, conn.port));
+    } else {
+      this.connection = getAddress(connection.ip, connection.port);
+    }
+
     this.socketType = socketType;
     this.connectionType = connectionType;
     
     let socket = zmq.socket(this.socketType);
     if (this.connectionType === CONNECTION_TYPE.CONNECT) {
-      socket.connect(this.address);
+      if (_.isArray(this.connection)) {
+        _.each(this.connection, socket.connect);
+      } else {
+        socket.connect(this.connection);
+      }
     } else {
-      socket.bindSync(this.address);
+      socket.bindSync(this.connection);
     }
 
     this.socket = socket;

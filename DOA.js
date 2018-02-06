@@ -1,5 +1,7 @@
 let Process = require("./Process");
 let Pull = require("./Messaging/Pull");
+let Pub = require("./Messaging/Pub");
+let Sub = require("./Messaging/Sub");
 
 class DOA extends Process {
   constructor() {
@@ -12,10 +14,15 @@ class DOA extends Process {
       port: params.doa.port
     };
   
-    this.puller = new Pull(this.connection);
-    this.puller.on(function (data) {
-      console.log(data);
-    });
+    this.diseaseUpdateSub = new Sub(_.map(params.hds, "update"));
+    this.diseaseUpdateSub.on(this.onDiseaseUpdate);
+
+    this.diseaseOutbreakPub = new Pub(this.connection);
+  }
+
+  onDiseaseUpdate(data) {
+    console.log(data);
+    this.diseaseOutbreakPub.send(data.type, "outbreak");
   }
 }
 
