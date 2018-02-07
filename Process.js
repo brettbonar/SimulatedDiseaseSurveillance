@@ -4,7 +4,6 @@ const _ = require("lodash");
 const logger = require("./logger");
 const Req = require("./Messaging/Req");
 
-// TODO: make one launching process that takes "type" command line parameter and creates an instance of that type
 class Process {
   constructor(type) {
     this.type = type;
@@ -14,21 +13,27 @@ class Process {
     _.noop();
   }
   
-  handleConfig(params) {
-    this.logger.debug("Got config: " + JSON.stringify(params));
-    this.start(params);
+  handleConfig(config) {
+    this.logger.debug("Got config: " + JSON.stringify(config, null, 2));
+    this.initializeVectorTimestamp(config);
+    this.start(config);
   }
 
   init() {
     options
       .option("-i, --id <n>", "Process ID", parseInt)
-      .option("-c, --configuration <f>", "Configuration file path")
+      .option("-cip, --coordinator-ip <f>", "Coordinator IP address")
+      .option("-cport, --coordinator-port <f>", "Coordinator port")
       .parse(process.argv);
 
     this.id = options.id;
-    this.coordinator = require(options.configuration).coordinator;
+    this.coordinator = {
+      ip: options.coordinatorIp,
+      port: options.coordinatorPort
+    };
     this.name = _.upperCase(this.type) + this.id;
     this.logger = logger.getLogger(this.name);
+    this.vectorTimestamp = { [this.id]: 0 };
 
     // Get configuration from coordinator first
     let sock = new Req(this.coordinator);
@@ -37,7 +42,23 @@ class Process {
       type: this.type
     };
     sock.on((data) => this.handleConfig(data));
-    sock.send(params);//.then((config) => this.handleConfig(config));
+    sock.send(params);
+  }
+
+  initializeVectorTimestamp(config) {
+    _.each(config.processes, (process) => {
+      this.vectorTimestamp[process.id] = 0;
+    });
+  }
+
+  updateVectorTimestamp(vectorTimestamp) {
+    if (vectorTimestamp) {
+      _.each(vectorTimestamp, (time, processId) => {
+        this.vectorTimestamp[processId] = Math.max(this.vectorTimestamp[processId], time);
+      });
+    }
+    this.vectorTimestamp[this.id] += 1;
+    this.logger.debug("Vector timestamp: " + JSON.stringify(this.vectorTimestamp, null, 2));
   }
 }
 

@@ -6,10 +6,11 @@ function configure(name) {
   log4js.configure({
     appenders: {
       file: { type: "file", filename: "./logs/" + name + ".log" },
-      console: { type: "console" }
+      console: { type: "console" },
+      "console-filter": { type: "logLevelFilter", level: "info", maxLevel: "info", appender: "console" }
     },
     categories: {
-      default: { appenders: ["file"], level: "debug" }
+      default: { appenders: ["file", "console-filter"], level: "all" }
     }
   });
   configured = true;

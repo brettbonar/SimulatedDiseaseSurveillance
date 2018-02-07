@@ -5,6 +5,8 @@ const Pull = require("./Messaging/Pull");
 const Pub = require("./Messaging/Pub");
 const Sub = require("./Messaging/Sub");
 
+const SIMULATION_INTERVAL = 1000;
+
 class DOA extends Process {
   constructor() {
     super("doa");
@@ -18,39 +20,46 @@ class DOA extends Process {
     };
   
     this.disease = _.find(this.simulation.diseases, { id: params.doa.disease });
+    this.currentHour = 0;
+    this.diseaseCounts = Array(this.simulation.simulationTime).fill(0);
+    this.outbreaking = false;
 
     this.diseaseUpdateSub = new Sub(_.map(params.hds, "update"), params.doa.disease.toString());
     this.diseaseUpdateSub.on((data) => this.onDiseaseUpdate(data));
-
     this.diseaseOutbreakPub = new Pub(this.connection);
 
-    this.currentHour = 0;
-    this.diseaseCounts = Array(this.simulation.simulationTime).fill(0);
-
-    // Update simulation every hour
-    setInterval(() => this.updateSimulation(), 1000);
+    // Update simulation every second
+    setInterval(() => this.updateSimulation(), SIMULATION_INTERVAL);
   }
 
   onDiseaseUpdate(data) {
-    this.logger.debug("Disease update: " + JSON.stringify(data));
+    this.updateVectorTimestamp(data.vectorTimestamp);
+    this.logger.debug("Disease update: " + JSON.stringify(_.omit(data, "vectorTimestamp"), null, 2));
     this.diseaseCounts[this.currentHour] += data.count;
     this.logger.debug("Counts: " + JSON.stringify(this.diseaseCounts));
+
+    this.notifyOutbreaks();
   }
 
-  updateSimulation() {
-    // Check if an outbreak has occurred. Continue to broadcast outbreak notification each hour
-    // as long as outbreak is still active.
+  notifyOutbreaks() {
+    this.updateVectorTimestamp();
     let sum = _.sum(this.diseaseCounts);
-    if (sum > this.disease.threshold) {
+    if (sum > this.disease.threshold && !this.outbreaking) {
+      this.outbreaking = true;
       let message = {
         type: this.disease.id,
         infections: sum,
-        vectorTimestamp: []
+        vectorTimestamp: this.vectorTimestamp
       };
       this.diseaseOutbreakPub.send(message, "outbreak");
-      this.logger.debug("Published disease outbreak: " + JSON.stringify(message));
+      this.logger.debug("Published disease outbreak: " + JSON.stringify(_.omit(message, "vectorTimestamp"), null, 2));
+    } else if (this.outbreaking) {
+      this.outbreaking = false;
     }
+  }
 
+  updateSimulation() {
+    this.updateVectorTimestamp();
     this.currentHour = (this.currentHour + 1) % this.simulation.simulationTime;
     this.diseaseCounts[this.currentHour] = 0;
   }

@@ -3,7 +3,10 @@ const _ = require("lodash");
 const fs = require("fs");
 const path = require("path");
 
-let config = require("./config/coordinatorConfig.json");
+const CONFIG_PATH = "./config/influenzaOutbreak.json";
+//const CONFIG_PATH = "./config/influenzaOutbreak.json";
+
+let config = require(CONFIG_PATH);
 let children = [];
 
 function launch(command, args) {
@@ -35,19 +38,19 @@ fs.readdir(logDir, (err, files) => {
 });
 
 // Launch coordinator
-launch("node", ["./Coordinator.js", "--configuration", "./config/coordinatorConfig.json"]);
+launch("node", ["./Coordinator.js", "--configuration", CONFIG_PATH]);
 
 // Launch DOA
 _.each(config.doa, function (process) {
-  launch("node",  ["./DOA.js", "--id", process.id, "--configuration", "./config/processConfig.json"]);
+  launch("node",  ["./DOA.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
 });
 
 // Launch HDS
 _.each(config.hds, function (process) {
-  launch("node",  ["./HDS.js", "--id", process.id, "--configuration", "./config/processConfig.json"]);
+  launch("node",  ["./HDS.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
 });
 
 // Launch EMR
 _.each(config.emr, function (process) {
-  launch("node",  ["./EMR.js", "--id", process.id, "--configuration", "./config/processConfig.json"]);
+  launch("node",  ["./EMR.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
 });

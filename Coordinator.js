@@ -12,11 +12,13 @@ let config = require(options.configuration);
 let socket = new Router(config.coordinator);
 
 function getConfig(data) {
+  let processes = _.concat(config.doa, config.emr, config.hds);
   if (data.type === "emr") {
     let hdsId = _.find(config.emr, { id: data.id }).hds;
     let hds = _.find(config.hds, { id: hdsId });
     return {
       hds: hds,
+      processes: processes,
       simulation: config.simulation
     };
   } else if (data.type === "hds") {
@@ -24,6 +26,7 @@ function getConfig(data) {
     return {
       hds: hds,
       doa: config.doa,
+      processes: processes,
       simulation: config.simulation
     };
   } else if (data.type === "doa") {
@@ -31,6 +34,7 @@ function getConfig(data) {
     return {
       doa: doa,
       hds: config.hds,
+      processes: processes,
       simulation: config.simulation
     };
   }

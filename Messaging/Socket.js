@@ -1,5 +1,4 @@
 const _ = require("lodash");
-const q = require("q");
 const zmq = require("zmq");
 
 let CONNECTION_TYPE = {
@@ -38,10 +37,6 @@ class Socket {
     }
 
     this.socket = socket;
-
-    // Make socket a "deferred"
-    let deferred = q.defer();
-    _.assign(this, deferred);
   }
 
   send(data, id) {

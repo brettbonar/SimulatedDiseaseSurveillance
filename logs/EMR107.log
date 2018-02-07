@@ -1,500 +1,1277 @@
-[2018-02-05T23:36:02.990] [DEBUG] EMR107 - Got config: {"hds":{"id":13,"notification":{"ip":"localhost","port":12106},"update":{"ip":"localhost","port":12107},"outbreakRouter":{"ip":"localhost","port":12113}},"simulation":{"simulationTime":24,"diseases":[{"id":1,"name":"Influenza","threshold":100,"rate":12},{"id":2,"name":"Chicken Pox","threshold":50,"rate":1},{"id":3,"name":"Measles","threshold":10,"rate":0.5}]}}
-[2018-02-05T23:36:03.092] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:03.194] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:03.295] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:03.395] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:03.496] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:03.596] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:03.695] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:03.795] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:03.896] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:03.994] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:03.997] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:03.997] [DEBUG] EMR107 - Outbreaks: {"time":1517898963995,"outbreaks":[],"vectorTimestamp":[]}
-[2018-02-05T23:36:04.096] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:04.196] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:04.297] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:04.397] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:04.497] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:04.597] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:04.699] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:04.800] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:04.900] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:04.996] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:04.997] [DEBUG] EMR107 - Outbreaks: {"time":1517898964995,"outbreaks":[{"time":1517898964378,"infections":25,"type":3}],"vectorTimestamp":[]}
-[2018-02-05T23:36:05.001] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.101] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.201] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:05.301] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:05.402] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.502] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:05.601] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.701] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.802] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.903] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:05.995] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:05.996] [DEBUG] EMR107 - Outbreaks: {"time":1517898965994,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3}],"vectorTimestamp":[]}
-[2018-02-05T23:36:06.003] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:06.103] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:06.204] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:06.305] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:06.405] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:06.506] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:06.606] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:06.706] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:06.806] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:06.907] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:06.996] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:06.997] [DEBUG] EMR107 - Outbreaks: {"time":1517898966996,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2}],"vectorTimestamp":[]}
-[2018-02-05T23:36:07.007] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:07.107] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:07.207] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:07.308] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:07.408] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:07.508] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:07.608] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:07.709] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:07.809] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:07.909] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:07.997] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:07.998] [DEBUG] EMR107 - Outbreaks: {"time":1517898967997,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:08.010] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:08.110] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:08.210] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:08.310] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:08.411] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:08.511] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:08.610] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:08.710] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:08.811] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:08.911] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:08.998] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:08.999] [DEBUG] EMR107 - Outbreaks: {"time":1517898968998,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:09.011] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:09.111] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:09.212] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:09.312] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:09.412] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:09.513] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:09.613] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:09.713] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:09.813] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:09.914] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:09.999] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:10.000] [DEBUG] EMR107 - Outbreaks: {"time":1517898969999,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:10.014] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:10.114] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:10.214] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:10.315] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:10.415] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:10.515] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:10.615] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:10.716] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:10.816] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:10.916] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:10.999] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:11.000] [DEBUG] EMR107 - Outbreaks: {"time":1517898971000,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:11.017] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.117] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.217] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:11.317] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.418] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.518] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.617] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:11.717] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:11.818] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:11.918] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:12.000] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:12.001] [DEBUG] EMR107 - Outbreaks: {"time":1517898972000,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:12.018] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:12.118] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:12.219] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:12.320] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:12.420] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:12.521] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:12.621] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:12.721] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:12.822] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:12.922] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:13.000] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:13.001] [DEBUG] EMR107 - Outbreaks: {"time":1517898973000,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:13.022] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:13.122] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:13.223] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:13.323] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:13.423] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:13.523] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:13.624] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:13.724] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:13.824] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:13.925] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.002] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:14.004] [DEBUG] EMR107 - Outbreaks: {"time":1517898974001,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:14.025] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.125] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:14.225] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:14.326] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.426] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.526] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.626] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:14.727] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:14.827] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:14.927] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:15.002] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:15.003] [DEBUG] EMR107 - Outbreaks: {"time":1517898975003,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:15.027] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:15.128] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:15.228] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:15.328] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:15.429] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:15.529] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:15.629] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:15.729] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:15.830] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:15.930] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:16.002] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:16.003] [DEBUG] EMR107 - Outbreaks: {"time":1517898976002,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:16.030] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:16.130] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:16.232] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:16.333] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:16.433] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:16.533] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:16.634] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:16.734] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:16.834] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:16.935] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:17.003] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:17.004] [DEBUG] EMR107 - Outbreaks: {"time":1517898977002,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:17.035] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:17.135] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:17.235] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:17.336] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:17.436] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:17.536] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:17.636] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:17.737] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:17.837] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:17.937] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:18.003] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:18.004] [DEBUG] EMR107 - Outbreaks: {"time":1517898978003,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:18.037] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:18.138] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:18.238] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:18.338] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:18.439] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:18.539] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:18.639] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:18.739] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:18.840] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:18.940] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:19.004] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:19.005] [DEBUG] EMR107 - Outbreaks: {"time":1517898979003,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:19.039] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:19.139] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:19.240] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:19.340] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:19.440] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:19.540] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:19.641] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:19.741] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:19.841] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:19.942] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:20.005] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:20.006] [DEBUG] EMR107 - Outbreaks: {"time":1517898980004,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:20.042] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:20.142] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:20.242] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:20.343] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:20.443] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:20.543] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:20.643] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:20.744] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:20.844] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:20.944] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:21.005] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:21.006] [DEBUG] EMR107 - Outbreaks: {"time":1517898981004,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:21.044] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:21.145] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:21.245] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:21.345] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:21.446] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:21.546] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:21.646] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:21.746] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:21.847] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:21.947] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:22.006] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:22.007] [DEBUG] EMR107 - Outbreaks: {"time":1517898982005,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:22.046] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:22.146] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:22.247] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:22.347] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:22.447] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:22.547] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:22.648] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:22.748] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:22.848] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:22.949] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:23.007] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:23.008] [DEBUG] EMR107 - Outbreaks: {"time":1517898983007,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:23.049] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:23.149] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:23.249] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:23.350] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:23.450] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:23.550] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:23.650] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:23.751] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:23.851] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:23.951] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:24.007] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:24.008] [DEBUG] EMR107 - Outbreaks: {"time":1517898984007,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:24.051] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.152] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:24.252] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.352] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:24.453] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:24.553] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.653] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.753] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.854] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:24.954] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.012] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:25.012] [DEBUG] EMR107 - Outbreaks: {"time":1517898985008,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:25.053] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:25.153] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:25.254] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.354] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.454] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:25.554] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.655] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:25.755] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.855] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:25.955] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:26.013] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:26.014] [DEBUG] EMR107 - Outbreaks: {"time":1517898986012,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:26.056] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:26.156] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:26.256] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:26.357] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:26.457] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:26.557] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:26.657] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:26.758] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:26.858] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:26.958] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:27.013] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:27.014] [DEBUG] EMR107 - Outbreaks: {"time":1517898987013,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:27.058] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:27.159] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:27.259] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:27.359] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:27.459] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:27.560] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:27.659] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:27.759] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:27.860] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:27.960] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.014] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:28.015] [DEBUG] EMR107 - Outbreaks: {"time":1517898988014,"outbreaks":[{"time":1517898964378,"infections":25,"type":3},{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:28.059] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.159] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:28.260] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.360] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:28.460] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:28.560] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.661] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:28.761] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.861] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:28.961] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:29.015] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:29.016] [DEBUG] EMR107 - Outbreaks: {"time":1517898989014,"outbreaks":[{"time":1517898965377,"infections":49,"type":3},{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:29.062] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:29.162] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:29.262] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:29.363] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:29.463] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:29.563] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:29.663] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:29.764] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:29.864] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:29.964] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:30.015] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:30.016] [DEBUG] EMR107 - Outbreaks: {"time":1517898990015,"outbreaks":[{"time":1517898966376,"infections":65,"type":3},{"time":1517898966380,"infections":72,"type":2},{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:30.064] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:30.165] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:30.265] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:30.365] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:30.465] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:30.566] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:30.666] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:30.766] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:30.867] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:30.967] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:31.016] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:31.018] [DEBUG] EMR107 - Outbreaks: {"time":1517898991017,"outbreaks":[{"time":1517898967378,"infections":92,"type":3},{"time":1517898967381,"infections":91,"type":2},{"time":1517898967928,"infections":113,"type":1},{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:31.066] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:31.166] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:31.267] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:31.367] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:31.467] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:31.567] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:31.668] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:31.768] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:31.868] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:31.968] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.017] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:32.018] [DEBUG] EMR107 - Outbreaks: {"time":1517898992017,"outbreaks":[{"time":1517898968379,"infections":114,"type":3},{"time":1517898968382,"infections":113,"type":2},{"time":1517898968929,"infections":142,"type":1},{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:32.069] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.169] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.269] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:32.370] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.470] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.570] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.670] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:32.771] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:32.871] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:32.971] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:33.017] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:33.018] [DEBUG] EMR107 - Outbreaks: {"time":1517898993016,"outbreaks":[{"time":1517898969377,"infections":145,"type":3},{"time":1517898969381,"infections":132,"type":2},{"time":1517898969929,"infections":161,"type":1},{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:33.071] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:33.172] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:33.272] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:33.372] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:33.472] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:33.573] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:33.673] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:33.773] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:33.874] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:33.974] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:34.018] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:34.019] [DEBUG] EMR107 - Outbreaks: {"time":1517898994018,"outbreaks":[{"time":1517898970378,"infections":163,"type":3},{"time":1517898970382,"infections":159,"type":2},{"time":1517898970928,"infections":184,"type":1},{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:34.073] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:34.173] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:34.274] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:34.374] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.474] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.574] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.675] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.775] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.875] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:34.975] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:35.019] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:35.020] [DEBUG] EMR107 - Outbreaks: {"time":1517898995019,"outbreaks":[{"time":1517898971379,"infections":188,"type":3},{"time":1517898971383,"infections":185,"type":2},{"time":1517898971929,"infections":201,"type":1},{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:35.076] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:35.176] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:35.276] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:35.377] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:35.477] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:35.577] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:35.677] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:35.778] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:35.878] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:35.978] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:36.019] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:36.020] [DEBUG] EMR107 - Outbreaks: {"time":1517898996019,"outbreaks":[{"time":1517898972378,"infections":215,"type":3},{"time":1517898972382,"infections":208,"type":2},{"time":1517898972930,"infections":218,"type":1},{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:36.082] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.183] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:36.283] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.383] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.483] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:36.584] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.684] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.784] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:36.885] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:36.985] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:37.020] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:37.021] [DEBUG] EMR107 - Outbreaks: {"time":1517898997019,"outbreaks":[{"time":1517898973378,"infections":235,"type":3},{"time":1517898973382,"infections":239,"type":2},{"time":1517898973931,"infections":238,"type":1},{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:37.084] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:37.184] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:37.285] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:37.385] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:37.485] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:37.585] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:37.686] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:37.786] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:37.886] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:37.986] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:38.021] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:38.022] [DEBUG] EMR107 - Outbreaks: {"time":1517898998021,"outbreaks":[{"time":1517898974379,"infections":266,"type":3},{"time":1517898974383,"infections":261,"type":2},{"time":1517898974930,"infections":259,"type":1},{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:38.087] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:38.187] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:38.287] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:38.388] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:38.488] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:38.588] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:38.688] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:38.789] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:38.889] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:38.988] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:39.022] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:39.023] [DEBUG] EMR107 - Outbreaks: {"time":1517898999021,"outbreaks":[{"time":1517898975379,"infections":295,"type":3},{"time":1517898975383,"infections":275,"type":2},{"time":1517898975931,"infections":289,"type":1},{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:39.089] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:39.190] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:39.290] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:39.390] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:39.490] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:39.591] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:39.691] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:39.791] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:39.892] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:39.992] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:40.023] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:40.024] [DEBUG] EMR107 - Outbreaks: {"time":1517899000022,"outbreaks":[{"time":1517898976378,"infections":313,"type":3},{"time":1517898976382,"infections":297,"type":2},{"time":1517898976931,"infections":316,"type":1},{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1},{"time":1517898999385,"infections":540,"type":3},{"time":1517898999389,"infections":583,"type":2},{"time":1517898999934,"infections":540,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:40.091] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:40.191] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:40.292] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:40.392] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:40.492] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:40.592] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:40.693] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:40.793] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:40.893] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:40.993] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:41.024] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:41.025] [DEBUG] EMR107 - Outbreaks: {"time":1517899001023,"outbreaks":[{"time":1517898977379,"infections":335,"type":3},{"time":1517898977384,"infections":325,"type":2},{"time":1517898977930,"infections":339,"type":1},{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1},{"time":1517898999385,"infections":540,"type":3},{"time":1517898999389,"infections":583,"type":2},{"time":1517898999934,"infections":540,"type":1},{"time":1517899000386,"infections":543,"type":3},{"time":1517899000390,"infections":595,"type":2},{"time":1517899000933,"infections":538,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:41.094] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:41.194] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:41.294] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:41.395] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:41.495] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:41.595] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:41.695] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:41.796] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:41.896] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:41.996] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:42.023] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:42.024] [DEBUG] EMR107 - Outbreaks: {"time":1517899002022,"outbreaks":[{"time":1517898978378,"infections":351,"type":3},{"time":1517898978384,"infections":353,"type":2},{"time":1517898978931,"infections":360,"type":1},{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1},{"time":1517898999385,"infections":540,"type":3},{"time":1517898999389,"infections":583,"type":2},{"time":1517898999934,"infections":540,"type":1},{"time":1517899000386,"infections":543,"type":3},{"time":1517899000390,"infections":595,"type":2},{"time":1517899000933,"infections":538,"type":1},{"time":1517899001387,"infections":539,"type":3},{"time":1517899001391,"infections":594,"type":2},{"time":1517899001934,"infections":537,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:42.096] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:42.197] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:42.297] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:42.397] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:42.497] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:42.598] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:42.698] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:42.798] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:42.899] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:42.999] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:43.024] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:43.025] [DEBUG] EMR107 - Outbreaks: {"time":1517899003024,"outbreaks":[{"time":1517898979379,"infections":376,"type":3},{"time":1517898979383,"infections":378,"type":2},{"time":1517898979932,"infections":379,"type":1},{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1},{"time":1517898999385,"infections":540,"type":3},{"time":1517898999389,"infections":583,"type":2},{"time":1517898999934,"infections":540,"type":1},{"time":1517899000386,"infections":543,"type":3},{"time":1517899000390,"infections":595,"type":2},{"time":1517899000933,"infections":538,"type":1},{"time":1517899001387,"infections":539,"type":3},{"time":1517899001391,"infections":594,"type":2},{"time":1517899001934,"infections":537,"type":1},{"time":1517899002386,"infections":547,"type":3},{"time":1517899002390,"infections":588,"type":2},{"time":1517899002935,"infections":532,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:43.098] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:43.198] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:43.299] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:43.399] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:43.502] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:43.604] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:43.705] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:43.805] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:43.905] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.005] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:44.026] [DEBUG] EMR107 - Sent outbreak request
-[2018-02-05T23:36:44.027] [DEBUG] EMR107 - Outbreaks: {"time":1517899004025,"outbreaks":[{"time":1517898980380,"infections":394,"type":3},{"time":1517898980384,"infections":407,"type":2},{"time":1517898980931,"infections":404,"type":1},{"time":1517898981379,"infections":418,"type":3},{"time":1517898981383,"infections":429,"type":2},{"time":1517898981932,"infections":427,"type":1},{"time":1517898982380,"infections":442,"type":3},{"time":1517898982384,"infections":452,"type":2},{"time":1517898982933,"infections":451,"type":1},{"time":1517898983381,"infections":465,"type":3},{"time":1517898983385,"infections":471,"type":2},{"time":1517898983932,"infections":473,"type":1},{"time":1517898984380,"infections":489,"type":3},{"time":1517898984384,"infections":494,"type":2},{"time":1517898984933,"infections":501,"type":1},{"time":1517898985381,"infections":515,"type":3},{"time":1517898985385,"infections":514,"type":2},{"time":1517898985933,"infections":524,"type":1},{"time":1517898986382,"infections":536,"type":3},{"time":1517898986386,"infections":538,"type":2},{"time":1517898986932,"infections":546,"type":1},{"time":1517898987381,"infections":558,"type":3},{"time":1517898987385,"infections":564,"type":2},{"time":1517898987933,"infections":548,"type":1},{"time":1517898988382,"infections":553,"type":3},{"time":1517898988386,"infections":567,"type":2},{"time":1517898988933,"infections":550,"type":1},{"time":1517898989383,"infections":556,"type":3},{"time":1517898989387,"infections":567,"type":2},{"time":1517898989932,"infections":544,"type":1},{"time":1517898990382,"infections":563,"type":3},{"time":1517898990386,"infections":568,"type":2},{"time":1517898990933,"infections":541,"type":1},{"time":1517898991383,"infections":554,"type":3},{"time":1517898991387,"infections":577,"type":2},{"time":1517898991933,"infections":536,"type":1},{"time":1517898992384,"infections":557,"type":3},{"time":1517898992388,"infections":580,"type":2},{"time":1517898992932,"infections":531,"type":1},{"time":1517898993383,"infections":552,"type":3},{"time":1517898993387,"infections":585,"type":2},{"time":1517898993933,"infections":540,"type":1},{"time":1517898994384,"infections":556,"type":3},{"time":1517898994388,"infections":580,"type":2},{"time":1517898994933,"infections":543,"type":1},{"time":1517898995385,"infections":550,"type":3},{"time":1517898995389,"infections":577,"type":2},{"time":1517898995932,"infections":544,"type":1},{"time":1517898996384,"infections":546,"type":3},{"time":1517898996388,"infections":580,"type":2},{"time":1517898996933,"infections":553,"type":1},{"time":1517898997385,"infections":550,"type":3},{"time":1517898997389,"infections":569,"type":2},{"time":1517898997932,"infections":557,"type":1},{"time":1517898998386,"infections":545,"type":3},{"time":1517898998390,"infections":575,"type":2},{"time":1517898998933,"infections":554,"type":1},{"time":1517898999385,"infections":540,"type":3},{"time":1517898999389,"infections":583,"type":2},{"time":1517898999934,"infections":540,"type":1},{"time":1517899000386,"infections":543,"type":3},{"time":1517899000390,"infections":595,"type":2},{"time":1517899000933,"infections":538,"type":1},{"time":1517899001387,"infections":539,"type":3},{"time":1517899001391,"infections":594,"type":2},{"time":1517899001934,"infections":537,"type":1},{"time":1517899002386,"infections":547,"type":3},{"time":1517899002390,"infections":588,"type":2},{"time":1517899002935,"infections":532,"type":1},{"time":1517899003387,"infections":549,"type":3},{"time":1517899003391,"infections":589,"type":2},{"time":1517899003934,"infections":532,"type":1}],"vectorTimestamp":[]}
-[2018-02-05T23:36:44.106] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
-[2018-02-05T23:36:44.205] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.305] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.406] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.506] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.606] [DEBUG] EMR107 - Sent disease notification: Measles (3)
-[2018-02-05T23:36:44.706] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
-[2018-02-05T23:36:44.807] [DEBUG] EMR107 - Sent disease notification: Chicken Pox (2)
+[2018-02-06T20:53:52.855] [DEBUG] EMR107 - Got config: {
+  "hds": {
+    "id": 13,
+    "notification": {
+      "ip": "localhost",
+      "port": 12106
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12107
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12113
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 120,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 50,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 120
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 10,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-06T20:53:53.860] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 1
+}
+[2018-02-06T20:53:53.861] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:53.863] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 3,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 2
+}
+[2018-02-06T20:53:53.863] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:54.862] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 3,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 3
+}
+[2018-02-06T20:53:54.862] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:54.863] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 6,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 4
+}
+[2018-02-06T20:53:54.863] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:55.862] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 6,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 5
+}
+[2018-02-06T20:53:55.862] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:55.863] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 9,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 6
+}
+[2018-02-06T20:53:55.863] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:56.863] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 9,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 7
+}
+[2018-02-06T20:53:56.863] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:56.864] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 12,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 8
+}
+[2018-02-06T20:53:56.864] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:57.865] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 12,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 9
+}
+[2018-02-06T20:53:57.865] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:57.867] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 15,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 10
+}
+[2018-02-06T20:53:57.867] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:58.865] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 15,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 11
+}
+[2018-02-06T20:53:58.865] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:58.866] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 18,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 12
+}
+[2018-02-06T20:53:58.867] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:53:59.866] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 18,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 13
+}
+[2018-02-06T20:53:59.866] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:53:59.867] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 21,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 14
+}
+[2018-02-06T20:53:59.867] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:00.378] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 21,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 15
+}
+[2018-02-06T20:54:00.378] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:00.868] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 21,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 16
+}
+[2018-02-06T20:54:00.868] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:00.869] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 25,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 17
+}
+[2018-02-06T20:54:00.869] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:01.869] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 25,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 18
+}
+[2018-02-06T20:54:01.869] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:01.871] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 28,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 19
+}
+[2018-02-06T20:54:01.871] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:02.870] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 28,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 20
+}
+[2018-02-06T20:54:02.870] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:02.871] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 31,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 21
+}
+[2018-02-06T20:54:02.871] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:03.871] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 31,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 22
+}
+[2018-02-06T20:54:03.871] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:03.875] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 34,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 23
+}
+[2018-02-06T20:54:03.876] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:04.488] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 34,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 24
+}
+[2018-02-06T20:54:04.488] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:04.871] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 34,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 25
+}
+[2018-02-06T20:54:04.872] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:04.873] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 38,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 26
+}
+[2018-02-06T20:54:04.873] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:05.872] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 38,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 27
+}
+[2018-02-06T20:54:05.872] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:05.873] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 41,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 28
+}
+[2018-02-06T20:54:05.873] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:06.873] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 41,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 29
+}
+[2018-02-06T20:54:06.873] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:06.874] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 44,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 30
+}
+[2018-02-06T20:54:06.874] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:07.873] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 44,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 31
+}
+[2018-02-06T20:54:07.873] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:07.874] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 47,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 32
+}
+[2018-02-06T20:54:07.874] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:08.874] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 47,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 33
+}
+[2018-02-06T20:54:08.874] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:08.875] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 50,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 34
+}
+[2018-02-06T20:54:08.875] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:09.303] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 50,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 35
+}
+[2018-02-06T20:54:09.303] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:09.604] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 50,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 36
+}
+[2018-02-06T20:54:09.604] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:09.876] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 50,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 37
+}
+[2018-02-06T20:54:09.876] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:09.877] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 55,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 38
+}
+[2018-02-06T20:54:09.877] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:10.876] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 55,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 39
+}
+[2018-02-06T20:54:10.876] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:10.877] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 58,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 40
+}
+[2018-02-06T20:54:10.877] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:11.609] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 58,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 41
+}
+[2018-02-06T20:54:11.609] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:11.877] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 58,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 42
+}
+[2018-02-06T20:54:11.877] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:11.878] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 62,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 43
+}
+[2018-02-06T20:54:11.878] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:12.512] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 62,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 44
+}
+[2018-02-06T20:54:12.512] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:12.877] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 62,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 45
+}
+[2018-02-06T20:54:12.878] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:12.879] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 66,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 46
+}
+[2018-02-06T20:54:12.879] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:13.879] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 66,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 47
+}
+[2018-02-06T20:54:13.880] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:13.881] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 69,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 48
+}
+[2018-02-06T20:54:13.881] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:14.880] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 69,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 49
+}
+[2018-02-06T20:54:14.881] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:14.882] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 72,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 50
+}
+[2018-02-06T20:54:14.882] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:15.017] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 72,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 51
+}
+[2018-02-06T20:54:15.017] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:15.881] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 72,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 52
+}
+[2018-02-06T20:54:15.881] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:15.882] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 76,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 53
+}
+[2018-02-06T20:54:15.882] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:16.882] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 76,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 54
+}
+[2018-02-06T20:54:16.882] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:16.883] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 79,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 55
+}
+[2018-02-06T20:54:16.884] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:17.884] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 79,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 56
+}
+[2018-02-06T20:54:17.884] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:17.888] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 82,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 57
+}
+[2018-02-06T20:54:17.888] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:18.884] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 82,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 58
+}
+[2018-02-06T20:54:18.884] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:18.885] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 85,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 59
+}
+[2018-02-06T20:54:18.885] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:19.629] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 85,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 60
+}
+[2018-02-06T20:54:19.629] [DEBUG] EMR107 - Sent disease notification: Influenza (1)
+[2018-02-06T20:54:19.885] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 85,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 61
+}
+[2018-02-06T20:54:19.885] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:19.886] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 89,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 62
+}
+[2018-02-06T20:54:19.886] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:20.886] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 89,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 63
+}
+[2018-02-06T20:54:20.886] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:20.887] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 92,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 64
+}
+[2018-02-06T20:54:20.887] [DEBUG] EMR107 - Got outbreak response
+[2018-02-06T20:54:21.886] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 92,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 65
+}
+[2018-02-06T20:54:21.887] [DEBUG] EMR107 - Sent outbreak request
+[2018-02-06T20:54:21.888] [DEBUG] EMR107 - Vector timestamp: {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 95,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 66
+}
+[2018-02-06T20:54:21.892] [DEBUG] EMR107 - Got outbreak response
