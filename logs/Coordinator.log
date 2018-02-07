@@ -1,14 +1,6511 @@
-[2018-02-06T20:53:52.766] [DEBUG] Coordinator - Sent config to: hds10
-[2018-02-06T20:53:52.770] [DEBUG] Coordinator - Sent config to: doa2
-[2018-02-06T20:53:52.799] [DEBUG] Coordinator - Sent config to: doa3
-[2018-02-06T20:53:52.800] [DEBUG] Coordinator - Sent config to: doa1
-[2018-02-06T20:53:52.813] [DEBUG] Coordinator - Sent config to: emr103
-[2018-02-06T20:53:52.827] [DEBUG] Coordinator - Sent config to: hds13
-[2018-02-06T20:53:52.843] [DEBUG] Coordinator - Sent config to: emr104
-[2018-02-06T20:53:52.854] [DEBUG] Coordinator - Sent config to: emr107
-[2018-02-06T20:53:52.870] [DEBUG] Coordinator - Sent config to: emr105
-[2018-02-06T20:53:52.875] [DEBUG] Coordinator - Sent config to: emr102
-[2018-02-06T20:53:52.875] [DEBUG] Coordinator - Sent config to: hds12
-[2018-02-06T20:53:52.888] [DEBUG] Coordinator - Sent config to: hds11
-[2018-02-06T20:53:52.898] [DEBUG] Coordinator - Sent config to: emr101
-[2018-02-06T20:53:52.910] [DEBUG] Coordinator - Sent config to: emr106
+[2018-02-07T00:03:27.204] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:03:27.233] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:03:27.234] [DEBUG] Coordinator - Sent config to: doa2
+[2018-02-07T00:03:27.244] [DEBUG] Coordinator - Sent config to: emr103
+[2018-02-07T00:03:27.250] [DEBUG] Coordinator - Sent config to: emr102
+[2018-02-07T00:03:27.254] [DEBUG] Coordinator - Sent config to: emr107
+[2018-02-07T00:03:27.255] [DEBUG] Coordinator - Sent config to: doa3
+[2018-02-07T00:03:27.259] [DEBUG] Coordinator - Sent config to: emr104
+[2018-02-07T00:03:27.264] [DEBUG] Coordinator - Sent config to: emr106
+[2018-02-07T00:03:27.286] [DEBUG] Coordinator - Sent config to: hds13
+[2018-02-07T00:03:27.290] [DEBUG] Coordinator - Sent config to: emr105
+[2018-02-07T00:03:27.303] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:03:27.318] [DEBUG] Coordinator - Sent config to: hds11
+[2018-02-07T00:03:27.338] [DEBUG] Coordinator - Sent config to: hds12
+[2018-02-07T00:05:16.838] [DEBUG] Coordinator - Sent config to: undefined1
+[2018-02-07T00:05:16.840] [DEBUG] 1 - Got config: {
+  "coordinator": {
+    "ip": "localhost",
+    "port": 12000
+  },
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    }
+  ],
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "emr": [
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    }
+  ]
+}
+[2018-02-07T00:05:40.166] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:05:40.169] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:05:41.170] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:07:14.319] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:07:14.322] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:07:15.323] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:07:23.262] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:07:23.264] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:07:24.266] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:07:32.871] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:07:32.873] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:07:33.875] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:05.885] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:10:05.888] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:10:05.888] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:10:05.889] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:05.891] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:05.894] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:06.891] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.891] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:10:06.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 1,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 2,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.892] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:10:06.894] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 3,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.894] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517987406894,
+  "outbreaks": []
+}
+[2018-02-07T00:10:06.894] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.895] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 3,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 2,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:06.895] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:10:14.230] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:10:14.233] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:10:14.233] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:10:14.234] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:14.236] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:14.239] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 2,
+      "ip": "localhost",
+      "port": 12002,
+      "disease": 2
+    },
+    {
+      "id": 3,
+      "ip": "localhost",
+      "port": 12003,
+      "disease": 3
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 102,
+      "hds": 10
+    },
+    {
+      "id": 103,
+      "hds": 11
+    },
+    {
+      "id": 104,
+      "hds": 11
+    },
+    {
+      "id": 105,
+      "hds": 12
+    },
+    {
+      "id": 106,
+      "hds": 12
+    },
+    {
+      "id": 107,
+      "hds": 13
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    },
+    {
+      "id": 11,
+      "notification": {
+        "ip": "localhost",
+        "port": 12102
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12103
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12111
+      }
+    },
+    {
+      "id": 12,
+      "notification": {
+        "ip": "localhost",
+        "port": 12104
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12105
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12112
+      }
+    },
+    {
+      "id": 13,
+      "notification": {
+        "ip": "localhost",
+        "port": 12106
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12107
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12113
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Influenza",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 48
+      },
+      {
+        "id": 2,
+        "name": "Chicken Pox",
+        "threshold": 150,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 240
+      },
+      {
+        "id": 3,
+        "name": "Measles",
+        "threshold": 300,
+        "minP": 0,
+        "maxP": 0.1,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:10:15.236] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.236] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:10:15.237] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 1,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.237] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 2,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.237] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:10:15.239] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 3,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 1,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.239] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517987415238,
+  "outbreaks": []
+}
+[2018-02-07T00:10:15.239] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "2": 0,
+  "3": 0,
+  "10": 0,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 0,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.240] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "10": 3,
+  "11": 0,
+  "12": 0,
+  "13": 0,
+  "101": 2,
+  "102": 0,
+  "103": 0,
+  "104": 0,
+  "105": 0,
+  "106": 0,
+  "107": 0
+}
+[2018-02-07T00:10:15.240] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:14.375] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:20:14.377] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:20:14.378] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:20:14.379] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:14.380] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:14.382] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:15.380] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:20:15.380] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:20:15.381] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 0
+}
+[2018-02-07T00:20:15.381] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:20:15.381] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:20:15.382] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:20:15.383] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988015382,
+  "outbreaks": []
+}
+[2018-02-07T00:20:15.383] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:20:15.383] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:20:15.383] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:35.911] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:20:35.913] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:20:35.913] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:20:35.914] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:35.916] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:35.918] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:36.916] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:20:36.916] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:20:36.917] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 0
+}
+[2018-02-07T00:20:36.917] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:20:36.917] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:20:36.919] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:20:36.919] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988036919,
+  "outbreaks": []
+}
+[2018-02-07T00:20:36.919] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:20:36.920] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:20:36.920] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:45.651] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:20:45.653] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:20:45.653] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:20:45.654] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:45.655] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:45.657] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:20:46.655] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:20:46.655] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:20:46.656] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 0
+}
+[2018-02-07T00:20:46.656] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:20:46.656] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:20:46.658] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:20:46.659] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988046658,
+  "outbreaks": []
+}
+[2018-02-07T00:20:46.659] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:20:46.660] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:20:46.660] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:47.152] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 3
+}
+[2018-02-07T00:20:47.152] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:20:47.153] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 3
+}
+[2018-02-07T00:20:47.153] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:20:47.153] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 3
+}
+[2018-02-07T00:20:47.154] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988047153,
+  "outbreaks": []
+}
+[2018-02-07T00:20:47.154] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:20:47.154] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:47.656] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:20:47.656] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:20:47.656] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 3
+}
+[2018-02-07T00:20:47.657] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:20:47.657] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:20:47.657] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 5
+}
+[2018-02-07T00:20:47.658] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988047657,
+  "outbreaks": []
+}
+[2018-02-07T00:20:47.658] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:20:47.658] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:20:47.660] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:21:07.952] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:21:07.955] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:21:07.955] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:21:07.956] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:21:07.958] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:21:07.960] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:21:08.953] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:21:08.954] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:21:08.954] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:21:08.954] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:21:08.956] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:21:08.956] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988068956,
+  "outbreaks": []
+}
+[2018-02-07T00:21:08.956] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:21:08.957] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:21:08.957] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:21:08.957] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:21:08.957] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:21:08.957] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:21:08.958] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:21:08.958] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988068957,
+  "outbreaks": []
+}
+[2018-02-07T00:21:08.958] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 4
+}
+[2018-02-07T00:21:08.958] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:21:08.959] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:21:08.960] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:26:32.050] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:26:32.053] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:26:32.053] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:26:32.054] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:26:32.056] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:26:32.057] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:26:33.051] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:26:33.051] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:26:33.052] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:26:33.052] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:26:33.054] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:26:33.054] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988393053,
+  "outbreaks": []
+}
+[2018-02-07T00:26:33.054] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:26:33.055] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:26:33.055] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:26:33.055] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:26:33.055] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:26:33.055] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:26:33.055] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:26:33.056] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988393055,
+  "outbreaks": []
+}
+[2018-02-07T00:26:33.056] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 4
+}
+[2018-02-07T00:26:33.056] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:26:33.057] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:26:33.058] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:26:34.054] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 5
+}
+[2018-02-07T00:27:05.680] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:27:05.682] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:27:05.683] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:27:05.684] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:05.685] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:05.687] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:06.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:27:06.683] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:06.683] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:27:06.683] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:27:06.685] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:27:06.685] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988426685,
+  "outbreaks": []
+}
+[2018-02-07T00:27:06.685] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:27:06.686] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:06.686] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:27:06.686] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:27:06.686] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:06.686] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:27:06.686] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:27:06.687] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:27:06.687] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988426687,
+  "outbreaks": []
+}
+[2018-02-07T00:27:06.687] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:27:06.687] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:27:06.687] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:29.724] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:27:29.727] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:27:29.727] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:27:29.728] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:29.730] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:29.732] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:27:30.726] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:27:30.727] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:30.727] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:27:30.727] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:27:30.729] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:27:30.729] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988450729,
+  "outbreaks": []
+}
+[2018-02-07T00:27:30.729] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:27:30.730] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:30.730] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:27:30.730] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:30.731] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 2
+}
+[2018-02-07T00:27:30.731] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:27:30.731] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:27:30.731] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988450731,
+  "outbreaks": []
+}
+[2018-02-07T00:27:30.731] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:27:30.731] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 4
+}
+[2018-02-07T00:27:30.731] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:30.733] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:27:31.728] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 5
+}
+[2018-02-07T00:27:31.728] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:27:31.728] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:27:31.728] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:27:31.731] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 6
+}
+[2018-02-07T00:27:31.731] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:31.732] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:31.733] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:27:31.733] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:27:31.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:27:31.733] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:27:31.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:27:31.734] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988451733,
+  "outbreaks": []
+}
+[2018-02-07T00:27:31.734] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:31.734] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:27:31.734] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:27:31.734] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:31.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:27:31.734] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:32.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:27:32.733] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:32.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:27:32.733] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:32.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 11,
+  "101": 8
+}
+[2018-02-07T00:27:32.734] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:27:32.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:27:32.734] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988452734,
+  "outbreaks": []
+}
+[2018-02-07T00:27:32.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 9
+}
+[2018-02-07T00:27:32.734] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:33.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 10
+}
+[2018-02-07T00:27:33.733] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:33.733] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:27:33.733] [DEBUG] VectorTimestamp - {
+  "1": 6,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:33.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 14,
+  "101": 10
+}
+[2018-02-07T00:27:33.734] [DEBUG] HDS10 - Got disease outbreak req:    iV
+[2018-02-07T00:27:33.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 10
+}
+[2018-02-07T00:27:33.734] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988453734,
+  "outbreaks": []
+}
+[2018-02-07T00:27:33.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 11
+}
+[2018-02-07T00:27:33.734] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:27:34.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 12
+}
+[2018-02-07T00:27:34.734] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:27:34.734] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 16,
+  "101": 10
+}
+[2018-02-07T00:27:34.734] [DEBUG] VectorTimestamp - {
+  "1": 7,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:27:34.735] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 17,
+  "101": 12
+}
+[2018-02-07T00:27:34.735] [DEBUG] HDS10 - Got disease outbreak req:    iW
+[2018-02-07T00:27:34.735] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 12
+}
+[2018-02-07T00:27:34.735] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988454735,
+  "outbreaks": []
+}
+[2018-02-07T00:27:34.735] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 13
+}
+[2018-02-07T00:27:34.735] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:44.883] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:28:44.886] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:28:44.886] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:28:44.887] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:28:44.889] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:28:44.891] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:28:45.885] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:28:45.886] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:45.886] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:28:45.886] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:28:45.888] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:28:45.888] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988525888,
+  "outbreaks": []
+}
+[2018-02-07T00:28:45.888] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:28:45.889] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:45.889] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:28:45.889] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:28:45.889] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:45.889] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:28:45.890] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:28:45.890] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:28:45.890] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988525890,
+  "outbreaks": []
+}
+[2018-02-07T00:28:45.890] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:28:45.890] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:45.892] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:28:46.887] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:28:46.887] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:28:46.887] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:28:46.887] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:28:46.890] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 6
+}
+[2018-02-07T00:28:46.890] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:46.891] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:46.891] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:28:46.891] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:28:46.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:28:46.892] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:28:46.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:28:46.892] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988526892,
+  "outbreaks": []
+}
+[2018-02-07T00:28:46.892] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:46.892] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:28:46.892] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:28:46.892] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:46.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:28:46.893] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:47.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:28:47.892] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:47.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:28:47.892] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:47.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 11,
+  "101": 8
+}
+[2018-02-07T00:28:47.893] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:28:47.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:28:47.893] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988527893,
+  "outbreaks": []
+}
+[2018-02-07T00:28:47.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 9
+}
+[2018-02-07T00:28:47.893] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:48.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 10
+}
+[2018-02-07T00:28:48.892] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:48.892] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:28:48.892] [DEBUG] VectorTimestamp - {
+  "1": 6,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:48.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 14,
+  "101": 10
+}
+[2018-02-07T00:28:48.893] [DEBUG] HDS10 - Got disease outbreak req:    iV
+[2018-02-07T00:28:48.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 10
+}
+[2018-02-07T00:28:48.893] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988528893,
+  "outbreaks": []
+}
+[2018-02-07T00:28:48.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 11
+}
+[2018-02-07T00:28:48.893] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:28:49.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 12
+}
+[2018-02-07T00:28:49.893] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:28:49.893] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 16,
+  "101": 10
+}
+[2018-02-07T00:28:49.893] [DEBUG] VectorTimestamp - {
+  "1": 7,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:28:49.894] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 17,
+  "101": 12
+}
+[2018-02-07T00:28:49.894] [DEBUG] HDS10 - Got disease outbreak req:    iW
+[2018-02-07T00:28:49.894] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 12
+}
+[2018-02-07T00:28:49.894] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988529894,
+  "outbreaks": []
+}
+[2018-02-07T00:28:49.894] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 13
+}
+[2018-02-07T00:28:49.894] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:06.235] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:29:06.237] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:29:06.237] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:29:06.238] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:29:06.240] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:29:06.242] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:29:07.236] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:29:07.237] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:07.238] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:29:07.238] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:29:07.241] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:29:07.242] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988547241,
+  "outbreaks": []
+}
+[2018-02-07T00:29:07.242] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:29:07.243] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:07.243] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:29:07.243] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:29:07.243] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:29:07.243] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:07.244] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:29:07.244] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:29:07.244] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:29:07.244] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988547244,
+  "outbreaks": []
+}
+[2018-02-07T00:29:07.244] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:29:07.244] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:08.240] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:29:08.240] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:29:08.240] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:29:08.240] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:29:08.243] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 6
+}
+[2018-02-07T00:29:08.243] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:08.244] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:08.245] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:29:08.245] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:29:08.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:29:08.245] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:29:08.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:29:08.245] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988548245,
+  "outbreaks": []
+}
+[2018-02-07T00:29:08.245] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:08.245] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:29:08.246] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:29:08.246] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:08.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:29:08.246] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:09.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:29:09.245] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:09.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:29:09.246] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:09.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 11,
+  "101": 8
+}
+[2018-02-07T00:29:09.246] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:29:09.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:29:09.246] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988549246,
+  "outbreaks": []
+}
+[2018-02-07T00:29:09.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 9
+}
+[2018-02-07T00:29:09.246] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:10.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 10
+}
+[2018-02-07T00:29:10.245] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:10.245] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:29:10.245] [DEBUG] VectorTimestamp - {
+  "1": 6,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:10.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 14,
+  "101": 10
+}
+[2018-02-07T00:29:10.246] [DEBUG] HDS10 - Got disease outbreak req:    iV
+[2018-02-07T00:29:10.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 10
+}
+[2018-02-07T00:29:10.246] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988550246,
+  "outbreaks": []
+}
+[2018-02-07T00:29:10.246] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 11
+}
+[2018-02-07T00:29:10.246] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:29:11.247] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 12
+}
+[2018-02-07T00:29:11.247] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:29:11.247] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 16,
+  "101": 10
+}
+[2018-02-07T00:29:11.247] [DEBUG] VectorTimestamp - {
+  "1": 7,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:29:11.248] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 17,
+  "101": 12
+}
+[2018-02-07T00:29:11.248] [DEBUG] HDS10 - Got disease outbreak req:    iW
+[2018-02-07T00:29:11.248] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 12
+}
+[2018-02-07T00:29:11.248] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988551248,
+  "outbreaks": []
+}
+[2018-02-07T00:29:11.248] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 13
+}
+[2018-02-07T00:29:11.248] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:22.674] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:31:22.676] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:31:22.676] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:31:22.677] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:22.679] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:22.680] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:23.675] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:31:23.675] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:23.676] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:31:23.676] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:31:23.678] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:31:23.678] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988683678,
+  "outbreaks": []
+}
+[2018-02-07T00:31:23.678] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:31:23.679] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:23.679] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:31:23.679] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:23.679] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:31:23.679] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:31:23.680] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:31:23.680] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:31:23.680] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988683680,
+  "outbreaks": []
+}
+[2018-02-07T00:31:23.680] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:31:23.680] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:31:23.680] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:24.678] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:31:24.678] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:31:24.678] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:31:24.678] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:31:24.679] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 6
+}
+[2018-02-07T00:31:24.680] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:24.680] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:24.681] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:31:24.681] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:31:24.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:31:24.681] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:31:24.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:31:24.681] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988684681,
+  "outbreaks": []
+}
+[2018-02-07T00:31:24.682] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:24.682] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:31:24.682] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:31:24.682] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:24.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:31:24.682] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:25.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:31:25.681] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:25.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:31:25.682] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:25.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 11,
+  "101": 8
+}
+[2018-02-07T00:31:25.682] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:31:25.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:31:25.682] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988685682,
+  "outbreaks": []
+}
+[2018-02-07T00:31:25.683] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 9
+}
+[2018-02-07T00:31:25.683] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:26.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 12,
+  "101": 10
+}
+[2018-02-07T00:31:26.681] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:26.681] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:31:26.681] [DEBUG] VectorTimestamp - {
+  "1": 6,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:26.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 14,
+  "101": 10
+}
+[2018-02-07T00:31:26.682] [DEBUG] HDS10 - Got disease outbreak req:    iV
+[2018-02-07T00:31:26.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 10
+}
+[2018-02-07T00:31:26.682] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988686682,
+  "outbreaks": []
+}
+[2018-02-07T00:31:26.682] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 11
+}
+[2018-02-07T00:31:26.682] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:27.683] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 15,
+  "101": 12
+}
+[2018-02-07T00:31:27.683] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:27.683] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 16,
+  "101": 10
+}
+[2018-02-07T00:31:27.683] [DEBUG] VectorTimestamp - {
+  "1": 7,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:27.684] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 17,
+  "101": 12
+}
+[2018-02-07T00:31:27.684] [DEBUG] HDS10 - Got disease outbreak req:    iW
+[2018-02-07T00:31:27.684] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 12
+}
+[2018-02-07T00:31:27.684] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988687684,
+  "outbreaks": []
+}
+[2018-02-07T00:31:27.684] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 18,
+  "101": 13
+}
+[2018-02-07T00:31:27.684] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:55.714] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:31:55.716] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:31:55.717] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:31:55.718] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:55.719] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:55.720] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:31:56.715] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:31:56.716] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:56.716] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:31:56.716] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:31:56.718] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:31:56.718] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988716718,
+  "outbreaks": []
+}
+[2018-02-07T00:31:56.718] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:31:56.719] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:56.719] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:31:56.719] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:56.719] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:31:56.720] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:31:56.720] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:31:56.720] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:31:56.720] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988716720,
+  "outbreaks": []
+}
+[2018-02-07T00:31:56.720] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:31:56.720] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:56.720] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:31:57.718] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:31:57.718] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:31:57.718] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:31:57.718] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:31:57.719] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 6
+}
+[2018-02-07T00:31:57.719] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:57.720] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:57.721] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:31:57.721] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:31:57.721] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:31:57.721] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:31:57.721] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:31:57.721] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988717721,
+  "outbreaks": []
+}
+[2018-02-07T00:31:57.722] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:57.722] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:31:57.722] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:31:57.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:57.722] [DEBUG] DOA1 - Published disease outbreak: {
+  "type": 1,
+  "infections": 1
+}
+[2018-02-07T00:31:57.722] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:31:57.722] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:57.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:31:57.722] [DEBUG] HDS10 - Disease Outbreak (Test)
+[2018-02-07T00:31:58.721] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:31:58.721] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:58.721] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 11,
+  "101": 6
+}
+[2018-02-07T00:31:58.721] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:58.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:31:58.722] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:31:58.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:31:58.722] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988718722,
+  "outbreaks": [
+    {
+      "time": 1517988717723,
+      "infections": 1,
+      "type": 1
+    }
+  ]
+}
+[2018-02-07T00:31:58.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 13,
+  "101": 9
+}
+[2018-02-07T00:31:58.722] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:58.722] [INFO] EMR101 - Outbreaks: [
+  {
+    "time": "Wed Feb 07 2018 00:31:57 GMT-0700 (Mountain Standard Time)",
+    "infections": 1,
+    "type": 1,
+    "name": "Test"
+  }
+]
+[2018-02-07T00:31:59.721] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 13,
+  "101": 10
+}
+[2018-02-07T00:31:59.721] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:31:59.721] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 14,
+  "101": 8
+}
+[2018-02-07T00:31:59.721] [DEBUG] VectorTimestamp - {
+  "1": 6,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:31:59.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 15,
+  "101": 10
+}
+[2018-02-07T00:31:59.722] [DEBUG] HDS10 - Got disease outbreak req:    iV
+[2018-02-07T00:31:59.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 16,
+  "101": 10
+}
+[2018-02-07T00:31:59.722] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988719722,
+  "outbreaks": [
+    {
+      "time": 1517988717723,
+      "infections": 1,
+      "type": 1
+    }
+  ]
+}
+[2018-02-07T00:31:59.722] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 16,
+  "101": 11
+}
+[2018-02-07T00:31:59.722] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:31:59.722] [INFO] EMR101 - Outbreaks: [
+  {
+    "time": "Wed Feb 07 2018 00:31:57 GMT-0700 (Mountain Standard Time)",
+    "infections": 1,
+    "type": 1,
+    "name": "Test"
+  }
+]
+[2018-02-07T00:32:00.723] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 16,
+  "101": 12
+}
+[2018-02-07T00:32:00.723] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:32:00.723] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 17,
+  "101": 10
+}
+[2018-02-07T00:32:00.723] [DEBUG] VectorTimestamp - {
+  "1": 7,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:32:00.724] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 18,
+  "101": 12
+}
+[2018-02-07T00:32:00.724] [DEBUG] HDS10 - Got disease outbreak req:    iW
+[2018-02-07T00:32:00.724] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 19,
+  "101": 12
+}
+[2018-02-07T00:32:00.724] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988720724,
+  "outbreaks": [
+    {
+      "time": 1517988717723,
+      "infections": 1,
+      "type": 1
+    }
+  ]
+}
+[2018-02-07T00:32:00.724] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 19,
+  "101": 13
+}
+[2018-02-07T00:32:00.724] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:32:00.724] [INFO] EMR101 - Outbreaks: [
+  {
+    "time": "Wed Feb 07 2018 00:31:57 GMT-0700 (Mountain Standard Time)",
+    "infections": 1,
+    "type": 1,
+    "name": "Test"
+  }
+]
+[2018-02-07T00:32:29.406] [DEBUG] Coordinator - Sent config to: doa1
+[2018-02-07T00:32:29.408] [DEBUG] Coordinator - Sent config to: emr101
+[2018-02-07T00:32:29.409] [DEBUG] Coordinator - Sent config to: hds10
+[2018-02-07T00:32:29.410] [DEBUG] EMR101 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:32:29.411] [DEBUG] HDS10 - Got config: {
+  "hds": {
+    "id": 10,
+    "notification": {
+      "ip": "localhost",
+      "port": 12100
+    },
+    "update": {
+      "ip": "localhost",
+      "port": 12101
+    },
+    "outbreakRouter": {
+      "ip": "localhost",
+      "port": 12110
+    }
+  },
+  "doa": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:32:29.413] [DEBUG] DOA1 - Got config: {
+  "doa": {
+    "id": 1,
+    "ip": "localhost",
+    "port": 12001,
+    "disease": 1
+  },
+  "hds": [
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "processes": [
+    {
+      "id": 1,
+      "ip": "localhost",
+      "port": 12001,
+      "disease": 1
+    },
+    {
+      "id": 101,
+      "hds": 10
+    },
+    {
+      "id": 10,
+      "notification": {
+        "ip": "localhost",
+        "port": 12100
+      },
+      "update": {
+        "ip": "localhost",
+        "port": 12101
+      },
+      "outbreakRouter": {
+        "ip": "localhost",
+        "port": 12110
+      }
+    }
+  ],
+  "simulation": {
+    "simulationTime": 24,
+    "simulationInterval": 100,
+    "diseases": [
+      {
+        "id": 1,
+        "name": "Test",
+        "threshold": 1,
+        "minP": 0,
+        "maxP": 0,
+        "ratePeriod": 24
+      }
+    ]
+  }
+}
+[2018-02-07T00:32:30.408] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 1
+}
+[2018-02-07T00:32:30.408] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:32:30.409] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 1,
+  "101": 1
+}
+[2018-02-07T00:32:30.409] [DEBUG] HDS10 - Got disease outbreak req:    iR
+[2018-02-07T00:32:30.411] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 1
+}
+[2018-02-07T00:32:30.411] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988750411,
+  "outbreaks": []
+}
+[2018-02-07T00:32:30.411] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 0,
+  "101": 2
+}
+[2018-02-07T00:32:30.412] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:32:30.412] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 3,
+  "101": 1
+}
+[2018-02-07T00:32:30.412] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 2,
+  "101": 3
+}
+[2018-02-07T00:32:30.412] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:32:30.412] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 4,
+  "101": 2
+}
+[2018-02-07T00:32:30.412] [DEBUG] HDS10 - Got disease outbreak req:    iS
+[2018-02-07T00:32:30.413] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 2
+}
+[2018-02-07T00:32:30.413] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988750413,
+  "outbreaks": []
+}
+[2018-02-07T00:32:30.413] [DEBUG] VectorTimestamp - {
+  "1": 1,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:32:30.413] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 4
+}
+[2018-02-07T00:32:30.413] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:32:31.411] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 5
+}
+[2018-02-07T00:32:31.411] [DEBUG] EMR101 - Sent disease notification: Test (1)
+[2018-02-07T00:32:31.411] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 6,
+  "101": 5
+}
+[2018-02-07T00:32:31.411] [DEBUG] HDS10 - Received disease notification (Test): 1
+[2018-02-07T00:32:31.413] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 5,
+  "101": 6
+}
+[2018-02-07T00:32:31.413] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:32:31.414] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:32:31.415] [DEBUG] HDS10 - Published disease count: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:32:31.415] [DEBUG] VectorTimestamp - {
+  "1": 2,
+  "10": 0,
+  "101": 0
+}
+[2018-02-07T00:32:31.415] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 8,
+  "101": 6
+}
+[2018-02-07T00:32:31.415] [DEBUG] HDS10 - Got disease outbreak req:    iT
+[2018-02-07T00:32:31.415] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 6
+}
+[2018-02-07T00:32:31.415] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988751415,
+  "outbreaks": []
+}
+[2018-02-07T00:32:31.416] [DEBUG] VectorTimestamp - {
+  "1": 3,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:32:31.416] [DEBUG] DOA1 - Disease update: {
+  "hds": 10,
+  "disease": 1,
+  "count": 1
+}
+[2018-02-07T00:32:31.416] [DEBUG] DOA1 - Disease counts: [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[2018-02-07T00:32:31.416] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:32:31.416] [DEBUG] DOA1 - Published disease outbreak: {
+  "type": 1,
+  "infections": 1
+}
+[2018-02-07T00:32:31.416] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 7
+}
+[2018-02-07T00:32:31.416] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:32:31.416] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 10,
+  "101": 6
+}
+[2018-02-07T00:32:31.416] [DEBUG] HDS10 - Disease Outbreak (Test)
+[2018-02-07T00:32:32.415] [DEBUG] VectorTimestamp - {
+  "1": 0,
+  "10": 9,
+  "101": 8
+}
+[2018-02-07T00:32:32.415] [DEBUG] EMR101 - Sent outbreak request
+[2018-02-07T00:32:32.415] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 11,
+  "101": 6
+}
+[2018-02-07T00:32:32.416] [DEBUG] VectorTimestamp - {
+  "1": 5,
+  "10": 7,
+  "101": 5
+}
+[2018-02-07T00:32:32.416] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 12,
+  "101": 8
+}
+[2018-02-07T00:32:32.416] [DEBUG] HDS10 - Got disease outbreak req:    iU
+[2018-02-07T00:32:32.416] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 13,
+  "101": 8
+}
+[2018-02-07T00:32:32.416] [DEBUG] HDS10 - Sent disease outbreak response: {
+  "time": 1517988752416,
+  "outbreaks": [
+    {
+      "time": 1517988751417,
+      "infections": 1,
+      "type": 1
+    }
+  ]
+}
+[2018-02-07T00:32:32.416] [DEBUG] VectorTimestamp - {
+  "1": 4,
+  "10": 13,
+  "101": 9
+}
+[2018-02-07T00:32:32.416] [DEBUG] EMR101 - Got outbreak response
+[2018-02-07T00:32:32.416] [INFO] EMR101 - Outbreaks: [
+  {
+    "time": "Wed Feb 07 2018 00:32:31 GMT-0700 (Mountain Standard Time)",
+    "infections": 1,
+    "type": 1,
+    "name": "Test"
+  }
+]

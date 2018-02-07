@@ -1,5 +1,6 @@
 const Socket = require("./Socket");
 const _ = require("lodash");
+const zmq = require("zmq");
 
 class Pub extends Socket {
   constructor(connection) {
@@ -8,7 +9,7 @@ class Pub extends Socket {
 
   send(data, topic) {
     if (!_.isNil(topic)) {
-      this.socket.send([topic, JSON.stringify(data)]);
+      zmq.Socket.prototype.send.call(this, [topic, JSON.stringify(data)]);
     } else {
       super.send(data);
     }

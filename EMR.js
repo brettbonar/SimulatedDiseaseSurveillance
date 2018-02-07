@@ -1,15 +1,15 @@
 const _ = require("lodash");
 
 const Process = require("./Process");
-const Disease = require("./Disease");
+const DiseaseNotification = require("./Messages/DiseaseNotification");
 const Push = require("./Messaging/Push");
 const Req = require("./Messaging/Req");
 
 const OUTBREAK_REQ_INTERVAL = 1000;
 
 class EMR extends Process {
-  constructor() {
-    super("emr");
+  constructor(options) {
+    super(options);
   }
   
   start(params) {
@@ -27,16 +27,20 @@ class EMR extends Process {
     setInterval(() => this.sendOutbreakReq(), OUTBREAK_REQ_INTERVAL);
   }
 
+  sendDiseaseNotification(disease) {
+    this.vectorTimestamp.update();
+    this.logger.debug("Sent disease notification: " + disease.name + " (" + disease.id + ")");
+    this.push.send(new DiseaseNotification({
+      type: disease.id,
+      vectorTimestamp: this.vectorTimestamp
+    }).toJSON());
+  }
+
   simulateDiseases() {    
     _.each(this.simulation.diseases, (disease) => {
       disease.probability = disease.probability + disease.deltaP;
       if (Math.random() <= disease.probability) {
-        this.updateVectorTimestamp();
-        this.logger.debug("Sent disease notification: " + disease.name + " (" + disease.id + ")");
-        this.push.send(new Disease({
-          type: disease.id,
-          vectorTimestamp: this.vectorTimestamp
-        }).toJSON());
+        sendDiseaseNotification(disease);
       }
 
       if (disease.probability > disease.maxP) {
@@ -50,17 +54,17 @@ class EMR extends Process {
   }
 
   sendOutbreakReq() {
-    this.updateVectorTimestamp();
+    this.vectorTimestamp.update();
     this.req = new Req(this.hds.outbreakRouter);
-    this.req.on((data) => this.handleOutbreakResp(data));
+    this.req.on((data) => this.handleOutbreakRep(data));
     this.req.send({
-      vectorTimestamp: this.vectorTimestamp
+      vectorTimestamp: this.vectorTimestamp.get()
     });
     this.logger.debug("Sent outbreak request");
   }
   
-  handleOutbreakResp(status) {
-    this.updateVectorTimestamp(status.vectorTimestamp);
+  handleOutbreakRep(status) {
+    this.vectorTimestamp.update(status.vectorTimestamp);
     this.logger.debug("Got outbreak response");
     if (status.outbreaks.length > 0) {
       _.each(status.outbreaks, (outbreak) => {
@@ -72,5 +76,4 @@ class EMR extends Process {
   }
 }
 
-let process = new EMR();
-process.init();
+module.exports = EMR;

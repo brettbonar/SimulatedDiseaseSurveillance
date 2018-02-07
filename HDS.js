@@ -2,15 +2,14 @@ const _ = require("lodash");
 const moment = require("moment");
 
 const Process = require("./Process");
-const Disease = require("./Disease");
 const Pull = require("./Messaging/Pull");
 const Pub = require("./Messaging/Pub");
 const Sub = require("./Messaging/Sub");
 const Router = require("./Messaging/Router");
 
 class HDS extends Process {
-  constructor() {
-    super("hds");
+  constructor(options) {
+    super(options);
   }
   
   start(params) {
@@ -34,7 +33,7 @@ class HDS extends Process {
   }
 
   handleDiseaseNotification(data) {
-    this.updateVectorTimestamp(data.vectorTimestamp);
+    this.vectorTimestamp.update(data.vectorTimestamp);
     let diseaseCnt = _.find(this.diseaseCounts, { type: data.type });
     if (!diseaseCnt) {
       diseaseCnt = {
@@ -49,7 +48,7 @@ class HDS extends Process {
   }
   
   handleOutbreakNotification(data) {
-    this.updateVectorTimestamp(data.vectorTimestamp);
+    this.vectorTimestamp.update(data.vectorTimestamp);
     this.logger.debug("Disease Outbreak (" + _.find(this.simulation.diseases, { id: data.type }).name + ")");
     this.diseaseOutbreaks.push({
       time: moment().valueOf(),
@@ -60,14 +59,14 @@ class HDS extends Process {
 
   publishDiseases() {
     // Notify associated DOA
-    this.updateVectorTimestamp();
+    this.vectorTimestamp.update();
     _.each(this.diseaseCounts, (disease) => {
       if (disease.count != disease.lastCount) {
         let message = {
           hds: this.id,
           disease: disease.type,
           count: disease.count - disease.lastCount,
-          vectorTimestamp: this.vectorTimestamp
+          vectorTimestamp: this.vectorTimestamp.get()
         };
         disease.lastCount = disease.count;
         this.diseaseUpdatePublisher.send(message, disease.type.toString());
@@ -77,7 +76,7 @@ class HDS extends Process {
   }
 
   handleDiseaseOutbreakReq(data, id) {
-    this.updateVectorTimestamp(data.vectorTimestamp);
+    this.vectorTimestamp.update(data.vectorTimestamp);
     this.logger.debug("Got disease outbreak req: " + id.toString());
     // Respond with list of outbreaks from last simulation time period
     let minTime = moment().subtract(this.simulation.simulationTime, "seconds").valueOf();
@@ -85,15 +84,14 @@ class HDS extends Process {
     let message = {
       time: moment().valueOf(),
       outbreaks: outbreaks,
-      vectorTimestamp: this.vectorTimestamp
+      vectorTimestamp: this.vectorTimestamp.get()
     };
     
-    this.updateVectorTimestamp();
+    this.vectorTimestamp.update();
     this.diseaseOutbreakRouter.send(message, id);
     this.logger.debug("Sent disease outbreak response: " + 
       JSON.stringify(_.omit(message, "vectorTimestamp"), null, 2));
   }
 }
 
-let process = new HDS();
-process.init();
+module.exports = HDS;

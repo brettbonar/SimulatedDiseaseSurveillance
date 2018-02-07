@@ -7,7 +7,7 @@ class Sub extends Socket {
     if (_.isNil(topic)) {
       topic = "";
     }
-    this.socket.subscribe(topic);
+    this.subscribe(topic);
   }
 }
 

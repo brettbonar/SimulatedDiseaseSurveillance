@@ -1,0 +1,98 @@
+[2018-02-07T00:33:01.817] [DEBUG] VectorTimestamp - {
+  "A": 1
+}
+[2018-02-07T00:33:01.819] [DEBUG] VectorTimestamp - {
+  "A": 2
+}
+[2018-02-07T00:33:01.819] [DEBUG] VectorTimestamp - {
+  "A": 3
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "A": 1,
+  "B": 0,
+  "C": 0
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "B": 1,
+  "A": 0,
+  "C": 0
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "A": 2,
+  "B": 1,
+  "C": 0
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "B": 2,
+  "A": 2,
+  "C": 0
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "C": 1,
+  "A": 2,
+  "B": 1
+}
+[2018-02-07T00:33:01.820] [DEBUG] VectorTimestamp - {
+  "A": 3,
+  "B": 1,
+  "C": 1
+}
+[2018-02-07T00:33:01.821] [DEBUG] VectorTimestamp - {
+  "C": 2,
+  "A": 2,
+  "B": 1
+}
+[2018-02-07T00:33:01.821] [DEBUG] VectorTimestamp - {
+  "B": 3,
+  "A": 2,
+  "C": 2
+}
+[2018-02-07T00:33:19.338] [DEBUG] VectorTimestamp - {
+  "A": 1
+}
+[2018-02-07T00:33:19.339] [DEBUG] VectorTimestamp - {
+  "A": 2
+}
+[2018-02-07T00:33:19.340] [DEBUG] VectorTimestamp - {
+  "A": 3
+}
+[2018-02-07T00:33:19.341] [DEBUG] VectorTimestamp - {
+  "A": 1,
+  "B": 0,
+  "C": 0
+}
+[2018-02-07T00:33:19.341] [DEBUG] VectorTimestamp - {
+  "B": 1,
+  "A": 0,
+  "C": 0
+}
+[2018-02-07T00:33:19.341] [DEBUG] VectorTimestamp - {
+  "A": 2,
+  "B": 1,
+  "C": 0
+}
+[2018-02-07T00:33:19.341] [DEBUG] VectorTimestamp - {
+  "B": 2,
+  "A": 2,
+  "C": 0
+}
+[2018-02-07T00:33:19.342] [DEBUG] VectorTimestamp - {
+  "C": 1,
+  "A": 2,
+  "B": 1
+}
+[2018-02-07T00:33:19.342] [DEBUG] VectorTimestamp - {
+  "A": 3,
+  "B": 1,
+  "C": 1
+}
+[2018-02-07T00:33:19.342] [DEBUG] VectorTimestamp - {
+  "C": 2,
+  "A": 2,
+  "B": 1
+}
+[2018-02-07T00:33:19.342] [DEBUG] VectorTimestamp - {
+  "B": 3,
+  "A": 2,
+  "C": 2
+}

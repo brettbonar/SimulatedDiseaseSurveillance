@@ -1,9 +1,8 @@
-class Disease {
+class DiseaseNotification {
   constructor(json) {
     json = json || {};
     this.type = json.type || 1;
     this.timestamp = json.timestamp || Date.now();
-    // TODO: handle this
     this.vectorTimestamp = json.vectorTimestamp || [];
   }
 
@@ -11,9 +10,9 @@ class Disease {
     return {
       type: this.type,
       timestamp: this.timestamp,
-      vectorTimestamp: this.vectorTimestamp
+      vectorTimestamp: this.vectorTimestamp.get()
     };
   }
 }
 
-module.exports = Disease;
+module.exports = DiseaseNotification;

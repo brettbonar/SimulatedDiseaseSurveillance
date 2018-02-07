@@ -38,19 +38,23 @@ fs.readdir(logDir, (err, files) => {
 });
 
 // Launch coordinator
-launch("node", ["./Coordinator.js", "--configuration", CONFIG_PATH]);
+launch("node", ["./startProcess.js", "--type", "coordinator", "--configuration", CONFIG_PATH]);
+
+function startProcess(id, type) {
+  launch("node",  ["./startProcess.js", "--id", id, "--type", type, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+}
 
 // Launch DOA
 _.each(config.doa, function (process) {
-  launch("node",  ["./DOA.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
-});
-
-// Launch HDS
-_.each(config.hds, function (process) {
-  launch("node",  ["./HDS.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+  startProcess(process.id, "doa");
 });
 
 // Launch EMR
 _.each(config.emr, function (process) {
-  launch("node",  ["./EMR.js", "--id", process.id, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+  startProcess(process.id, "emr");
+});
+
+// Launch HDS
+_.each(config.hds, function (process) {
+  startProcess(process.id, "hds");
 });
