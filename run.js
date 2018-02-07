@@ -2,11 +2,20 @@ const { spawn } = require("child_process");
 const _ = require("lodash");
 const fs = require("fs");
 const path = require("path");
+const options = require("commander");
 
-const CONFIG_PATH = "./config/influenzaOutbreak.json";
-//const CONFIG_PATH = "./config/influenzaOutbreak.json";
+function list(val) {
+  return val.split(",");
+}
 
-let config = require(CONFIG_PATH);
+options
+  .option("-c, --coordinator", "Launch coordinator")
+  .option("-config, --configuration <f>", "Configuration file")
+  .option("-ids, --ids <items>", "Process IDs to launch from config", list)
+  .parse(process.argv);
+
+let configPath = options.configuration || "./config/outbreaks.json";
+let config = require(configPath);
 let children = [];
 
 function launch(command, args) {
@@ -24,24 +33,28 @@ function launch(command, args) {
 }
 
 // Clean log directory
-let logDir = "./logs";
-fs.readdir(logDir, (err, files) => {
-  if (err) throw err;
+// let logDir = "./logs";
+// fs.readdir(logDir, (err, files) => {
+//   if (err) throw err;
 
-  if (files) {
-    for (const file of files) {
-      fs.unlink(path.join(logDir, file), err => {
-        if (err) throw err;
-      });
-    }
-  }
-});
+//   if (files) {
+//     for (const file of files) {
+//       fs.unlink(path.join(logDir, file), err => {
+//         if (err) throw err;
+//       });
+//     }
+//   }
+// });
 
 // Launch coordinator
-launch("node", ["./startProcess.js", "--type", "coordinator", "--configuration", CONFIG_PATH]);
+if (options.coordinator) {
+  launch("node", ["./startProcess.js", "--type", "coordinator", "--configuration", configPath]);
+}
 
 function startProcess(id, type) {
-  launch("node",  ["./startProcess.js", "--id", id, "--type", type, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+  if (!options.ids || _.includes(options.ids, id.toString())) {
+    launch("node",  ["./startProcess.js", "--id", id, "--type", type, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+  }
 }
 
 // Launch DOA

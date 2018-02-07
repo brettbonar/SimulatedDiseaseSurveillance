@@ -32,6 +32,7 @@ class EMR extends Process {
     this.logger.debug("Sent disease notification: " + disease.name + " (" + disease.id + ")");
     this.push.send(new DiseaseNotification({
       type: disease.id,
+      id: this.id,
       vectorTimestamp: this.vectorTimestamp
     }).toJSON());
   }
@@ -40,7 +41,7 @@ class EMR extends Process {
     _.each(this.simulation.diseases, (disease) => {
       disease.probability = disease.probability + disease.deltaP;
       if (Math.random() <= disease.probability) {
-        sendDiseaseNotification(disease);
+        this.sendDiseaseNotification(disease);
       }
 
       if (disease.probability > disease.maxP) {

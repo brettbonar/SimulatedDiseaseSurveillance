@@ -10,26 +10,26 @@
       {
         "id": 1,
         "name": "Influenza",
-        "threshold": 120,
+        "threshold": 500,
         "minP": 0,
         "maxP": 0.1,
-        "ratePeriod": 24
+        "ratePeriod": 48
       },
       {
         "id": 2,
         "name": "Chicken Pox",
-        "threshold": 50,
+        "threshold": 500,
         "minP": 0,
-        "maxP": 0,
-        "ratePeriod": 24
+        "maxP": 0.1,
+        "ratePeriod": 48
       },
       {
         "id": 3,
         "name": "Measles",
-        "threshold": 10,
+        "threshold": 500,
         "minP": 0,
-        "maxP": 0,
-        "ratePeriod": 24
+        "maxP": 0.1,
+        "ratePeriod": 48
       }
     ]
   },

@@ -52,6 +52,7 @@ describe("Integration", function () {
   })
   
   it("Disease Notification to Outbreak", function (done) {
+    this.timeout(5000);
     let spyHdsNotification = sinon.spy(hds, "handleDiseaseNotification");
     let spyHdsPublish = sinon.spy(hds, "publishDiseases");
     let spyHdsOutbreak = sinon.spy(hds, "handleOutbreakNotification");

@@ -44,7 +44,7 @@ class HDS extends Process {
       this.diseaseCounts.push(diseaseCnt);
     }
     diseaseCnt.count += 1;
-    this.logger.debug("Received disease notification (" + _.find(this.simulation.diseases, { id: data.type }).name + "): " + diseaseCnt.count);
+    this.logger.debug("Received disease notification (" + _.find(this.simulation.diseases, { id: data.type }).name + ") from: " + data.id);
   }
   
   handleOutbreakNotification(data) {
@@ -77,7 +77,7 @@ class HDS extends Process {
 
   handleDiseaseOutbreakReq(data, id) {
     this.vectorTimestamp.update(data.vectorTimestamp);
-    this.logger.debug("Got disease outbreak req: " + id.toString());
+    this.logger.debug("Got disease outbreak req");
     // Respond with list of outbreaks from last simulation time period
     let minTime = moment().subtract(this.simulation.simulationTime, "seconds").valueOf();
     let outbreaks = _.takeRightWhile(this.diseaseOutbreaks, (outbreak) => outbreak.time > minTime);
