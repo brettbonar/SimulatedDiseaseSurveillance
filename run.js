@@ -12,6 +12,7 @@ options
   .option("-c, --coordinator", "Launch coordinator")
   .option("-config, --configuration <f>", "Configuration file")
   .option("-ids, --ids <items>", "Process IDs to launch from config", list)
+  .option("-a, --all", "Start all processes")
   .parse(process.argv);
 
 let configPath = options.configuration || "./config/outbreaks.json";
@@ -52,7 +53,7 @@ if (options.coordinator) {
 }
 
 function startProcess(id, type) {
-  if (!options.ids || _.includes(options.ids, id.toString())) {
+  if (options.all || _.includes(options.ids, id.toString())) {
     launch("node",  ["./startProcess.js", "--id", id, "--type", type, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
   }
 }
