@@ -1,1 +1,1 @@
-node run --coordinator --configuration=./config/outbreaks.json --ids ""
+node run --coordinator --configuration=./config/outbreaks.json

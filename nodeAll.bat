@@ -1,1 +1,1 @@
-node run --configuration=./config/outbreaks.json
+node run --configuration=./config/outbreaks.json --all
