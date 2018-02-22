@@ -73,7 +73,7 @@ class HDS extends Process {
           vectorTimestamp: this.vectorTimestamp.get()
         };
         disease.lastCount = disease.count;
-        this.diseaseUpdatePublisher.send(message, disease.type);
+        this.diseaseUpdatePublisher.send(message, disease.type.toString());
         this.logger.debug("Published disease count: " + JSON.stringify(_.omit(message, "vectorTimestamp"), null, 2));
       }
     });

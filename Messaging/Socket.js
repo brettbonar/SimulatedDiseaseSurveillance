@@ -58,7 +58,7 @@ class Socket extends zmq.Socket {
     this.sendImpl(data, id);
     this.timeout = setTimeout(() => {
       this.retries -= 1;
-      if (retries > 0) {
+      if (this.retries > 0) {
         this.sendImpl(data, id);
       } else {
         console.log("FAILED TO SEND");
