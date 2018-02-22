@@ -57,17 +57,18 @@ class Socket extends zmq.Socket {
   send(data, id) {
     this.sendImpl(data, id);
     this.timeout = setTimeout(() => {
-      this.retries -= 1;
       if (this.retries > 0) {
+        this.retries -= 1;
         this.sendImpl(data, id);
-      } else {
-        console.log("FAILED TO SEND");
+      } else if (this.timeout) {
+        console.log("FAILED TO SEND: " + JSON.stringify(data, null, 2));
       }
     }, 5000);
   }
 
   on(cb) {
     clearTimeout(this.timeout);
+    this.timeout = null;
     super.on("message", function (data) {
       let from = null; // will be sender id or publish topic
       if (arguments.length > 1) {
