@@ -11,7 +11,7 @@ class Coordinator {
     this.config = require(options.configuration);
     this.socket = new Router(this.config.coordinator);
     this.logger = logger.getLogger("Coordinator");
-    this.nextPort = this.config.coordinator.port + 1;
+    this.nextPort = this.config.coordinator.port + 10;
     this.readyReqs = [];
 
     this.socket.on((data, id) => this.handleRequest(data, id));
