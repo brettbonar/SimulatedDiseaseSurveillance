@@ -1,0 +1,9 @@
+Congratulations! The application simulated-disease-surveillance has been created.
+Before you deploy your application, you need to upload its files to a repository. You can use the AWS CLI to upload to an S3 bucket. (Want to use a different repository type? Learn more )
+Create An AWS CodeDeploy AppSpec File. This File Defines How An Application Is Deployed To A Single Instance. Learn more
+Download and install the AWS CLI, and then use it to upload your application to your preferred storage location. Learn more
+Push and deploy your application. Use the AWS CLI to access the directory that contains your application files, and then run the following command:
+
+aws deploy push --application-name <MyAppName> \
+      --s3-location s3://<MyBucketName>/<MyNewAppBundleName> \
+      --source <PathToMyBundle>

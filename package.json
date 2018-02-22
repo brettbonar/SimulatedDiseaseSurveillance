@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.200.0",
     "chai": "^4.1.2",
     "commander": "^2.13.0",
     "lodash": "^4.17.4",
