@@ -56,7 +56,7 @@ class Process {
     let left = _.size(config.bindings);
     _.each(config.bindings, (binding, name) => {
       let req = new Req(this.coordinator);
-      this.logger.debug("Register Binding:" + name);
+      this.logger.debug("Register Binding: " + name);
       req.send({
         msgType: "register",
         name: [this.id, name].join("."),

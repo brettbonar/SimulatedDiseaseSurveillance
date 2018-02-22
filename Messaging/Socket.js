@@ -19,6 +19,7 @@ class Socket extends zmq.Socket {
     super(socketType);
     this.socketType = socketType;
     this.connectionType = connectionType;
+    this.retries = 3;
 
     if (connection) {
       this.connect(connection);
@@ -43,7 +44,7 @@ class Socket extends zmq.Socket {
     }
   }
 
-  send(data, id) {
+  sendImpl(data, id) {
     data = JSON.stringify(data);
     if (!_.isUndefined(id)) {
       super.send([id, "", data]);
@@ -53,7 +54,20 @@ class Socket extends zmq.Socket {
     }
   }
 
+  send(data, id) {
+    this.sendImpl(data, id);
+    this.timeout = setTimeout(() => {
+      this.retries -= 1;
+      if (retries > 0) {
+        this.sendImpl(data, id);
+      } else {
+        console.log("FAILED TO SEND");
+      }
+    }, 5000);
+  }
+
   on(cb) {
+    clearTimeout(this.timeout);
     super.on("message", function (data) {
       let from = null; // will be sender id or publish topic
       if (arguments.length > 1) {

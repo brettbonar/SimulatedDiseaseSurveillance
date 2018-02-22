@@ -30,7 +30,7 @@ class Coordinator {
     } else if (data.msgType === "register") {
       this.logger.debug("Register request: " + JSON.stringify(data, null, 2));
       this.register(data);
-      this.socket.send("", id);
+      this.socket.send({ registered: true }, id);
     } else if (data.msgType === "requestName") {
       this.logger.debug("Name request: " + JSON.stringify(data, null, 2));
       let name = data.name.split(".")[0];
