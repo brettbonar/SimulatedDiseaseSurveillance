@@ -63,8 +63,10 @@ class Process {
         type: this.type
       });
       req.on((data) => {
+        this.logger.debug("Registered: " + name);
         left -= 1;
         if (left === 0) {
+          this.logger.debug("Ready");
           this.ready(config);
         }
       });

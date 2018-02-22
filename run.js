@@ -1,25 +1,74 @@
-var AWS = require('aws-sdk');
+const { spawn } = require("child_process");
+const _ = require("lodash");
+const fs = require("fs");
+const path = require("path");
+const options = require("commander");
 
-var s3 = new AWS.S3();
+function list(val) {
+  return val.split(",");
+}
 
-// Bucket names must be unique across all S3 users
+options
+  .option("-c, --coordinator", "Launch coordinator")
+  .option("-config, --configuration <f>", "Configuration file")
+  .option("-ids, --ids <items>", "Process IDs to launch from config", list)
+  .option("-a, --all", "Start all processes")
+  .parse(process.argv);
 
-var myBucket = 'bbonar-simulated-disease-surveillance';
+let configPath = options.configuration || "./config/outbreaks.json";
+let config = require(configPath);
+let children = [];
 
-var myKey = 'myBucketKey';
+function launch(command, args) {
+  let child = spawn(command, args);
+  child.stdout.on("data", function(data) {
+    console.log(data.toString());
+  });
+  child.stderr.on("data", function(data) {
+    console.log(data.toString());
+  });
+  child.on("close", function(code) {
+    console.log("closing code: " + code);
+  });
+  children.push(child);
+}
 
-params = {Bucket: myBucket, Key: myKey, Body: 'Hello!'};
+// Clean log directory
+// let logDir = "./logs";
+// fs.readdir(logDir, (err, files) => {
+//   if (err) throw err;
 
-s3.putObject(params, function(err, data) {
+//   if (files) {
+//     for (const file of files) {
+//       fs.unlink(path.join(logDir, file), err => {
+//         if (err) throw err;
+//       });
+//     }
+//   }
+// });
 
-    if (err) {
+// Launch coordinator
+if (options.coordinator) {
+  launch("node", ["./startProcess.js", "--type", "coordinator", "--configuration", configPath]);
+}
 
-        console.log(err)
+function startProcess(id, type) {
+  if (options.all || _.includes(options.ids, id.toString())) {
+    launch("node",  ["./startProcess.js", "--id", id, "--type", type, "--coordinator-ip", "localhost", "--coordinator-port", "12000"]);
+  }
+}
 
-    } else {
+// Launch DOA
+// _.each(config.doa, function (process) {
+//   startProcess(process.id, "doa");
+// });
 
-        console.log("Successfully uploaded data to myBucket/myKey");
+// // Launch EMR
+// _.each(config.emr, function (process) {
+//   startProcess(process.id, "emr");
+// });
 
-    }
-
- });
+// // Launch HDS
+// _.each(config.hds, function (process) {
+//   startProcess(process.id, "hds");
+// });
