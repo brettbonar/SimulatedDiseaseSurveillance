@@ -1,8 +1,8 @@
 const Socket = require("./Socket");
 
 class Pull extends Socket {
-  constructor(connection) {
-    super(connection, "pull", Socket.CONNECTION_TYPE.BIND);
+  constructor(connection, type) {
+    super(connection, "pull", type || Socket.CONNECTION_TYPE.BIND);
   }
 }
 

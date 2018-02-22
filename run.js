@@ -59,16 +59,16 @@ function startProcess(id, type) {
 }
 
 // Launch DOA
-_.each(config.doa, function (process) {
-  startProcess(process.id, "doa");
-});
+// _.each(config.doa, function (process) {
+//   startProcess(process.id, "doa");
+// });
 
-// Launch EMR
-_.each(config.emr, function (process) {
-  startProcess(process.id, "emr");
-});
+// // Launch EMR
+// _.each(config.emr, function (process) {
+//   startProcess(process.id, "emr");
+// });
 
-// Launch HDS
-_.each(config.hds, function (process) {
-  startProcess(process.id, "hds");
-});
+// // Launch HDS
+// _.each(config.hds, function (process) {
+//   startProcess(process.id, "hds");
+// });

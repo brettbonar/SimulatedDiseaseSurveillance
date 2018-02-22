@@ -13,23 +13,22 @@ class DOA extends Process {
   }
 
   start(params) {
-    this.simulation = params.simulation;
-    this.connection = {
-      ip: params.doa.ip,
-      port: params.doa.port
-    };
-  
-    this.disease = _.find(this.simulation.diseases, { id: params.doa.disease });
+    this.simulation = params.simulation;  
+    this.disease = params.disease;
     this.currentHour = 0;
     this.diseaseCounts = Array(this.simulation.simulationTime).fill(0);
     this.outbreaking = false;
 
-    this.diseaseUpdateSub = new Sub(_.map(params.hds, "update"), params.doa.disease.toString());
-    this.diseaseUpdateSub.on((data) => this.onDiseaseUpdate(data));
-    this.diseaseOutbreakPub = new Pub(this.connection);
+    this.diseaseOutbreakPub = new Pub(params.bindings.notification);
+    this.requestName("hds.update").then((data) => this.subscribeToHds(data));
 
     // Update simulation every second
     setInterval(() => this.updateSimulation(), SIMULATION_INTERVAL);
+  }
+
+  subscribeToHds(hds) {
+    this.diseaseUpdateSub = new Sub(hds, this.disease.id.toString());
+    this.diseaseUpdateSub.on((data) => this.onDiseaseUpdate(data));
   }
 
   onDiseaseUpdate(data) {

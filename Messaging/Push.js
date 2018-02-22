@@ -1,8 +1,8 @@
 const Socket = require("./Socket");
 
 class Push extends Socket {
-  constructor(connection) {
-    super(connection, "push", Socket.CONNECTION_TYPE.CONNECT);
+  constructor(connection, type) {
+    super(connection, "push", type || Socket.CONNECTION_TYPE.CONNECT);
   }
 }
 

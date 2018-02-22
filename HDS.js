@@ -14,22 +14,25 @@ class HDS extends Process {
   
   start(params) {
     this.simulation = params.simulation;
-    this.settings = params.hds;
 
     this.diseaseCounts = [];
     this.diseaseOutbreaks = [];
 
     // Establish sockets
-    this.diseaseUpdatePublisher = new Pub(this.settings.update);
-    this.diseaseNotificationPuller = new Pull(this.settings.notification);
+    this.diseaseUpdatePublisher = new Pub(params.bindings.update);
+    this.diseaseNotificationPuller = new Pull(params.bindings.notification);
     this.diseaseNotificationPuller.on((data) => this.handleDiseaseNotification(data));
     
-    this.outbreakSub = new Sub(params.doa, "outbreak");
-    this.outbreakSub.on((data) => this.handleOutbreakNotification(data));
-    this.diseaseOutbreakRouter = new Router(this.settings.outbreakRouter);
+    this.diseaseOutbreakRouter = new Router(params.bindings.outbreak);
     this.diseaseOutbreakRouter.on((data, id) => this.handleDiseaseOutbreakReq(data, id));
 
+    this.requestName("doa.notification").then((data) => this.subscribeToDoa(data));
     setInterval(() => this.publishDiseases(), 1000);
+  }
+
+  subscribeToDoa(doa) {
+    this.outbreakSub = new Sub(doa, "outbreak");
+    this.outbreakSub.on((data) => this.handleOutbreakNotification(data));
   }
 
   handleDiseaseNotification(data) {
@@ -45,6 +48,7 @@ class HDS extends Process {
     }
     diseaseCnt.count += 1;
     this.logger.debug("Received disease notification (" + _.find(this.simulation.diseases, { id: data.type }).name + ") from: " + data.id);
+    this.logger.debug("Total: " + diseaseCnt.count);
   }
   
   handleOutbreakNotification(data) {
@@ -61,7 +65,7 @@ class HDS extends Process {
     // Notify associated DOA
     this.vectorTimestamp.update();
     _.each(this.diseaseCounts, (disease) => {
-      if (disease.count != disease.lastCount) {
+      if (disease.count !== disease.lastCount) {
         let message = {
           hds: this.id,
           disease: disease.type,
@@ -69,7 +73,7 @@ class HDS extends Process {
           vectorTimestamp: this.vectorTimestamp.get()
         };
         disease.lastCount = disease.count;
-        this.diseaseUpdatePublisher.send(message, disease.type.toString());
+        this.diseaseUpdatePublisher.send(message, disease.type);
         this.logger.debug("Published disease count: " + JSON.stringify(_.omit(message, "vectorTimestamp"), null, 2));
       }
     });

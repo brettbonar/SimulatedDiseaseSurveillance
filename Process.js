@@ -1,4 +1,5 @@
 const _ = require("lodash");
+const q = require("q");
 
 const logger = require("./logger");
 const Req = require("./Messaging/Req");
@@ -12,7 +13,7 @@ class Process {
       ip: options.coordinatorIp,
       port: options.coordinatorPort
     };
-    this.name = _.upperCase(this.type) + this.id;
+    this.name = this.id;
     this.logger = logger.getLogger(this.name);
     this.vectorTimestamp = new VectorTimestamp(this.id);
 
@@ -20,20 +21,58 @@ class Process {
     let sock = new Req(this.coordinator);
     let params = {
       id: this.id,
-      type: this.type
+      msgType: "requestConfiguration"
     };
     sock.on((data) => this.handleConfig(data));
     sock.send(params);
   }
-  
-  start(params) {
-    _.noop();
+
+  requestName(name) {
+    let deferred = q.defer();
+    let req = new Req(this.coordinator);
+    req.on((data) => deferred.resolve(data));
+    req.send({
+      name: name,
+      msgType: "requestName"
+    });
+    
+    return deferred.promise;
+  }
+
+  ready(config) {
+    let req = new Req(this.coordinator);
+    req.send({
+      msgType: "ready",
+      id: this.id
+    });
+    req.on((data) => {
+      this.start(config);
+    });
   }
   
   handleConfig(config) {
+    // TODO: clean this up
     this.logger.debug("Got config: " + JSON.stringify(config, null, 2));
-    this.vectorTimestamp.init(_.map(config.processes, "id"));
-    this.start(config);
+    let left = _.size(config.bindings);
+    _.each(config.bindings, (binding, name) => {
+      let req = new Req(this.coordinator);
+      req.send({
+        msgType: "register",
+        name: [this.id, name].join("."),
+        binding: binding,
+        type: this.type
+      });
+      req.on((data) => {
+        left -= 1;
+        if (left === 0) {
+          this.ready(config);
+        }
+      });
+    });
+
+    if (_.size(config.bindings) === 0) {
+      this.ready(config);
+    }
   }
 }
 

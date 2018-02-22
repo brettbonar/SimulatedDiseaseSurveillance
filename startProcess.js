@@ -7,7 +7,7 @@ const HDS = require("./HDS");
 
 options
   .option("-c, --configuration <f>", "Configuration file path")
-  .option("-i, --id <n>", "Process ID", parseInt)
+  .option("-i, --id <n>", "Process ID")
   .option("-t, --type <s>", "Process type")
   .option("-cip, --coordinator-ip <f>", "Coordinator IP address")
   .option("-cport, --coordinator-port <f>", "Coordinator port")

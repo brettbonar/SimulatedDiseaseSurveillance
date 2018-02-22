@@ -14,17 +14,22 @@ class EMR extends Process {
   
   start(params) {
     this.simulation = params.simulation;
-    this.hds = params.hds;
-    this.push = new Push(this.hds.notification);
+    
+    this.requestName([params.hds, "notification"].join(".")).then((data) => {
+      this.push = new Push(data);
+      setInterval(() => this.simulateDiseases(), this.simulation.simulationInterval);
+    });
+
+    this.requestName([params.hds, "outbreak"].join(".")).then((data) => {
+      this.outbreakReqBinding = data;
+      setInterval(() => this.sendOutbreakReq(), OUTBREAK_REQ_INTERVAL);
+    });
 
     _.each(this.simulation.diseases, (disease) => {
       disease.changeP = ((disease.maxP - disease.minP) / disease.ratePeriod) / (1000 / this.simulation.simulationInterval);
       disease.deltaP = disease.changeP;
       disease.probability = disease.minP;
     });
-
-    setInterval(() => this.simulateDiseases(), this.simulation.simulationInterval);
-    setInterval(() => this.sendOutbreakReq(), OUTBREAK_REQ_INTERVAL);
   }
 
   sendDiseaseNotification(disease) {
@@ -56,7 +61,7 @@ class EMR extends Process {
 
   sendOutbreakReq() {
     this.vectorTimestamp.update();
-    this.req = new Req(this.hds.outbreakRouter);
+    this.req = new Req(this.outbreakReqBinding);
     this.req.on((data) => this.handleOutbreakRep(data));
     this.req.send({
       vectorTimestamp: this.vectorTimestamp.get()

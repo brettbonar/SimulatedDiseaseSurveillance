@@ -19,7 +19,7 @@ class VectorTimestamp {
   update(vectorTimestamps) {
     if (vectorTimestamps) {
       _.each(vectorTimestamps, (time, processId) => {
-        this.timestamps[processId] = Math.max(this.timestamps[processId], time);
+        this.timestamps[processId] = Math.max(this.timestamps[processId] || 0, time);
       });
     }
     this.timestamps[this.id] += 1;
