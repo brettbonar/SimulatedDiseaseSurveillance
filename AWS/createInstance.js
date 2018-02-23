@@ -63,7 +63,6 @@ function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
       q.all([tagPromise, runningPromise]).then(
         function(data) {
           console.log("Instance tagged and running:", process.id, instanceId);
-          console.log(JSON.stringify(data, null, 2));
           deferred.resolve(data[1].Reservations[0].Instances[0]);
         }).catch(function(err) {
           deferred.reject(err);
