@@ -74,7 +74,7 @@ class Process {
         if (binding.port > 13000) {
           binding.port = 12000;
         }
-        getPort(binding, cb);
+        this.getPort(binding, cb);
       } else {
         cb();
       }
@@ -86,33 +86,33 @@ class Process {
     this.logger.debug("Got config: " + JSON.stringify(config, null, 2));
     let left = _.size(config.bindings);
 
-    publicIp.v4().then((ip) => {
-      _.each(config.bindings, (binding, name) => {
-        getPort(binding, () => {
-          let req = new Req(this.coordinator);
-          this.logger.debug("Register Binding: " + name);
-          req.send({
-            msgType: "register",
-            name: [this.id, name].join("."),
-            binding: {
-              ip: ip,
-              port: binding.port
-            },
-            type: this.type
-          });
-          req.on((data) => {
-            this.logger.debug("Registered: " + name);
-            left -= 1;
-            if (left === 0) {
-              this.logger.debug("Ready");
-              this.ready(config);
-            }
-          });
-        })
+    if (_.size(config.bindings) > 0) {
+      publicIp.v4().then((ip) => {
+        _.each(config.bindings, (binding, name) => {
+          this.getPort(binding, () => {
+            let req = new Req(this.coordinator);
+            this.logger.debug("Register Binding: " + name, ip, binding.port);
+            req.send({
+              msgType: "register",
+              name: [this.id, name].join("."),
+              binding: {
+                ip: ip,
+                port: binding.port
+              },
+              type: this.type
+            });
+            req.on((data) => {
+              this.logger.debug("Registered: " + name);
+              left -= 1;
+              if (left === 0) {
+                this.logger.debug("Ready");
+                this.ready(config);
+              }
+            });
+          })
+        });
       });
-    });
-
-    if (_.size(config.bindings) === 0) {
+    } else {
       this.ready(config);
     }
   }
