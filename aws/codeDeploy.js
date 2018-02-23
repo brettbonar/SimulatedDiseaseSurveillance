@@ -19,50 +19,11 @@ function codeDeploy() {
     ignoreApplicationStopFailures: true,//true || false,
     revision: {
       gitHubLocation: {
-        commitId: '85d7bc4e3511490dc5429d0b1855bdf39423166b',
+        commitId: 'a61716d4d0ce4831a83a1f6e1e65d01ea35dcd42',
         repository: 'brettbonar/SimulatedDiseaseSurveillance'
       },
-      revisionType: "GitHub",//S3 | GitHub | String,
-      // s3Location: {
-      //   bucket: 'STRING_VALUE',
-      //   bundleType: tar | tgz | zip | YAML | JSON,
-      //   eTag: 'STRING_VALUE',
-      //   key: 'STRING_VALUE',
-      //   version: 'STRING_VALUE'
-      // },
-      // string: {
-      //   content: 'STRING_VALUE',
-      //   sha256: 'STRING_VALUE'
-      // }
+      revisionType: "GitHub",
     },
-    // targetInstances: {
-    //   // autoScalingGroups: [
-    //   //   'STRING_VALUE',
-    //   //   /* more items */
-    //   // ],
-    //   ec2TagSet: {
-    //     ec2TagSetList: [
-    //       [
-    //         {
-    //           Key: 'SDS',
-    //           Type: "KEY_ONLY",//KEY_ONLY | VALUE_ONLY | KEY_AND_VALUE,
-    //           Value: 'simulated-disease-surveillance'
-    //         },
-    //         /* more items */
-    //       ],
-    //       /* more items */
-    //     ]
-    //   },
-    //   // tagFilters: [
-    //   //   {
-    //   //     Key: 'STRING_VALUE',
-    //   //     Type: KEY_ONLY | VALUE_ONLY | KEY_AND_VALUE,
-    //   //     Value: 'STRING_VALUE'
-    //   //   },
-    //   //   /* more items */
-    //   // ]
-    // },
-    //updateOutdatedInstancesOnly: true,//true || false
   };
 
   let deferred = q.defer();

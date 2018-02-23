@@ -69,21 +69,6 @@ class Process {
       this.start(config);
     });
   }
-
-  // getPort(binding, cb) {
-  //   tcpPortUsed.check(binding.port, binding.ip).then((inUse) => {
-  //     if (inUse) {
-  //       this.logger.debug("Port in use: " + binding.port);
-  //       binding.port += 1;
-  //       if (binding.port > 13000) {
-  //         binding.port = 12000;
-  //       }
-  //       this.getPort(binding, cb);
-  //     } else {
-  //       cb();
-  //     }
-  //   });
-  // }
   
   handleConfig(config) {
     if (this.gotConfig) {

@@ -134,7 +134,6 @@ function launchDistributed() {
   });
 
   q.all(promises).then(function (instanceIds) {
-    //console.log(JSON.stringify(config, null, 2));
     console.log("Done creating instances. Start deployment.");
     q.all([deployConfig(config), codeDeploy()]).then(function () {
       console.log("Code deployment successful");
@@ -142,17 +141,6 @@ function launchDistributed() {
     }).catch(function (err) {
       console.log("Code deployment failed:", err);
     });
-
-    // setTimeout(function () {
-    //   var params = {
-    //     InstanceIds: instanceIds,
-    //     DryRun: false
-    //   };
-    //   ec2.terminateInstances(params, function(err, data) {
-    //     if (err) console.log(err, err.stack); // an error occurred
-    //     else     console.log(data);           // successful response
-    //   });
-    // }, 10000)
   }).catch(function (err) {
     console.log("Failed deploying:", err);
   });
