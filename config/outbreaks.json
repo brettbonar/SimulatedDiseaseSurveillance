@@ -1,8 +1,4 @@
 {
-  "coordinator": {
-    "ip": "localhost",
-    "port": 12000
-  },
   "distribution": {
     "type": "distributed"
   },

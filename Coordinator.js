@@ -1,20 +1,33 @@
+const AWS = require('aws-sdk');
+const s3 = new AWS.S3();
 const _ = require("lodash");
 const options = require("commander");
 const Router = require("./Messaging/Router");
 const logger = require("./logger");
 const launchProcess = require("./launchProcess");
 
+function getConfig() {
+  var myBucket = 'bbonar-simulated-disease-surveillance';
+  var myKey = 'deployed.json';
+
+  let params = { Bucket: myBucket, Key: myKey };
+  return s3.getObject(params).promise();
+}
+
 class Coordinator {
   constructor(options) {
     this.bindings = {};
     this.processes = {};
-    this.config = require(options.configuration);
-    this.socket = new Router(this.config.coordinator);
     this.logger = logger.getLogger("Coordinator");
-    this.nextPort = this.config.coordinator.port + 10;
     this.readyReqs = [];
 
-    this.socket.on((data, id) => this.handleRequest(data, id));
+    this.logger.debug("Get config");
+    getConfig().then((config) => {
+      this.logger.debug("Loaded config: ", config);
+      this.config = JSON.parse(config);
+      this.socket = new Router(this.config.coordinator);
+      this.socket.on((data, id) => this.handleRequest(data, id));
+    });
   }
 
   handleRequest(data, id) {

@@ -12,14 +12,14 @@ function codeDeploy() {
       //   /* more items */
       // ]
     },
-    //deploymentConfigName: 'STRING_VALUE',
+    deploymentConfigName: 'CodeDeployDefault.AllAtOnce',
     deploymentGroupName: 'SDS',
     //description: 'STRING_VALUE',
     fileExistsBehavior: "OVERWRITE",//DISALLOW | OVERWRITE | RETAIN,
     ignoreApplicationStopFailures: true,//true || false,
     revision: {
       gitHubLocation: {
-        commitId: '9ef7d60826f86b7ee617079ff8e2a282e90258e2',
+        commitId: '4d4529cfe2658930600aa7cc8be3db3d39887217',
         repository: 'brettbonar/SimulatedDiseaseSurveillance'
       },
       revisionType: "GitHub",//S3 | GitHub | String,

@@ -14,6 +14,9 @@ const q = require("q");
 
 const createInstance = require("./createInstance");
 const codeDeploy = require("./codeDeploy");
+const deployConfig = require("./deployConfig");
+const runProcesses = require("./runProcesses");
+
 const ec2 = new AWS.EC2({apiVersion: "2016-11-15"});
 
 function list(val) {
@@ -28,8 +31,13 @@ options
 
 let configPath = options.configuration || "../config/outbreaks.json";
 let config = require(configPath);
-let processes = {};
+config.processes = {};
 let nextPort = 12001;
+
+function addProcess(process) {
+  config.processes[process.id] = process;
+  return createInstance(process).then(instanceId => process.instanceId = instanceId);
+}
 
 function launchDoa(disease, index) {
   let id = "doa" + index;
@@ -42,12 +50,9 @@ function launchDoa(disease, index) {
         ip: "localhost",
         port: nextPort++
       }
-    },
-    coordinator: config.coordinator,
-    simulation: config.simulation
+    }
   };
-  processes[id] = process;
-  return createInstance(process);
+  addProcess(process);
 }
 
 function launchEmr(hds, hdsIndex, emrIndex) {
@@ -55,12 +60,9 @@ function launchEmr(hds, hdsIndex, emrIndex) {
   let process = {
     id: id,
     type: "emr",
-    hds: hds,
-    coordinator: config.coordinator,
-    simulation: config.simulation
+    hds: hds
   };
-  processes[id] = process;
-  return createInstance(process);
+  addProcess(process);
 }
 
 function launchHds(id) {
@@ -80,13 +82,22 @@ function launchHds(id) {
         ip: "localhost",
         port: nextPort++
       }        
-    },
-    coordinator: config.coordinator,
-    simulation: config.simulation
+    }
   };
-  processes[id] = process;
-  return createInstance(process);
+  addProcess(process);
 
+function launchCoordinator() {
+  let process = {
+    id: "coordinator",
+    type: "coordinator",
+    bindings: {
+      coordinator: {
+        ip: "localhost",
+        port: nextPort++
+      }
+    }
+  };
+  addProcess(process);
 }
 
 function launchSingle() {
@@ -97,6 +108,7 @@ function launchSingle() {
 function launchDistributed() {
   // Create DOAs
   let promises = [];
+  promises.push(launchCoordinator());
   _.each(config.simulation.diseases, (disease, index) => {
     promises.push(launchDoa(disease, index));
   });
@@ -108,10 +120,13 @@ function launchDistributed() {
     }
   });
 
+  promises.push(deployConfig(config));
+
   q.all(promises).then(function (instanceIds) {
     console.log("Done creating instances. Start deployment.");
     codeDeploy().then(function () {
       console.log("Code deployment successful");
+      runProcesses(config);
     }).catch(function (err) {
       console.log("Code deployment failed:", err);
     });

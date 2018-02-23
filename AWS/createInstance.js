@@ -14,9 +14,16 @@ function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
   let instanceParams = {
     ImageId: "ami-91af20e9", 
     InstanceType: "t2.micro",
+    SecurityGroups: [
+      "simulated-disease-surveillance"
+    ],
+    IamInstanceProfile: {
+      Name: "simulated-disease-surveillance"
+    },
     KeyName: "bbonar",
     MinCount: 1,
     MaxCount: 1
+    //InstanceInitiatedShutdownBehavior: stop | terminate,
   };
 
   let deferred = new q.defer();
