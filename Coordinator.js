@@ -33,8 +33,10 @@ class Coordinator {
 
   handleRequest(data, id) {
     if (data.msgType === "requestConfiguration") {
+      let process = this.config.processes[data.id];
       this.logger.debug("Sent config to: " + data.id);
-      this.socket.send(this.config.processes[data.id], id);
+      this.logger.debug(JSON.stringify(process, null, 2));
+      this.socket.send(process, id);
     } else if (data.msgType === "register") {
       this.logger.debug("Register request: " + JSON.stringify(data, null, 2));
       this.register(data);
