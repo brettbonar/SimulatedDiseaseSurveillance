@@ -27,6 +27,8 @@ class Coordinator {
       this.logger.info("Loaded config: ", config.Body.toString());
       this.config = JSON.parse(config.Body.toString());
       this.config.processes.coordinator.ready = true;
+
+      _.each(this.config.processes, (proc) => proc.simulation = this.config.simulation);
       this.socket = new Router(this.config.processes.coordinator.bindings.coordinator);
       this.socket.on((data, id) => this.handleRequest(data, id));
     });

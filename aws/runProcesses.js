@@ -34,7 +34,7 @@ function runCoordinator(config, process) {
   });
 }
 
-function runDoa(config, process) {
+function runProcess(config, process) {
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
     Comment: "Run Process: " + process.id,
@@ -52,33 +52,7 @@ function runDoa(config, process) {
   };
   ssm.sendCommand(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log("Successful Command:", process.id);           // successful response
-  });
-}
-
-function runHds(config, process) {
-  
-  let params = {
-    DocumentName: "AWS-RunShellScript", /* required */
-    Comment: "Run Process: " + process.id,
-    TimeoutSeconds: 60
-  };
-  ssm.sendCommand(params, function(err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else     console.log("Successful Command:", process.id);           // successful response
-  });
-}
-
-function runEmr(config, process) {
-  
-  let params = {
-    DocumentName: "AWS-RunShellScript", /* required */
-    Comment: "Run Process: " + process.id,
-    TimeoutSeconds: 60
-  };
-  ssm.sendCommand(params, function(err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else     console.log("Successful Command:", process.id);           // successful response
+    else     console.log("Successful Command:", process.id, process.instanceId);           // successful response
   });
 }
 
@@ -87,12 +61,8 @@ function runProcesses(config) {
   _.each(config.processes, (process) => {
     if (process.type === "coordinator") {
       runCoordinator(config, process);
-    } else if (process.type === "doa") {
-      runDoa(config, process);
-    } else if (process.type === "hds") {
-      //runHds(config, process);
-    } else if (process.type === "emr") {
-      //runEmr(config, process);
+    } else {
+      runProcess(config, process);
     }
   });
 }
