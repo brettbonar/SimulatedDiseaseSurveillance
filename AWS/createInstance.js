@@ -12,15 +12,18 @@ const ec2 = new AWS.EC2({apiVersion: "2016-11-15"});
 
 function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
   let instanceParams = {
-    ImageId: "ami-a533bcdd", 
-    InstanceType: "t2.micro",
-    SecurityGroups: [
-      "simulated-disease-surveillance"
-    ],
-    IamInstanceProfile: {
-      Name: "simulated-disease-surveillance"
+    LaunchTemplate: {
+      LaunchTemplateId: "lt-0cc28780ae8ae79e3"
     },
-    KeyName: "bbonar",
+    // ImageId: "ami-a533bcdd", 
+    // InstanceType: "t2.micro",
+    // SecurityGroups: [
+    //   "simulated-disease-surveillance"
+    // ],
+    // IamInstanceProfile: {
+    //   Name: "simulated-disease-surveillance"
+    // },
+    // KeyName: "bbonar",
     MinCount: 1,
     MaxCount: 1
     //InstanceInitiatedShutdownBehavior: stop | terminate,
@@ -34,9 +37,8 @@ function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
   // Handle promise's fulfilled/rejected states
   instancePromise.then(
     function(data) {
-      console.log(data);
+      let instance = data.Instances[0];
       let instanceId = data.Instances[0].InstanceId;
-      console.log("Created instance", instanceId);
       // Add tags to the instance
       tagParams = {Resources: [instanceId], Tags: [
          {
@@ -48,15 +50,23 @@ function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
            Value: process.id
          }
       ]};
+
+      let waitParams = {
+        InstanceIds: [
+          instanceId
+        ]
+      };
       // Create a promise on an EC2 service object
       let tagPromise = new AWS.EC2({apiVersion: "2016-11-15"}).createTags(tagParams).promise();
+      let runningPromise = new AWS.EC2({apiVersion: "2016-11-15"}).waitFor("instanceRunning", waitParams).promise();
       // Handle promise's fulfilled/rejected states
-      tagPromise.then(
+      q.all([tagPromise, runningPromise]).then(
         function(data) {
-          console.log("Instance tagged");
-          deferred.resolve(instanceId);
-        }).catch(
-          function(err) {
+          console.log("Instance tagged and running:", process.id, instanceId);
+          console.log(JSON.stringify(data, null, 2));
+          deferred.resolve(data[1].Reservations[0].Instances[0]);
+        }).catch(function(err) {
+          deferred.reject(err);
           console.error(err, err.stack);
         });
     }).catch(

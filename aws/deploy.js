@@ -36,9 +36,18 @@ let nextPort = 12001;
 
 function addProcess(process) {
   config.processes[process.id] = process;
-  return createInstance(process).then((instanceId) => {
-    process.instanceId = instanceId;
-    return instanceId;
+  return createInstance(process).then((instance) => {
+    config.processes[process.id].instanceId = instance.InstanceId;
+    config.processes[process.id].publicIp = instance.PublicIpAddress;
+
+    if (process.type === "coordinator") {
+      config.coordinator = {
+        ip: instance.PublicIpAddress,
+        port: process.bindings.coordinator.port
+      };
+    }
+
+    return instance;
   });
 }
 
@@ -50,7 +59,7 @@ function launchDoa(disease, index) {
     type: "doa",
     bindings: {
       notification: {
-        ip: "localhost",
+        ip: "eth0",
         port: nextPort++
       }
     }
@@ -74,15 +83,15 @@ function launchHds(id) {
     type: "hds",
     bindings: {
       notification: {
-        ip: "localhost",
+        ip: "eth0",
         port: nextPort++
       },
       update: {
-        ip: "localhost",
+        ip: "eth0",
         port: nextPort++
       },
       outbreak: {
-        ip: "localhost",
+        ip: "eth0",
         port: nextPort++
       }        
     }
@@ -96,7 +105,7 @@ function launchCoordinator() {
     type: "coordinator",
     bindings: {
       coordinator: {
-        ip: "localhost",
+        ip: "eth0",
         port: nextPort++
       }
     }
@@ -113,9 +122,9 @@ function launchDistributed() {
   // Create DOAs
   let promises = [];
   promises.push(launchCoordinator());
-  // _.each(config.simulation.diseases, (disease, index) => {
-  //   promises.push(launchDoa(disease, index));
-  // });
+  _.each(config.simulation.diseases, (disease, index) => {
+    promises.push(launchDoa(disease, index));
+  });
   // _.each(config.hds, (hds, index) => {
   //   let id = "hds" + index;
   //   promises.push(launchHds(id));
@@ -124,11 +133,10 @@ function launchDistributed() {
   //   }
   // });
 
-  promises.push(deployConfig(config));
-
   q.all(promises).then(function (instanceIds) {
+    //console.log(JSON.stringify(config, null, 2));
     console.log("Done creating instances. Start deployment.");
-    codeDeploy().then(function () {
+    q.all([deployConfig(config), codeDeploy()]).then(function () {
       console.log("Code deployment successful");
       runProcesses(config);
     }).catch(function (err) {
@@ -145,8 +153,8 @@ function launchDistributed() {
     //     else     console.log(data);           // successful response
     //   });
     // }, 10000)
-  }).catch(function () {
-    console.log("Failed deploying");
+  }).catch(function (err) {
+    console.log("Failed deploying:", err);
   });
 }
 

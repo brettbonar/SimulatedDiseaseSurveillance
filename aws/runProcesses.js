@@ -5,7 +5,13 @@ AWS.config.setPromisesDependency(require("q").Promise);
 const ssm = new AWS.SSM();
 const _ = require("lodash");
 
-function runCoordinator(process) {
+function getCommand(config, process) {
+  return "cd /home/ec2-user/sds; sudo touch /etc/ld.so.conf; export LD_LIBRARY_PATH=/usr/local/lib; " +
+  "sudo ldconfig; ./node ./startProcess.js --type " + process.type + " --coordinator-ip " +
+  config.coordinator.ip + " --coordinator-port " + config.coordinator.port + " --id " + process.id; 
+}
+
+function runCoordinator(config, process) {
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
     Comment: "Run Process: " + process.id,
@@ -15,7 +21,8 @@ function runCoordinator(process) {
     ],
     Parameters: {
       "commands": [
-        "cd /home/ec2-user/sds; ./node ./startProcess.js --type coordinator"
+        "cd /home/ec2-user/sds; sudo touch /etc/ld.so.conf; export LD_LIBRARY_PATH=/usr/local/lib; " +
+          "sudo ldconfig; ./node ./startProcess.js --type coordinator;"
         /* more items */
       ],
       /* '<ParameterName>': ... */
@@ -27,7 +34,29 @@ function runCoordinator(process) {
   });
 }
 
-function runDoa(process) {
+function runDoa(config, process) {
+  let params = {
+    DocumentName: "AWS-RunShellScript", /* required */
+    Comment: "Run Process: " + process.id,
+    TimeoutSeconds: 60,
+    InstanceIds: [
+      process.instanceId
+    ],
+    Parameters: {
+      "commands": [
+        getCommand(config, process)
+        /* more items */
+      ],
+      /* '<ParameterName>': ... */
+    },
+  };
+  ssm.sendCommand(params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else     console.log(data);           // successful response
+  });
+}
+
+function runHds(config, process) {
   
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
@@ -40,20 +69,7 @@ function runDoa(process) {
   });
 }
 
-function runHds(process) {
-  
-  let params = {
-    DocumentName: "AWS-RunShellScript", /* required */
-    Comment: "Run Process: " + process.id,
-    TimeoutSeconds: 60
-  };
-  ssm.sendCommand(params, function(err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
-  });
-}
-
-function runEmr(process) {
+function runEmr(config, process) {
   
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
@@ -67,11 +83,12 @@ function runEmr(process) {
 }
 
 function runProcesses(config) {
-  _.each(config.processes, (proces) => {
+  console.log(JSON.stringify(config, null, 2));
+  _.each(config.processes, (process) => {
     if (process.type === "coordinator") {
       runCoordinator(config, process);
     } else if (process.type === "doa") {
-      //runDoa(config, process);
+      runDoa(config, process);
     } else if (process.type === "hds") {
       //runHds(config, process);
     } else if (process.type === "emr") {

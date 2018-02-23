@@ -1,5 +1,6 @@
 const _ = require("lodash");
 const q = require("q");
+const publicIp = require("public-ip");
 
 const logger = require("./logger");
 const Req = require("./Messaging/Req");
@@ -54,22 +55,28 @@ class Process {
     // TODO: clean this up
     this.logger.debug("Got config: " + JSON.stringify(config, null, 2));
     let left = _.size(config.bindings);
-    _.each(config.bindings, (binding, name) => {
-      let req = new Req(this.coordinator);
-      this.logger.debug("Register Binding: " + name);
-      req.send({
-        msgType: "register",
-        name: [this.id, name].join("."),
-        binding: binding,
-        type: this.type
-      });
-      req.on((data) => {
-        this.logger.debug("Registered: " + name);
-        left -= 1;
-        if (left === 0) {
-          this.logger.debug("Ready");
-          this.ready(config);
-        }
+
+    publicIp.v4().then((ip) => {
+      _.each(config.bindings, (binding, name) => {
+        let req = new Req(this.coordinator);
+        this.logger.debug("Register Binding: " + name);
+        req.send({
+          msgType: "register",
+          name: [this.id, name].join("."),
+          binding: {
+            ip: ip,
+            port: binding.port
+          },
+          type: this.type
+        });
+        req.on((data) => {
+          this.logger.debug("Registered: " + name);
+          left -= 1;
+          if (left === 0) {
+            this.logger.debug("Ready");
+            this.ready(config);
+          }
+        });
       });
     });
 
