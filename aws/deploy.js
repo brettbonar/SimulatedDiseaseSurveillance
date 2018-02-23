@@ -60,7 +60,7 @@ function launchDoa(disease, index) {
     bindings: {
       notification: {
         ip: "eth0",
-        port: nextPort++
+        port: 12000
       }
     }
   };
@@ -84,15 +84,15 @@ function launchHds(id) {
     bindings: {
       notification: {
         ip: "eth0",
-        port: nextPort++
+        port: 12000
       },
       update: {
         ip: "eth0",
-        port: nextPort++
+        port: 12000
       },
       outbreak: {
         ip: "eth0",
-        port: nextPort++
+        port: 12000
       }        
     }
   };
@@ -106,7 +106,7 @@ function launchCoordinator() {
     bindings: {
       coordinator: {
         ip: "eth0",
-        port: nextPort++
+        port: 12000
       }
     }
   };
