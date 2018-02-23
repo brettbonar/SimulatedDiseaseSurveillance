@@ -1,6 +1,7 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 const _ = require("lodash");
+const fs = require("fs");
 const options = require("commander");
 const Router = require("./Messaging/Router");
 const logger = require("./logger");
@@ -29,6 +30,17 @@ class Coordinator {
       this.socket = new Router(this.config.processes.coordinator.bindings.coordinator);
       this.socket.on((data, id) => this.handleRequest(data, id));
     });
+
+    setInterval(() => this.sendLogs(), 30000);
+  }
+
+  sendLogs() {
+    var myBucket = 'bbonar-simulated-disease-surveillance';
+    var name = this.id + ".log";
+    var file = fs.readFileSync("./logs/" + name, "utf8");
+  
+    let params = { Bucket: myBucket, Key: name, Body: file };
+    s3.putObject(params);
   }
 
   handleRequest(data, id) {

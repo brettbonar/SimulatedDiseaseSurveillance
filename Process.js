@@ -38,7 +38,7 @@ class Process {
     var name = this.id + ".log";
     var file = fs.readFileSync("./logs/" + name, "utf8");
   
-    let params = { Bucket: myBucket, Key: myKey, Body: file };
+    let params = { Bucket: myBucket, Key: name, Body: file };
     s3.putObject(params);
   }
 
