@@ -4,6 +4,7 @@ const publicIp = require("public-ip");
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 const fs = require("fs");
+const tcpPortUsed = require("tcp-port-used");
 
 const logger = require("./logger");
 const Req = require("./Messaging/Req");
@@ -64,6 +65,21 @@ class Process {
       this.start(config);
     });
   }
+
+  getPort(binding, cb) {
+    tcpPortUsed.check(binding.port, binding.ip).then((inUse) => {
+      if (inUse) {
+        this.logger.debug("Port in use: " + binding.port);
+        binding.port += 1;
+        if (binding.port > 13000) {
+          binding.port = 12000;
+        }
+        getPort(binding, cb);
+      } else {
+        cb();
+      }
+    });
+  }
   
   handleConfig(config) {
     // TODO: clean this up
@@ -72,25 +88,27 @@ class Process {
 
     publicIp.v4().then((ip) => {
       _.each(config.bindings, (binding, name) => {
-        let req = new Req(this.coordinator);
-        this.logger.debug("Register Binding: " + name);
-        req.send({
-          msgType: "register",
-          name: [this.id, name].join("."),
-          binding: {
-            ip: ip,
-            port: binding.port
-          },
-          type: this.type
-        });
-        req.on((data) => {
-          this.logger.debug("Registered: " + name);
-          left -= 1;
-          if (left === 0) {
-            this.logger.debug("Ready");
-            this.ready(config);
-          }
-        });
+        getPort(binding, () => {
+          let req = new Req(this.coordinator);
+          this.logger.debug("Register Binding: " + name);
+          req.send({
+            msgType: "register",
+            name: [this.id, name].join("."),
+            binding: {
+              ip: ip,
+              port: binding.port
+            },
+            type: this.type
+          });
+          req.on((data) => {
+            this.logger.debug("Registered: " + name);
+            left -= 1;
+            if (left === 0) {
+              this.logger.debug("Ready");
+              this.ready(config);
+            }
+          });
+        })
       });
     });
 

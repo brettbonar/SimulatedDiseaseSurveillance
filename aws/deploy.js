@@ -125,13 +125,13 @@ function launchDistributed() {
   _.each(config.simulation.diseases, (disease, index) => {
     promises.push(launchDoa(disease, index));
   });
-  // _.each(config.hds, (hds, index) => {
-  //   let id = "hds" + index;
-  //   promises.push(launchHds(id));
-  //   for (let i = 0; i < hds.numEmr; i++) {
-  //     promises.push(launchEmr(id, index, i));
-  //   }
-  // });
+  _.each(config.hds, (hds, index) => {
+    let id = "hds" + index;
+    promises.push(launchHds(id));
+    for (let i = 0; i < hds.numEmr; i++) {
+      promises.push(launchEmr(id, index, i));
+    }
+  });
 
   q.all(promises).then(function (instanceIds) {
     //console.log(JSON.stringify(config, null, 2));

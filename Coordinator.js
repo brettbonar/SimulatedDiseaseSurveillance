@@ -29,6 +29,7 @@ class Coordinator {
       this.config.processes.coordinator.ready = true;
 
       _.each(this.config.processes, (proc) => proc.simulation = this.config.simulation);
+      
       this.socket = new Router(this.config.processes.coordinator.bindings.coordinator);
       this.socket.on((data, id) => this.handleRequest(data, id));
     });
@@ -38,7 +39,7 @@ class Coordinator {
 
   sendLogs() {
     var myBucket = 'bbonar-simulated-disease-surveillance';
-    var name = this.id + ".log";
+    var name = "Coordinator.log";
     var file = fs.readFileSync("./logs/" + name, "utf8");
   
     let params = { Bucket: myBucket, Key: name, Body: file };
