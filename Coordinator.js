@@ -6,7 +6,7 @@ const Router = require("./Messaging/Router");
 const logger = require("./logger");
 const launchProcess = require("./launchProcess");
 
-function getConfig() {
+function getDeployedConfig() {
   var myBucket = 'bbonar-simulated-disease-surveillance';
   var myKey = 'deployed.json';
 
@@ -22,9 +22,10 @@ class Coordinator {
     this.readyReqs = [];
 
     this.logger.debug("Get config");
-    getConfig().then((config) => {
+    getDeployedConfig().then((config) => {
       this.logger.info("Loaded config: ", config.Body.toString());
       this.config = JSON.parse(config.Body.toString());
+      this.config.processes.coordinator.ready = true;
       this.socket = new Router(this.config.processes.coordinator.bindings.coordinator);
       this.socket.on((data, id) => this.handleRequest(data, id));
     });
@@ -33,7 +34,7 @@ class Coordinator {
   handleRequest(data, id) {
     if (data.msgType === "requestConfiguration") {
       this.logger.debug("Sent config to: " + data.id);
-      this.socket.send(this.getConfig(data), id);
+      this.socket.send(this.config.processes[data.id], id);
     } else if (data.msgType === "register") {
       this.logger.debug("Register request: " + JSON.stringify(data, null, 2));
       this.register(data);
@@ -44,9 +45,9 @@ class Coordinator {
       this.socket.send(_.get(this.bindings, data.name, ""), id);
     } else if (data.msgType === "ready") {
       this.logger.debug("Ready: " + data.id);
-      this.processes[data.id].ready = true;
+      this.config.processes[data.id].ready = true;
       this.readyReqs.push(id);
-      if (_.every(this.processes, (process) => process.ready)) {
+      if (_.every(this.config.processes, (process) => process.ready)) {
         this.logger.debug("All Ready. Starting...");
         for (const reqId of this.readyReqs) {
           this.socket.send("", reqId);
@@ -72,39 +73,6 @@ class Coordinator {
     } else {
       list.push(binding);
     }
-  }
-
-  getConfig(data) {
-    return this.processes[data.id];
-    // let config = this.config;
-    // let processes = _.concat(config.doa, config.emr, config.hds);
-    // if (data.type === "emr") {
-    //   let hdsId = _.find(config.emr, { id: data.id }).hds;
-    //   let hds = _.find(config.hds, { id: hdsId });
-    //   return {
-    //     hds: hds,
-    //     processes: processes,
-    //     simulation: config.simulation
-    //   };
-    // } else if (data.type === "hds") {
-    //   let hds = _.find(config.hds, { id: data.id });
-    //   return {
-    //     hds: hds,
-    //     doa: config.doa,
-    //     processes: processes,
-    //     simulation: config.simulation
-    //   };
-    // } else if (data.type === "doa") {
-    //   let doa = _.find(config.doa, { id: data.id });
-    //   return {
-    //     doa: doa,
-    //     hds: config.hds,
-    //     processes: processes,
-    //     simulation: config.simulation
-    //   };
-    // }
-
-    // return config;
   }
 }
 

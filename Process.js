@@ -1,6 +1,9 @@
 const _ = require("lodash");
 const q = require("q");
 const publicIp = require("public-ip");
+const AWS = require('aws-sdk');
+const s3 = new AWS.S3();
+const fs = require("fs");
 
 const logger = require("./logger");
 const Req = require("./Messaging/Req");
@@ -26,6 +29,17 @@ class Process {
     };
     sock.on((data) => this.handleConfig(data));
     sock.send(params);
+
+    setInterval(() => this.sendLogs(), 30000);
+  }
+
+  sendLogs() {
+    var myBucket = 'bbonar-simulated-disease-surveillance';
+    var name = this.id + ".log";
+    var file = fs.readFileSync("./logs/" + name, "utf8");
+  
+    let params = { Bucket: myBucket, Key: myKey, Body: file };
+    s3.putObject(params);
   }
 
   requestName(name) {

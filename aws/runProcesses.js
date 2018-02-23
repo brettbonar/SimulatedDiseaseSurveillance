@@ -30,7 +30,7 @@ function runCoordinator(config, process) {
   };
   ssm.sendCommand(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
+    else     console.log("Successful Command:", process.id);           // successful response
   });
 }
 
@@ -52,7 +52,7 @@ function runDoa(config, process) {
   };
   ssm.sendCommand(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
+    else     console.log("Successful Command:", process.id);           // successful response
   });
 }
 
@@ -65,7 +65,7 @@ function runHds(config, process) {
   };
   ssm.sendCommand(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
+    else     console.log("Successful Command:", process.id);           // successful response
   });
 }
 
@@ -78,7 +78,7 @@ function runEmr(config, process) {
   };
   ssm.sendCommand(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else     console.log(data);           // successful response
+    else     console.log("Successful Command:", process.id);           // successful response
   });
 }
 
