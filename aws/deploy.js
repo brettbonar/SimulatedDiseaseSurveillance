@@ -36,7 +36,10 @@ let nextPort = 12001;
 
 function addProcess(process) {
   config.processes[process.id] = process;
-  return createInstance(process).then(instanceId => process.instanceId = instanceId);
+  return createInstance(process).then((instanceId) => {
+    process.instanceId = instanceId;
+    return instanceId;
+  });
 }
 
 function launchDoa(disease, index) {
@@ -52,7 +55,7 @@ function launchDoa(disease, index) {
       }
     }
   };
-  addProcess(process);
+  return addProcess(process);
 }
 
 function launchEmr(hds, hdsIndex, emrIndex) {
@@ -62,7 +65,7 @@ function launchEmr(hds, hdsIndex, emrIndex) {
     type: "emr",
     hds: hds
   };
-  addProcess(process);
+  return addProcess(process);
 }
 
 function launchHds(id) {
@@ -84,7 +87,8 @@ function launchHds(id) {
       }        
     }
   };
-  addProcess(process);
+  return addProcess(process);
+}
 
 function launchCoordinator() {
   let process = {
@@ -97,7 +101,7 @@ function launchCoordinator() {
       }
     }
   };
-  addProcess(process);
+  return addProcess(process);
 }
 
 function launchSingle() {
@@ -109,16 +113,16 @@ function launchDistributed() {
   // Create DOAs
   let promises = [];
   promises.push(launchCoordinator());
-  _.each(config.simulation.diseases, (disease, index) => {
-    promises.push(launchDoa(disease, index));
-  });
-  _.each(config.hds, (hds, index) => {
-    let id = "hds" + index;
-    promises.push(launchHds(id));
-    for (let i = 0; i < hds.numEmr; i++) {
-      promises.push(launchEmr(id, index, i));
-    }
-  });
+  // _.each(config.simulation.diseases, (disease, index) => {
+  //   promises.push(launchDoa(disease, index));
+  // });
+  // _.each(config.hds, (hds, index) => {
+  //   let id = "hds" + index;
+  //   promises.push(launchHds(id));
+  //   for (let i = 0; i < hds.numEmr; i++) {
+  //     promises.push(launchEmr(id, index, i));
+  //   }
+  // });
 
   promises.push(deployConfig(config));
 

@@ -23,8 +23,8 @@ class Coordinator {
 
     this.logger.debug("Get config");
     getConfig().then((config) => {
-      this.logger.debug("Loaded config: ", config);
-      this.config = JSON.parse(config);
+      this.logger.info("Loaded config: ", config.Body.toString());
+      this.config = JSON.parse(config.Body.toString());
       this.socket = new Router(this.config.coordinator);
       this.socket.on((data, id) => this.handleRequest(data, id));
     });

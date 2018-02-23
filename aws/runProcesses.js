@@ -1,16 +1,26 @@
 const AWS = require("aws-sdk");
+AWS.config.update({region: "us-west-2"});
+// Use Q implementation of Promise
+AWS.config.setPromisesDependency(require("q").Promise);
 const ssm = new AWS.SSM();
+const _ = require("lodash");
 
 function runCoordinator(process) {
-
+  process = {
+    id: "coordinator",
+    instanceId: "i-0563e6c9e6d44ed2b"
+  };
 
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
     Comment: "Run Process: " + process.id,
     TimeoutSeconds: 60,
+    InstanceIds: [
+      process.instanceId
+    ],
     Parameters: {
       "commands": [
-        "node ./startProcess.js --type coordinator"
+        "cd /home/ec2-user/sds; ./node ./startProcess.js --type coordinator"
         /* more items */
       ],
       /* '<ParameterName>': ... */
@@ -62,9 +72,9 @@ function runEmr(process) {
 }
 
 function runProcesses(config) {
-  for (const process of config.processes) {
+  _.each(config.processes, (proces) => {
     if (process.type === "coordinator") {
-      //runCoordinator(config, process);
+      runCoordinator(config, process);
     } else if (process.type === "doa") {
       //runDoa(config, process);
     } else if (process.type === "hds") {
@@ -72,7 +82,8 @@ function runProcesses(config) {
     } else if (process.type === "emr") {
       //runEmr(config, process);
     }
-  }
+  });
 }
 
-module.exports = runProcesses;
+//module.exports = runProcesses;
+runCoordinator();
