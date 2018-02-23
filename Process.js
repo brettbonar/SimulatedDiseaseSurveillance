@@ -2,6 +2,10 @@ const _ = require("lodash");
 const q = require("q");
 const publicIp = require("public-ip");
 const AWS = require('aws-sdk');
+// Set the region 
+AWS.config.update({region: "us-west-2"});
+// Use Q implementation of Promise
+AWS.config.setPromisesDependency(require("q").Promise);
 const s3 = new AWS.S3();
 const fs = require("fs");
 const detect = require("detect-port");
@@ -40,7 +44,7 @@ class Process {
     var file = fs.readFileSync("./logs/" + name, "utf8");
   
     let params = { Bucket: myBucket, Key: name, Body: file };
-    s3.putObject(params);
+    s3.putObject(params, () => {});
   }
 
   requestName(name) {

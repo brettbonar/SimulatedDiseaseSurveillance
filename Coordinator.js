@@ -1,5 +1,10 @@
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
+// Set the region 
+AWS.config.update({region: "us-west-2"});
+// Use Q implementation of Promise
+AWS.config.setPromisesDependency(require("q").Promise);
+
 const _ = require("lodash");
 const fs = require("fs");
 const options = require("commander");
@@ -43,7 +48,7 @@ class Coordinator {
     var file = fs.readFileSync("./logs/" + name, "utf8");
   
     let params = { Bucket: myBucket, Key: name, Body: file };
-    s3.putObject(params);
+    s3.putObject(params, () => {});
   }
 
   handleRequest(data, id) {
