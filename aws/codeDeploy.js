@@ -19,7 +19,7 @@ function codeDeploy() {
     ignoreApplicationStopFailures: true,//true || false,
     revision: {
       gitHubLocation: {
-        commitId: '9ca47f11e8b35b731ec41b0315f9232fc4b570a6',
+        commitId: '0856b038664f4b21a676f24677f0c885202b8fe2',
         repository: 'brettbonar/SimulatedDiseaseSurveillance'
       },
       revisionType: "GitHub",//S3 | GitHub | String,

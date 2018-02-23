@@ -6,11 +6,6 @@ const ssm = new AWS.SSM();
 const _ = require("lodash");
 
 function runCoordinator(process) {
-  process = {
-    id: "coordinator",
-    instanceId: "i-0563e6c9e6d44ed2b"
-  };
-
   let params = {
     DocumentName: "AWS-RunShellScript", /* required */
     Comment: "Run Process: " + process.id,
@@ -85,5 +80,5 @@ function runProcesses(config) {
   });
 }
 
-//module.exports = runProcesses;
-runCoordinator();
+module.exports = runProcesses;
+//runCoordinator();
