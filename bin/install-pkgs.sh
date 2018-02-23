@@ -5,3 +5,6 @@ npm install
 sudo touch /etc/ld.so.conf
 export LD_LIBRARY_PATH=/usr/local/lib
 sudo ldconfig
+sudo touch /etc/ld.so.conf
+export LD_LIBRARY_PATH=/usr/local/lib
+sudo ldconfig

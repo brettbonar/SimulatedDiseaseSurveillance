@@ -12,7 +12,7 @@ const ec2 = new AWS.EC2({apiVersion: "2016-11-15"});
 
 function createInstance(process) {// AMI is amzn-ami-2011.09.1.x86_64-ebs
   let instanceParams = {
-    ImageId: "ami-91af20e9", 
+    ImageId: "ami-a533bcdd", 
     InstanceType: "t2.micro",
     SecurityGroups: [
       "simulated-disease-surveillance"
