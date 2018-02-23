@@ -82,6 +82,11 @@ class Process {
   // }
   
   handleConfig(config) {
+    if (this.gotConfig) {
+      return;
+    }
+
+    this.gotConfig = true;
     // TODO: clean this up
     this.logger.debug("Got config: " + JSON.stringify(config, null, 2));
     let left = _.size(config.bindings);
