@@ -4,9 +4,10 @@
     "port": 12000
   },
   "distribution": {
-    "type": "single"
+    "type": "distributed"
   },
   "simulation": {
+    "runFor": 120,
     "simulationTime": 24,
     "simulationInterval": 100,
     "diseases": [

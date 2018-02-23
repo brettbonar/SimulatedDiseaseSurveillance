@@ -15,12 +15,6 @@ class Coordinator {
     this.readyReqs = [];
 
     this.socket.on((data, id) => this.handleRequest(data, id));
-
-    if (this.config.distribution.type === "single") {
-      this.launchSingle();
-    } else {
-      this.launchDistributed();
-    }
   }
 
   handleRequest(data, id) {
@@ -47,77 +41,6 @@ class Coordinator {
         this.readyReqs.length = 0;
       }
     }
-  }
-
-  launchDoa(disease, index) {
-    let id = "doa" + index;
-    let process = {
-      disease: disease,
-      id: id,
-      type: "doa",
-      bindings: {
-        notification: {
-          ip: "localhost",
-          port: this.nextPort++
-        }
-      },
-      coordinator: this.config.coordinator,
-      simulation: this.config.simulation
-    };
-    this.processes[id] = process;
-    launchProcess(process);
-  }
-
-  launchEmr(hds, hdsIndex, emrIndex) {
-    let id = "emr" + hdsIndex + "_" + emrIndex;
-    let process = {
-      id: id,
-      type: "emr",
-      hds: hds,
-      coordinator: this.config.coordinator,
-      simulation: this.config.simulation
-    };
-    this.processes[id] = process;
-    launchProcess(process);
-  }
-
-  launchHds(hds, index) {
-    let id = "hds" + index;
-    let process = {
-      id: id,
-      type: "hds",
-      bindings: {
-        notification: {
-          ip: "localhost",
-          port: this.nextPort++
-        },
-        update: {
-          ip: "localhost",
-          port: this.nextPort++
-        },
-        outbreak: {
-          ip: "localhost",
-          port: this.nextPort++
-        }        
-      },
-      coordinator: this.config.coordinator,
-      simulation: this.config.simulation
-    };
-    this.processes[id] = process;
-    launchProcess(process);
-
-    for (let i = 0; i < hds.numEmr; i++) {
-      this.launchEmr(id, index, i);
-    }
-  }
-
-  launchSingle() {
-    this.config.simulation.diseases.forEach((disease, index) => this.launchDoa(disease, index));
-    this.config.hds.forEach((hds, index) => this.launchHds(hds, index));
-  }
-
-  launchDistributed() {
-
   }
 
   register(data) {
