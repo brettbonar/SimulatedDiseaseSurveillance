@@ -89,7 +89,7 @@ class Process {
     if (_.size(config.bindings) > 0) {
       publicIp.v4().then((ip) => {
         _.each(config.bindings, (binding, name) => {
-          this.getPort(binding, () => {
+          //this.getPort(binding, () => {
             let req = new Req(this.coordinator);
             this.logger.debug("Register Binding: " + name, ip, binding.port);
             req.send({
@@ -109,7 +109,7 @@ class Process {
                 this.ready(config);
               }
             });
-          })
+          //});
         });
       });
     } else {
